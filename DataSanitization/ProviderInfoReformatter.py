@@ -19,6 +19,7 @@ with open(sys.argv[1], "r", encoding="utf-8") as datfile:
 
     # open the output file
     with open('output.csv', 'w', newline='',  encoding='utf-8') as csvfile:
+        csvfile.truncate() # clear file
         spamreader = csv.DictReader(datfile, header, delimiter='|')
         writer = csv.DictWriter(csvfile, header)
         writer.writeheader()
@@ -35,3 +36,5 @@ with open(sys.argv[1], "r", encoding="utf-8") as datfile:
         
         print('number of counties: ', len(countyNames))
         print('counties: ', countyNames)
+
+    csvfile.close()
