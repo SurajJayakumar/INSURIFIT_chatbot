@@ -22,7 +22,7 @@ class HISummarizer():
         Returns:
             str: Conversational summary of the plan
         """
-        # Extract plan details
+
         coverage_level = plan.info.coverage_level
         in_network = "in-network" if plan.info.in_network else "out-of-network"
         deductible = plan.info.deductible_limit
@@ -31,14 +31,13 @@ class HISummarizer():
         oop_max = plan.info.cost_benefits.get('out_of_pocket_max', 'unknown')
         num_covered = plan.info.num_covered
 
-        # Construct prompt for NLP generation
         plan_details = (
             f"This is a {coverage_level} health insurance plan (ID: {plan.id}, Match Score: {plan.score:.2f}). "
             f"It is {in_network} and covers {num_covered} individuals. "
             f"The deductible is ${deductible:.2f}, "
-            f"monthly premium is ${premium:.2f} if isinstance(premium, (int, float)) else premium, "
-            f"copay is ${copay:.2f} if isinstance(copay, (int, float)) else copay, "
-            f"and out-of-pocket maximum is ${oop_max:.2f} if isinstance(oop_max, (int, float)) else oop_max."
+            f"monthly premium is ${premium:.2f}"
+            f"copay is ${copay:.2f} "
+            f"and out-of-pocket maximum is ${oop_max:.2f}."
         )
         prompt = (
             f"Summarize this health insurance plan in a friendly, conversational tone: {plan_details} "
@@ -48,7 +47,7 @@ class HISummarizer():
         # Generate summary
         generated = self.generator(prompt, num_return_sequences=1)[0]['generated_text']
         
-        # Clean up and format output
+        # Format output
         summary = f"Health Insurance Plan Summary\n{'=' * 40}\n\n{generated.strip()}\n"
         return summary
 
@@ -119,17 +118,12 @@ class HISummarizer():
             else:
                 cons.append(f"does not cover: {', '.join(uncovered)}")
 
-        # Coverage level
-        if user.preferences and user.preferences.lower().find(plan.coverage_level.lower()) != -1:
-            pros.append(f"{plan.coverage_level} coverage matches your preferences")
-        elif user.preferences:
-            cons.append(f"{plan.coverage_level} coverage may not suit your preferences")
 
-        # Comparison text for prompt
         pros_text = "; ".join(pros) if pros else "no specific matches"
         cons_text = "; ".join(cons) if cons else "no specific issues"
 
-        # Prompt for NLP generation
+        # Prompt 
+        # TODO: Dial in the prompting so it does exactly what we want it to do 
         prompt = (
             f"In a friendly, conversational tone, explain why this health insurance plan is a good or bad fit for the user. "
             f"Why it’s good: {pros_text}. "
