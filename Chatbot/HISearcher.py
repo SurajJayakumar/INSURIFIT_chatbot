@@ -2,6 +2,8 @@ from Interfaces import *
 from typing import List
 import Parameters.declarations as dec
 import spacy
+import pandas as pd
+import os
 
 # Load Spacy model and perform preprocessing
 nlp = spacy.load("en_core_web_md") # md is necessary for better recognition
@@ -42,12 +44,35 @@ def extractEntities(text: str, labels: dict, threshold: int) -> list[str]:
 # A wrapper for the HIOS database files
 # Accesses, Retrieves, and filters plans from the database
 class HIDatabase():
+
+    def __init__(self, 
+                 FilePath = str,
+                 Files_BaseRate: list[str] = [], 
+                 Files_BenefitCost: str = "", 
+                 Files_Benefits: str = "", 
+                 Files_PlanVariant: str = "", 
+                 Files_DDCTBL_MOOP: str = "",
+                 Files_SBC_Scenario: str = "", 
+                 Files_BusinessRule: str = "", 
+                 Files_ServiceArea: str = "", 
+                 Files_RatingArea: str = ""):
+        self.FilePath = os.path.join(os.path.dirname(os.path.realpath(__file__)), FilePath)
+        self.Files_BaseRate = [os.path.join(self.FilePath, baseRateFile) for baseRateFile in Files_BaseRate]
+        self.Files_BenefitCost = os.path.join(self.FilePath, Files_BenefitCost)
+        self.Files_Benefits = os.path.join(self.FilePath, Files_Benefits)
+        self.Files_PlanVariant = os.path.join(self.FilePath, Files_PlanVariant)
+        self.Files_DDCTBL_MOOP = os.path.join(self.FilePath, Files_DDCTBL_MOOP)
+        self.Files_SBC_Scenario = os.path.join(self.FilePath, Files_SBC_Scenario)
+        self.Files_BusinessRule = os.path.join(self.FilePath, Files_BusinessRule)
+        self.Files_ServiceArea = os.path.join(self.FilePath, Files_ServiceArea)
+        self.Files_RatingArea = os.path.join(self.FilePath, Files_RatingArea)
     
     # Cached list of currently selected plan rows
-    selectedPlans = list(int)
+    selectedPlans = list[int]
 
     # File references for retrieving data
-    Files_BaseRate = str
+    FilePath = str
+    Files_BaseRate = list[str]
     Files_BenefitCost = str
     Files_Benefits = str
     Files_PlanVariant = str
@@ -59,6 +84,89 @@ class HIDatabase():
 
     def ClearSelection(self):
         self.selectedPlans = []
+
+    def pullData(self, filePath: str, columns: list[str], filterValues: list[list[str]], onlyAll: bool) -> dict:
+        results = []
+        
+        iter_csv = pd.read_csv(
+            self.Files_ServiceArea, 
+            sep=',', 
+            usecols=columns, 
+            header=0, 
+            encoding='utf-8', 
+            iterator=True, 
+            chunksize=1000)
+        
+        for chunk in iter_csv:
+            
+            masks = []
+            for col, filters in zip(columns, filterValues):
+                if not filters:  # No filter for this column
+                    continue
+                # Case-insensitive comparison
+                mask = chunk[col].astype(str).str.upper().isin([f.upper() for f in filters])
+                masks.append(mask)
+            
+            if not masks:
+                filtered_chunk = chunk  # No filters at all
+            elif onlyAll:
+                combined_mask = masks[0]
+                for mask in masks[1:]:
+                    combined_mask &= mask
+                filtered_chunk = chunk[combined_mask]
+            else:
+                combined_mask = masks[0]
+                for mask in masks[1:]:
+                    combined_mask |= mask
+                filtered_chunk = chunk[combined_mask]
+
+            # Append filtered rows as dicts
+            results.extend(filtered_chunk.to_dict('records'))
+    
+        return results
+
+    def GetServicerInfoForCounty(self, countyName: str) -> dict:
+        resultDict = {
+            'Service Area ID': "[insert name]",
+            }
+        resultDict['Servicer ID'] = []
+        resultDict['Market Type'] = []
+            
+        if not os.path.exists(self.Files_ServiceArea):
+            print("bad file:", self.Files_ServiceArea)
+            return []
+        
+        iter_csv = pd.read_csv(
+            self.Files_ServiceArea, 
+            sep=',', 
+            usecols=['HIOS Issuer ID', 'Service Area ID', 'State', 'County Name', 'Market'], 
+            header=0, 
+            encoding='utf-8', 
+            iterator=True, 
+            chunksize=1000)
+        
+        filtered_rows = []
+        for chunk in iter_csv:
+            # Filter rows where 'State' == 'Yes' OR 'County Name' matches (case-insensitive)
+            filtered_chunk = chunk[
+                    (chunk['State'] == 'Yes') |
+                    (chunk['County Name'].str.upper() == countyName.upper())
+                ]
+
+            # Append filtered rows to the result list
+            filtered_rows.extend(filtered_chunk.to_dict('records'))
+
+        addedAreaID = False
+        for row in filtered_rows:
+            if addedAreaID == False:
+                resultDict['Service Area ID'] = row['Service Area ID'] 
+                addedAreaID = True
+            resultDict['Servicer ID'].append(row['HIOS Issuer ID'])
+            resultDict['Market Type'].append(row['Market'])
+
+        return resultDict
+
+
 
     def FilterSelection(self, columnName: str, value: str):
         pass
@@ -84,6 +192,7 @@ class HIDatabase():
         pass
 
     def FetchPlan_Data(self, PlanID: str, Provider: str) -> HIPlanInfo:
+        pass
 
 
 
@@ -142,7 +251,18 @@ class HISearcher(HIPlanSearchInterface):
 
         # -- Return results
 
-mytext = "I have diabetes and need tier 3 drugs."
+if __name__ == "__main__":
 
-print(extractEntities(mytext, dec.BENEFIT_LABELS, 70))
+    # mytext = "I have diabetes and need tier 3 drugs."
+
+    # print(extractEntities(mytext, dec.BENEFIT_LABELS, 70))
+    db = HIDatabase("../TexasFilteredData", 
+                    Files_ServiceArea="RBIS.ISSUER_SERVICE_AREA_20240509202140.csv")
+    
+    print(db.pullData(db.Files_ServiceArea, 
+                      ['HIOS Issuer ID', 'Service Area ID', 'State', 'County Name', 'Market'], 
+                      [[], [], ['Yes'], ["EL PASO"], []],
+                      False))
+    
+    # print(db.GetServicerInfoForCountyp("EL PASO"))
 
