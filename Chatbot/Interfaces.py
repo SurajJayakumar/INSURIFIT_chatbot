@@ -13,6 +13,12 @@ databaseId = int
 # TODO: modify this class with necessary fields 
 @dataclass
 class UserProfile:
+    def __init__(self):
+        self.age = ""
+        self.location = ""
+        self.dependents = 0
+        self.desiredPremium = []
+
     age: str # age of user (may not be necessary)
     location: str # location of user (to consider in-network)
     dependents: int # number of dependents to consider on a plan. Returned plans should only have >= number of dependents
