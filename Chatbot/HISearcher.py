@@ -4,6 +4,7 @@ import Parameters.declarations as dec
 import spacy
 import pandas as pd
 import os
+import timeit
 
 # Load Spacy model and perform preprocessing
 nlp = spacy.load("en_core_web_md") # md is necessary for better recognition
@@ -18,7 +19,7 @@ They were also advised to attend a follow-up appointment in two weeks.
 # Process with Spacy
 doc = nlp(text)
 
-def extractEntities(text: str, labels: dict, threshold: int) -> list[str]:
+def extractEntities(text: str, labels: dict, threshold: float) -> list[str]:
     doc = nlp(text)
     label_keys = labels.keys()
     results = []
@@ -92,7 +93,7 @@ class HIDatabase():
         results = []
         
         iter_csv = pd.read_csv(
-            self.Files_ServiceArea, 
+            filePath, 
             sep=',', 
             usecols=columns, 
             header=0, 
@@ -104,7 +105,7 @@ class HIDatabase():
             
             masks = []
             for col, filters in zip(columns, filterValues):
-                if not filters:  # No filter for this column
+                if len(filters) == 0:  # No filter for this column
                     continue
                 # Case-insensitive comparison
                 mask = chunk[col].astype(str).str.upper().isin([f.upper() for f in filters])
@@ -224,50 +225,53 @@ defaultDB = HIDatabase(FilePath="../TexasFilteredData",
 # See corresponding interface in chatbot/interfaces.py for usage
 # TODO: implement
 class HISearcher(HIPlanSearchInterface):
-    def FetchPlanInfo(PlanID: str) -> HIPlanInfo:
-        pass
+    def __init__(self):
+        return
+
+    def RetrievePlanInfo(PlanID: str) -> HIPlanInfo:
+        return None
 
     def ScorePlan(Plan: HIPlanInfo, fieldWeights: list[float]) -> float:
         
-        pass
-
-    def RankPlans(self, takeTopN: int) -> list[HIPlanInfo]:
-        
-        # filter plans by hard requirements
-
-
-        # determine field weights for scoring
-        fieldWeights = []
-        minScore = 0.0
-        currScore = 0.0
-
-        for planID in filteredPlans:
-            CurrPlanInfo = self.FetchPlanInfo(planID)
-            
-            # score plans
-            currScore = self.ScorePlan(CurrPlanInfo, fieldWeights)
-            if currScore > minScore:
-                # add new plan to top results
-
-                # set new minimum score
-                minScore = currScore
-
-        # sort plans according to score
-
-        pass
+        return None
 
     def ExtractUserBenefits():
         pass
 
-    def MatchPlansFromProfile(profile: UserProfile, takeTopN: int) -> list[HIPlan]:
+    def MatchPlansFromProfile(self, profile: UserProfile, takeTopN: int) -> list[HIPlan]:
         pass
 
         
         # -- Check for invalid input
 
         # -- Codify profile
+        ageVal = ""
+        if profile.age <= 14:
+            ageVal = "0-14"
+        elif profile.age >= 64:
+            ageVal = "64 and over"
+        else:
+            ageVal = str(profile.age)
+        
+        tobaccoVal = ["Tobacco User/Non-Tobacco User"]
+        """
+        if profile.tobacco == True:
+            tobaccoVal.append("Tobacco User")
+        else:
+            tobaccoVal.append("Non-Tobacco User")
+        """
+
+        groupVal = "Individual"
+        if profile.dependents > 0:
+            groupVal = "Small Group"
+        else:
+            groupVal = "Individual"
 
         # -- Extract desired benefits
+        labels = extractEntities(profile.preferences, dec.BENEFIT_LABELS, 0.7)
+        beneVal = []
+        for label in labels:
+            beneVal.extend(dec.BENEFIT_LABELS[label])
 
         # -- Access database
         # --- order for pulling data for plans: ---
@@ -281,28 +285,124 @@ class HISearcher(HIPlanSearchInterface):
         #   - Pull MOOP info from MOOP file
         #   - Pull SBC info from SBC file
 
+        # Service Area ID is what we'll use to check if a plan is offered in the overview file
+        # service area info
         serviceAreaInfo = defaultDB.pullData(
             defaultDB.Files_ServiceArea, 
             ['HIOS Issuer ID', 'Service Area ID', 'State', 'County Name', 'Market'], 
-            [[], [], ['Yes'], [UserProfile.location.upper()], []],
+            [[], [], ['Yes'], [profile.location], []],
             False)
+        temp_frame = pd.DataFrame(serviceAreaInfo)
+        temp_frame = temp_frame[temp_frame['Market'].astype(str).str.upper() == groupVal.upper()]
+        if 'Service Area ID' not in temp_frame.columns:
+            print("no service areas found")
+            return []
+        IssuerServiceInfo = temp_frame[['HIOS Issuer ID', 'Service Area ID']] # pull out issuer service info
+        serviceAreaIDs = temp_frame['Service Area ID'].unique()
+        # print(IssuerServiceInfo)
         
+        # rating area info
         ratingAreaInfo = defaultDB.pullData(
             defaultDB.Files_RatingArea, 
-            ['Rating Area ID', 'Market', 'County', 'FIPS'], 
-            [[], [], [UserProfile.location.upper()], []],
-            False)
+            ['Rating Area ID', 'Market', 'County'], 
+            [[], [groupVal], [profile.location.upper()]],
+            True)
+        temp_frame = pd.DataFrame(ratingAreaInfo)
+        if 'Rating Area ID' not in temp_frame.columns:
+            print("no rating areas found")
+            return []
+        ratingAreaInts = temp_frame['Rating Area ID'].unique()
+        ratingAreaNames = ['Rating Area '.join([' ', str(ID)]).strip() for ID in ratingAreaInts]
+        # print(ratingAreaNames)
         
-        possiblePlanIDs = defaultDB.pullData(
-            defaultDB.Files_BaseRate, 
-            ['Rating Area ID', 'Market', 'County', 'FIPS'], 
-            [[], [], [], []],
-            False)
+        # plan overview info
+        possiblePlanInfo = defaultDB.pullData(
+            defaultDB.Files_Overview, 
+            ['HIOS Plan ID', 'Plan Marketing Name', 'Market Coverage', 'Network ID', 'Service Area ID', 'Plan Type', 'Level of Coverage', 'Wellness Program Offered', 'Disease Management Programs Offered', 'National Network', 'Enrollment Payment URL', 'Does this plan offer Composite Rating'], 
+            [[], [], [groupVal], [], serviceAreaIDs, [], [], [], [], [], [], []],
+            True)
+        temp_frame = pd.DataFrame(possiblePlanInfo)
+        if 'HIOS Plan ID' not in temp_frame.columns:
+            print("no possible plans found")
+            return []
+        possiblePlanIDs = temp_frame['HIOS Plan ID'].unique()
+        possiblePlanFrame = temp_frame
+        # print("num possible IDs:", len(possiblePlanIDs))
 
-        # -- Measure distance from each element
-        # Use N element list to capture [takeTopN] best results  
+        # base rate information
+        baseRateInfo = []
+        for file in defaultDB.Files_BaseRate:
+            planBaseRateInfo = defaultDB.pullData(
+                file, 
+                ['Plan ID', 'Age', 'Tobacco', 'Rating Area ID', 'Individual Rate', 'Individual Tobacco Rate', 'HIOS Issuer ID', 'Market Coverage'], 
+                [possiblePlanIDs, [ageVal], tobaccoVal, ratingAreaNames, [], [], [], [groupVal]],
+                True)
+            
+            baseRateInfo.extend(planBaseRateInfo)
+        # reevaluate possible plan IDs
+        temp_frame = pd.DataFrame(baseRateInfo)
+        if len(temp_frame) == 0:
+            return []
+        temp_frame.rename(columns={'Plan ID': 'HIOS Plan ID'}, inplace=True) # rename column to match for merging later
+        temp_frame = temp_frame[temp_frame['HIOS Issuer ID'].astype(str).str.upper().isin(IssuerServiceInfo['HIOS Issuer ID'].astype(str))]
+        possiblePlanIDs = temp_frame['HIOS Plan ID'].unique()
+        baseRateFrame = temp_frame
+
+        # benefits information
+        BenefitInfo = defaultDB.pullData(
+            defaultDB.Files_Benefits, 
+            ['HIOS Plan ID', 'Benefit', 'EHB', 'Is This Benefit Covered', 'Quantitative Limit On Service', 'Limit Quantity', 'Limit Unit', 'Exclusions', 'Explanation', 'EHB Variance Reason', 'Excluded from In Network MOOP', 'Excluded from Out Of Network MOOP'], 
+            [possiblePlanIDs, beneVal, [], ['Covered'], [], [], [], [], [], [], [], []],
+            True)
+        temp_frame = pd.DataFrame(BenefitInfo)
+        benefitFrame = pd.DataFrame(columns=['HIOS Plan ID', 'Benefits'])
+        for planID in temp_frame['HIOS Plan ID'].unique():
+            temp_frame2 = temp_frame[(temp_frame['HIOS Plan ID'] == planID)]
+            temp_frame2 = temp_frame2['Benefit'].to_list()
+            print(temp_frame2)
+            benefitFrame.loc[len(benefitFrame)] = [planID, {'Benefit Array': temp_frame2}]
+        print(benefitFrame)
+        # print("benefit entries found:", len(temp_frame))
+
+        # Plan variant information
+        VariantInfo = defaultDB.pullData(
+            defaultDB.Files_PlanVariant, 
+            ['HIOS Plan ID', 'Level of Coverage', 'CSR Variation Type', 'Issuer Actuarial Value', 'AV Calculator Output Number', ' Plan Brochure', 'URL for Summary of Benefits and Coverage', 'HSA Eligible', 'Plan Variant Marketing Name'], 
+            # we could probably check if the user qualifies for csr, but it's not a big deal here
+            [possiblePlanIDs, [], [], [], [], [], [], [], [], [], [], []],
+            True)
+        variantFrame = pd.DataFrame(VariantInfo)
+
+        # -- Retrieve data for each unique plan in the list
+        fullPlanFrame = pd.merge(baseRateFrame, possiblePlanFrame, on='HIOS Plan ID', how='left')
+        fullPlanFrame = pd.merge(fullPlanFrame, variantFrame, on='HIOS Plan ID', how='left')
+        fullPlanFrame = pd.merge(fullPlanFrame, benefitFrame, on='HIOS Plan ID', how='left')
+        print("full plan:")
+        print(fullPlanFrame)
+
+
+        for planID in possiblePlanIDs:
+            pass
+        # - score plans and rank
+        scores = pd.DataFrame(columns=['HIOS Plan ID', 'Score'])
+        for i in range(len(fullPlanFrame)):
+            scores.loc[len(scores)] = [planID, self.ScorePlan(fullPlanFrame.loc[i])]
+
+        # take top N plan IDs
+        fullPlanFrame = pd.merge(fullPlanFrame, scores, on='HIOS Plan ID', how='left')
+        topPlans = fullPlanFrame.sort_values(by='Score', ascending=False).head(takeTopN)
 
         # -- Return results
+        return topPlans
+
+def testFunc():
+    searcher = HISearcher()
+    profile = UserProfile()
+    profile.location = "Dallas"
+    profile.age = 47
+    profile.preferences = "Diabetes"
+    searcher.MatchPlansFromProfile(profile, 10)
+    pass
 
 if __name__ == "__main__":
 
@@ -310,13 +410,8 @@ if __name__ == "__main__":
 
     # print(extractEntities(mytext, dec.BENEFIT_LABELS, 70))
     
-    
-    print(defaultDB.pullData(defaultDB.Files_ServiceArea, 
-                      ['HIOS Issuer ID', 'Service Area ID', 'State', 'County Name', 'Market'], 
-                      [[], [], ['Yes'], ["EL PASO"], []],
-                      False))
-    
-    
+    executionTime = timeit.timeit(testFunc, number=1)
+    print(f"Execution time: {executionTime:.4f} seconds")
     
     # print(db.GetServicerInfoForCountyp("EL PASO"))
 
