@@ -46,7 +46,8 @@ def extractEntities(text: str, labels: dict, threshold: int) -> list[str]:
 class HIDatabase():
 
     def __init__(self, 
-                 FilePath = str,
+                 FilePath: str,
+                 Files_Overview: str,
                  Files_BaseRate: list[str] = [], 
                  Files_BenefitCost: str = "", 
                  Files_Benefits: str = "", 
@@ -57,6 +58,7 @@ class HIDatabase():
                  Files_ServiceArea: str = "", 
                  Files_RatingArea: str = ""):
         self.FilePath = os.path.join(os.path.dirname(os.path.realpath(__file__)), FilePath)
+        self.Files_Overview = os.path.join(self.FilePath, Files_Overview)
         self.Files_BaseRate = [os.path.join(self.FilePath, baseRateFile) for baseRateFile in Files_BaseRate]
         self.Files_BenefitCost = os.path.join(self.FilePath, Files_BenefitCost)
         self.Files_Benefits = os.path.join(self.FilePath, Files_Benefits)
@@ -72,6 +74,7 @@ class HIDatabase():
 
     # File references for retrieving data
     FilePath = str
+    Files_Overview = str
     Files_BaseRate = list[str]
     Files_BenefitCost = str
     Files_Benefits = str
@@ -194,7 +197,27 @@ class HIDatabase():
     def FetchPlan_Data(self, PlanID: str, Provider: str) -> HIPlanInfo:
         pass
 
-
+defaultDB = HIDatabase(FilePath="../TexasFilteredData",
+                    Files_Overview="RBIS.INSURANCE_PLAN_20240509202140.csv",
+                    Files_BaseRate=["RBIS.INSURANCE_PLAN_BASE_RATE_FILE_20_21_22_24_25_26_20240509202140.csv",
+                                    "RBIS.INSURANCE_PLAN_BASE_RATE_FILE1_20240509202140.csv",
+                                    "RBIS.INSURANCE_PLAN_BASE_RATE_FILE3_20240509202140.csv",
+                                    "RBIS.INSURANCE_PLAN_BASE_RATE_FILE4_20240509202140.csv",
+                                    "RBIS.INSURANCE_PLAN_BASE_RATE_FILE5_20240509202140.csv",
+                                    "RBIS.INSURANCE_PLAN_BASE_RATE_FILE6_20240509202140.csv",
+                                    "RBIS.INSURANCE_PLAN_BASE_RATE_FILE7_20240509202140.csv",
+                                    "RBIS.INSURANCE_PLAN_BASE_RATE_FILE8_20240509202140.csv",
+                                    "RBIS.INSURANCE_PLAN_BASE_RATE_FILE9_20240509202140.csv",
+                                    "RBIS.INSURANCE_PLAN_BASE_RATE_FILE29_20240509202140.csv"],
+                    Files_BenefitCost="RBIS.INSURANCE_PLAN_BENEFIT_COST_SHARE_20240509202140.csv",
+                    Files_Benefits="RBIS.INSURANCE_PLAN_BENEFITS_20240509202140.csv",
+                    Files_PlanVariant="RBIS.INSURANCE_PLAN_VARIANT_20240509202140.csv",
+                    Files_DDCTBL_MOOP="RBIS.INSURANCE_PLAN_VARIANT_DDCTBL_MOOP_20240509202140.csv",
+                    Files_SBC_Scenario="RBIS.INSURANCE_PLAN_VARIANT_SBC_SCENARIO_20240509202140.csv",
+                    Files_BusinessRule="RBIS.ISSUER_BUSINESS_RULE_20240509202140.csv",
+                    Files_ServiceArea="RBIS.ISSUER_SERVICE_AREA_20240509202140.csv",
+                    Files_RatingArea="RBIS.STATE_RATING_AREA_20240509202140.csv"
+                    )
 
 
 # Helper class for health insurance plan database searching
@@ -238,6 +261,8 @@ class HISearcher(HIPlanSearchInterface):
 
     def MatchPlansFromProfile(profile: UserProfile, takeTopN: int) -> list[HIPlan]:
         pass
+
+        
         # -- Check for invalid input
 
         # -- Codify profile
@@ -245,6 +270,34 @@ class HISearcher(HIPlanSearchInterface):
         # -- Extract desired benefits
 
         # -- Access database
+        # --- order for pulling data for plans: ---
+        # 1 - Pull Service area ID and HIOS Issuer ID from service area file using county name
+        #   - Pull Rating area ID from rating file using county name
+        # 2 - Pull plan info and ID from overview file according to availability
+        # 2a- Get and Filter benefits on plan with benefit file
+        # 3 - Pull base rate from base rate files
+        #   - Pull benefit cost share from cost share file
+        #   - Pull AV and plan URLs from plan variant file
+        #   - Pull MOOP info from MOOP file
+        #   - Pull SBC info from SBC file
+
+        serviceAreaInfo = defaultDB.pullData(
+            defaultDB.Files_ServiceArea, 
+            ['HIOS Issuer ID', 'Service Area ID', 'State', 'County Name', 'Market'], 
+            [[], [], ['Yes'], [UserProfile.location.upper()], []],
+            False)
+        
+        ratingAreaInfo = defaultDB.pullData(
+            defaultDB.Files_RatingArea, 
+            ['Rating Area ID', 'Market', 'County', 'FIPS'], 
+            [[], [], [UserProfile.location.upper()], []],
+            False)
+        
+        possiblePlanIDs = defaultDB.pullData(
+            defaultDB.Files_BaseRate, 
+            ['Rating Area ID', 'Market', 'County', 'FIPS'], 
+            [[], [], [], []],
+            False)
 
         # -- Measure distance from each element
         # Use N element list to capture [takeTopN] best results  
@@ -256,13 +309,14 @@ if __name__ == "__main__":
     # mytext = "I have diabetes and need tier 3 drugs."
 
     # print(extractEntities(mytext, dec.BENEFIT_LABELS, 70))
-    db = HIDatabase("../TexasFilteredData", 
-                    Files_ServiceArea="RBIS.ISSUER_SERVICE_AREA_20240509202140.csv")
     
-    print(db.pullData(db.Files_ServiceArea, 
+    
+    print(defaultDB.pullData(defaultDB.Files_ServiceArea, 
                       ['HIOS Issuer ID', 'Service Area ID', 'State', 'County Name', 'Market'], 
                       [[], [], ['Yes'], ["EL PASO"], []],
                       False))
+    
+    
     
     # print(db.GetServicerInfoForCountyp("EL PASO"))
 
