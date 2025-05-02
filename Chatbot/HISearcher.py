@@ -231,9 +231,46 @@ class HISearcher(HIPlanSearchInterface):
     def RetrievePlanInfo(PlanID: str) -> HIPlanInfo:
         return None
 
-    def ScorePlan(Plan: HIPlanInfo, fieldWeights: list[float]) -> float:
+    # can score 1 point per category base, multiplied by field weights
+    def ScorePlan(self, profile: UserProfile, benefitList: list, plan: pd.DataFrame) -> float:
+        planFrame = plan
+        validColumns = planFrame.columns
+
+        # score AV
+        # 1 point for 100% coverage
+        score_AV = 0.0
+        if 'AV Calculator Output Number' in validColumns and planFrame['AV Calculator Output Number'].iloc[0] != "NaN" and planFrame['AV Calculator Output Number'].iloc[0] != "":
+            score_AV = planFrame['AV Calculator Output Number'].iloc[0].astype(float) / 100.0
+        elif 'Issuer Actuarial Value' in validColumns and planFrame['Issuer Actuarial Value'] != "NaN" and planFrame['Issuer Actuarial Value'] != "":
+            score_AV = planFrame['Issuer Actuarial Value'].iloc[0].astype(float) / 100.0
         
-        return None
+        # score base rate
+        # 1 point for low rate; account for tobacco usage
+        score_BaseRate = 0.0
+        useTobaccoRate = True #profile.tobacco #TODO: edit me to use profile tobacco
+        tobacco_rate = 0.0
+        if 'Tobacco' in validColumns and planFrame['Tobacco'].iloc[0] == "No Preference":
+            useTobaccoRate = False
+        if useTobaccoRate:
+            tobacco_rate = planFrame['Individual Rate'].iloc[0].astype(float)
+        else:
+            tobacco_rate = planFrame['Individual Tobacco Rate'].iloc[0].astype(float)
+        score_BaseRate = max(min(1.0 - (tobacco_rate / 2000.0), 1.0), 0.0)
+
+        # score benefits
+        # 1 point for all possible benefits
+        score_Benefits = 0.0
+        if 'Benefit' in validColumns and planFrame['Benefits'].iloc[0] != "NaN":
+            score_Benefits = len(planFrame['Benefits'].iloc[0].get('Benefit Array', [])) / len(benefitList)
+
+        # score wellness program
+        # 1 point for having it
+        score_WellnessProg = 0.0
+        if 'Wellness Program Offered' in validColumns and planFrame['Wellness Program Offered'].iloc[0] == 'Yes':
+            score_WellnessProg = 1.0
+
+
+        return score_AV + score_BaseRate + score_Benefits + score_WellnessProg
 
     def ExtractUserBenefits():
         pass
@@ -253,7 +290,7 @@ class HISearcher(HIPlanSearchInterface):
         else:
             ageVal = str(profile.age)
         
-        tobaccoVal = ["Tobacco User/Non-Tobacco User"]
+        tobaccoVal = ["Tobacco User/Non-Tobacco User", "No Preference"]
         """
         if profile.tobacco == True:
             tobaccoVal.append("Tobacco User")
@@ -377,20 +414,20 @@ class HISearcher(HIPlanSearchInterface):
         fullPlanFrame = pd.merge(baseRateFrame, possiblePlanFrame, on='HIOS Plan ID', how='left')
         fullPlanFrame = pd.merge(fullPlanFrame, variantFrame, on='HIOS Plan ID', how='left')
         fullPlanFrame = pd.merge(fullPlanFrame, benefitFrame, on='HIOS Plan ID', how='left')
-        print("full plan:")
-        print(fullPlanFrame)
-
 
         for planID in possiblePlanIDs:
             pass
         # - score plans and rank
         scores = pd.DataFrame(columns=['HIOS Plan ID', 'Score'])
         for i in range(len(fullPlanFrame)):
-            scores.loc[len(scores)] = [planID, self.ScorePlan(fullPlanFrame.loc[i])]
+            scores.loc[len(scores)] = [planID, self.ScorePlan(profile, beneVal, fullPlanFrame.iloc[[i]])]
 
         # take top N plan IDs
         fullPlanFrame = pd.merge(fullPlanFrame, scores, on='HIOS Plan ID', how='left')
         topPlans = fullPlanFrame.sort_values(by='Score', ascending=False).head(takeTopN)
+
+        print("top plans:")
+        print(topPlans)
 
         # -- Return results
         return topPlans
