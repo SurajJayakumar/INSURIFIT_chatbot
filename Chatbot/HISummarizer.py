@@ -1,16 +1,13 @@
 from Interfaces import *
-from transformers import pipeline
+from google import genai
 
-# Helper class for health insurance plan database searching
-# See corresponding interface in chatbot/interfaces.py for usage
-# TODO: update with 
+
 class HISummarizer():
     def __init__(self):
         """
-        Initialize HIFormatter with NLP text generation capabilities.
+        Initialize HIFormatter with NLP text generation.
         """
-        self.generator = pipeline('text-generation', model='distilgpt2', max_new_tokens=200)
-
+        self.client = genai.Client(api_key="AIzaSyD9AbZEe1YMquELbS7v9pZs3LBsk4imvDQ")
 
     def summarize_plan(self, plan: HIPlan) -> str:
         """
@@ -22,34 +19,45 @@ class HISummarizer():
         Returns:
             str: Conversational summary of the plan
         """
+        
+        info = plan.info
 
-        coverage_level = plan.info.coverage_level
-        in_network = "in-network" if plan.info.in_network else "out-of-network"
-        deductible = plan.info.deductible_limit
-        premium = plan.info.cost_benefits.get('premium', 'unknown')
-        copay = plan.info.cost_benefits.get('copay', 'unknown')
-        oop_max = plan.info.cost_benefits.get('out_of_pocket_max', 'unknown')
-        num_covered = plan.info.num_covered
+        name = info.plan_marketing_name
+        in_network = info.in_network
+        coverage_level = info.coverage_level
+        area_id = info.service_area_id
+        premium = info.premium
+        deductible = info.deductible
+        copay = info.copay
+        oop_max = info.out_of_pocket_max
+        covered_medications = info.covered_medications
+        num_dependents = info.num_dependents
+        couple_or_primary = info.couple_or_primary
+
+        in_network_string = "in network"
+        if in_network == False:
+            in_network_string = "out of network"
+
 
         plan_details = (
-            f"This is a {coverage_level} health insurance plan (ID: {plan.id}, Match Score: {plan.score:.2f}). "
-            f"It is {in_network} and covers {num_covered} individuals. "
+            f"This is a {coverage_level} health insurance plan called {name} (ID: {plan.id}, Match Score: {plan.score:.2f}). "
+            f"It is {in_network} and covers a {couple_or_primary} and {num_dependents} dependents. "
             f"The deductible is ${deductible:.2f}, "
             f"monthly premium is ${premium:.2f}"
             f"copay is ${copay:.2f} "
             f"and out-of-pocket maximum is ${oop_max:.2f}."
+            f"It covers these medications: {covered_medications}"
         )
         prompt = (
             f"Summarize this health insurance plan in a friendly, conversational tone: {plan_details} "
-            f"Keep the tone engaging and clear, as if explaining to someone new to insurance. "
+            f"Keep the tone engaging and clear, as if explaining to someone new to insurance. Keep it in paragraph form."
+            f"Try to avoid referring to the person you're conversing with, only summarize the plan. Delete all asterisks around variables."
         )
 
         # Generate summary
-        generated = self.generator(prompt, num_return_sequences=1)[0]['generated_text']
-        
-        # Format output
-        summary = f"Health Insurance Plan Summary\n{'=' * 40}\n\n{generated.strip()}\n"
-        return summary
+        generated = self.client.models.generate_content(model="gemini-2.0-flash", contents=prompt)
+        print(generated.text)
+        return generated.text
 
     
     def compare_plan_and_preferences(self, user: UserProfile, plan: HIPlan) -> str:
@@ -68,51 +76,53 @@ class HISummarizer():
         pros = []
         cons = []
 
+        info = plan.info
+
         # Location
         if user.location:
-            if plan.in_network:
+            if info.in_network:
                 pros.append(f"in-network for {user.location}, keeping costs low")
             else:
                 cons.append(f"out-of-network in {user.location}, which may increase costs")
 
         # Dependents
         if user.dependents > 0:
-            if plan.num_covered >= user.dependents:
-                pros.append(f"covers {plan.num_covered} people, enough for your {user.dependents} dependents")
+            if info.num_dependents >= user.dependents:
+                pros.append(f"covers {info.num_dependents} people, enough for your {user.dependents} dependents")
             else:
                 cons.append(f"only covers {plan.num_covered} people, not enough for your {user.dependents} dependents")
 
         # Premium
-        if user.desiredPremium[0] and isinstance(plan.premium, (int, float)):
-            if plan.premium <= user.desiredPremium[1]:
-                pros.append(f"premium of ${plan.premium:.2f} fits your budget of ${user.desiredPremium[1]:.2f}")
+        if user.desiredPremium[0]:
+            if info.premium <= user.desiredPremium[1]:
+                pros.append(f"premium of ${info.premium:.2f} fits your budget of ${user.desiredPremium[1]:.2f}")
             else:
-                cons.append(f"premium of ${plan.premium:.2f} exceeds your budget of ${user.desiredPremium[1]:.2f}")
+                cons.append(f"premium of ${info.premium:.2f} exceeds your budget of ${user.desiredPremium[1]:.2f}")
 
         # Deductible
         if user.desiredDeductible[0]:
-            if plan.deductible <= user.desiredDeductible[1]:
-                pros.append(f"deductible of ${plan.deductible:.2f} within your limit of ${user.desiredDeductible[1]:.2f}")
+            if info.deductible <= user.desiredDeductible[1]:
+                pros.append(f"deductible of ${info.deductible:.2f} within your limit of ${user.desiredDeductible[1]:.2f}")
             else:
-                cons.append(f"deductible of ${plan.deductible:.2f} exceeds your limit of ${user.desiredDeductible[1]:.2f}")
+                cons.append(f"deductible of ${info.deductible:.2f} exceeds your limit of ${user.desiredDeductible[1]:.2f}")
 
         # Copay
-        if user.desiredCopay[0] and isinstance(plan.copay, (int, float)):
-            if plan.copay <= user.desiredCopay[1]:
-                pros.append(f"copay of ${plan.copay:.2f} meets your target of ${user.desiredCopay[1]:.2f}")
+        if user.desiredCopay[0]:
+            if info.copay <= user.desiredCopay[1]:
+                pros.append(f"copay of ${info.copay:.2f} meets your target of ${user.desiredCopay[1]:.2f}")
             else:
-                cons.append(f"copay of ${plan.copay:.2f} higher than your target of ${user.desiredCopay[1]:.2f}")
+                cons.append(f"copay of ${info.copay:.2f} higher than your target of ${user.desiredCopay[1]:.2f}")
 
         # Out-of-pocket max
-        if user.desiredOOP[0] and isinstance(plan.out_of_pocket_max, (int, float)):
-            if plan.out_of_pocket_max <= user.desiredOOP[1]:
-                pros.append(f"out-of-pocket max of ${plan.out_of_pocket_max:.2f} within your limit of ${user.desiredOOP[1]:.2f}")
+        if user.desiredOOP[0]:
+            if info.out_of_pocket_max <= user.desiredOOP[1]:
+                pros.append(f"out-of-pocket max of ${info.out_of_pocket_max:.2f} within your limit of ${user.desiredOOP[1]:.2f}")
             else:
-                cons.append(f"out-of-pocket max of ${plan.out_of_pocket_max:.2f} exceeds your limit of ${user.desiredOOP[1]:.2f}")
+                cons.append(f"out-of-pocket max of ${info.out_of_pocket_max:.2f} exceeds your limit of ${user.desiredOOP[1]:.2f}")
 
         # Medications
         if user.medications:
-            uncovered = [med for med in user.medications if med not in plan.covered_medications]
+            uncovered = [med for med in user.medications if med not in info.covered_medications]
             if not uncovered:
                 pros.append("covers all your medications")
             else:
@@ -129,13 +139,50 @@ class HISummarizer():
             f"Why it’s good: {pros_text}. "
             f"Why it’s not ideal: {cons_text}. "
             f"Keep it clear and engaging, like explaining to someone new to insurance."
+            f"Make two paragraphs, one for what is good and one for what is a bad fit. Delete asterisks around variables."
         )
 
-        # Generate explanation
-        generated = self.generator(prompt, num_return_sequences=1)[0]['generated_text']
+        # Generate summary
+        generated = self.client.models.generate_content(model="gemini-2.0-flash", contents=prompt)
+        print(generated.text)
+        return generated.text
         
-        # Format output
-        summary = f"Why This Plan Fits (or Doesn’t)\n{'=' * 30}\n{generated.strip()}\n"
-        return summary
-        
+def main():
+    summarizer = HISummarizer()
 
+    id = 1
+    rank = 1
+    score = 1
+
+    user = UserProfile(
+        age="44",
+        location="TX001",
+        dependents=2,
+        desiredPremium=(True, 300.00),       
+        desiredDeductible=(True, 1500.00),    
+        desiredCopay=(True, 40.00),           
+        desiredOOP=(True, 8000.00),           
+        medications=["Metformin", "Atorvastatin"],
+        preferences="Looking for in-network plans with solid coverage for a couple and kids",
+        tobacco_use=False
+    )
+
+    info = HIPlanInfo(plan_marketing_name = "HealthyChoice Silver",
+        in_network = True,
+        coverage_level = "Silver",
+        service_area_id = "TX001",
+        premium = 350.50,
+        deductible = 2000.00,
+        copay = 30.00,
+        out_of_pocket_max = 7500.00,
+        covered_medications = ["Metformin", "Atorvastatin"],
+        num_dependents = 3,
+        couple_or_primary = "Couple"
+    )
+
+    plan = HIPlan(id=id, rank=rank, score=score, info=info)
+    
+    summarizer.compare_plan_and_preferences(plan=plan, user=user)
+
+if __name__ == "__main__":
+    main()
