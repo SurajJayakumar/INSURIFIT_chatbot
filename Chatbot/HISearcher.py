@@ -304,6 +304,8 @@ class HISearcher(HIPlanSearchInterface):
         else:
             groupVal = "Individual"
 
+        variantVal = "Exchange variant (no CSR)" # or "Non-Exchange variant"
+
         # -- Extract desired benefits
         labels = extractEntities(profile.preferences, dec.BENEFIT_LABELS, 0.7)
         beneVal = []
@@ -396,31 +398,47 @@ class HISearcher(HIPlanSearchInterface):
         for planID in temp_frame['HIOS Plan ID'].unique():
             temp_frame2 = temp_frame[(temp_frame['HIOS Plan ID'] == planID)]
             temp_frame2 = temp_frame2['Benefit'].to_list()
-            print(temp_frame2)
             benefitFrame.loc[len(benefitFrame)] = [planID, {'Benefit Array': temp_frame2}]
         print(benefitFrame)
         # print("benefit entries found:", len(temp_frame))
+
+        # Plan MOOP information
+        MoopInfo = defaultDB.pullData(
+            defaultDB.Files_DDCTBL_MOOP, 
+            ['Insurance Plan Identifier', 'Insurance Plan Variant Component Type Name', 'Medical And Drug Deductibles Integrated', 'Maximum Out of Pocket \\ Deductible Type', 'Network Category Type Code', 'Insurance Plan Individual Deductible Amount \\ Insurance Plan Annual Out Of Pocket Limit Amount', 'Insurance Plan Family Deductible Amount \\ Insurance Plan Annual Out Of Pocket Limit Amount Per Person', 'Insurance Plan Family Deductible Amount \\ Insurance Plan Annual Out Of Pocket Limit Amount Per Group', 'Insurance Plan Default Co-Insurance Amount', 'Level of Coverage Type Code'],
+            # we could probably check if the user qualifies for csr, but it's not a big deal here
+            [possiblePlanIDs, [], [], [], [], [], [], [], [], []],
+            True)
+        temp_frame = pd.DataFrame(MoopInfo)
+        moopFrame = pd.DataFrame(columns=['HIOS Plan ID', 'MoopSubframe'])
+        for planID in temp_frame['Insurance Plan Identifier'].unique():
+            temp_frame2 = temp_frame[(temp_frame['Insurance Plan Identifier'] == planID)].to_dict()
+            moopFrame.loc[len(moopFrame)] = [planID, {'Moop Subframe': temp_frame2}]
+        print(moopFrame)
+        # example how to access dataframe for results
+        print(pd.DataFrame(moopFrame[(moopFrame['HIOS Plan ID'] == '29418TX0170023')].iloc[0, 1].get('Moop Subframe')))
 
         # Plan variant information
         VariantInfo = defaultDB.pullData(
             defaultDB.Files_PlanVariant, 
             ['HIOS Plan ID', 'Level of Coverage', 'CSR Variation Type', 'Issuer Actuarial Value', 'AV Calculator Output Number', ' Plan Brochure', 'URL for Summary of Benefits and Coverage', 'HSA Eligible', 'Plan Variant Marketing Name'], 
             # we could probably check if the user qualifies for csr, but it's not a big deal here
-            [possiblePlanIDs, [], [], [], [], [], [], [], [], [], [], []],
+            [possiblePlanIDs, [], [variantVal], [], [], [], [], [], [], [], [], []],
             True)
         variantFrame = pd.DataFrame(VariantInfo)
 
         # -- Retrieve data for each unique plan in the list
-        fullPlanFrame = pd.merge(baseRateFrame, possiblePlanFrame, on='HIOS Plan ID', how='left')
+        fullPlanFrame = pd.merge(possiblePlanFrame, baseRateFrame, on='HIOS Plan ID', how='left')
         fullPlanFrame = pd.merge(fullPlanFrame, variantFrame, on='HIOS Plan ID', how='left')
+        fullPlanFrame = pd.merge(fullPlanFrame, moopFrame, on='HIOS Plan ID', how='left')
         fullPlanFrame = pd.merge(fullPlanFrame, benefitFrame, on='HIOS Plan ID', how='left')
 
-        for planID in possiblePlanIDs:
-            pass
-        # - score plans and rank
+        print("scoring...")
         scores = pd.DataFrame(columns=['HIOS Plan ID', 'Score'])
-        for i in range(len(fullPlanFrame)):
-            scores.loc[len(scores)] = [planID, self.ScorePlan(profile, beneVal, fullPlanFrame.iloc[[i]])]
+        for planID in fullPlanFrame['HIOS Plan ID'].to_list():
+            # - score plans and rank
+            scores.loc[len(scores)] = [planID, self.ScorePlan(profile, beneVal, fullPlanFrame[fullPlanFrame['HIOS Plan ID'] == planID])]
+        print("done scoring")
 
         # take top N plan IDs
         fullPlanFrame = pd.merge(fullPlanFrame, scores, on='HIOS Plan ID', how='left')
@@ -428,6 +446,8 @@ class HISearcher(HIPlanSearchInterface):
 
         print("top plans:")
         print(topPlans)
+        print(pd.DataFrame(topPlans.iloc[0]['MoopSubframe'].get('Moop Subframe')))
+        print(pd.DataFrame(topPlans.loc[0]['MoopSubframe'].get('Moop Subframe'))) # example of how to access moop frame in this version
 
         # -- Return results
         return topPlans
