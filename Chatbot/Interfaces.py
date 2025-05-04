@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
+from typing import List, Optional
 import pandas as pd
 
 # --- type definitions --- #
@@ -14,19 +15,36 @@ databaseId = int
 # TODO: modify this class with necessary fields 
 @dataclass
 class UserProfile:
-    def __init__(self):
-        self.age = ""
-        self.location = ""
-        self.dependents = 0
-        self.desiredPremium = []
+    def __init__(self,
+                 age: int = 0,
+                 location: str = "",
+                 dependents: int = 0,
+                 desiredPremium: tuple[bool, float] = (False, 0.0),
+                 desiredDeductible: tuple[bool, str] = (False, ""),
+                 desiredCopay: tuple[bool, float] = (False, 0.0), # Added default
+                 desiredOOP: tuple[bool, str] = (False, ""),
+                 medications: Optional[List[str]] = None, # Use None as default for mutable list
+                 preferences: str = "",
+                 tobacco_use: bool = False,
+                 **kwargs): # Accept extra keywords if needed, though not used here
+        self.age = age
+        self.location = location
+        self.dependents = dependents
+        self.desiredPremium = desiredPremium
+        self.desiredDeductible = desiredDeductible
+        self.desiredCopay = desiredCopay
+        self.desiredOOP = desiredOOP
+        self.medications = [] if medications is None else medications # Initialize properly
+        self.preferences = preferences
+        self.tobacco_use = tobacco_use
 
-    age: str # age of user (may not be necessary)
+    age: int # age of user (may not be necessary)
     location: str # location of user (to consider in-network)
     dependents: int # number of dependents to consider on a plan. Returned plans should only have >= number of dependents
     desiredPremium: tuple[bool, float] # desired premium, may be omitted
-    desiredDeductible: tuple[bool, float] # desired deductible, may be omitted
+    desiredDeductible: tuple[bool, str] # desired deductible, may be omitted
     desiredCopay: tuple[bool, float] # desired copay amount, may be omitted
-    desiredOOP: tuple[bool, float] # desired out-of-pocket amount, may be omitted
+    desiredOOP: tuple[bool, str] # desired out-of-pocket amount, may be omitted
     medications: list[str] # any medicines that need to be given preference in the search
     preferences: str # other preferences (may not be necessary)
     tobacco_use: bool 
@@ -41,9 +59,9 @@ class HIPlanInfo:
     coverage_level: str # metal tier; shows cost-sharing level; RBIS.INSURANCE_PLAN: Level of Coverage
     service_area_id: str # geographic area, location fit (may not be needed if all returned plans are a location fit); RBIS.INSURANCE_PLAN: Service_Area_ID
     premium: float # monthly premium; RBIS.INSURANCE_PLAN_BASE_RATE_FILE: Individual Rate
-    deductible: float # annual deductible, shows initial out-of-pocket costs; RBIS.INSURANCE_PLAN_VARIANT_DDCTL_MOOP: Insurance Plan Individual Deductible Amount
+    deductible: str # annual deductible, shows initial out-of-pocket costs; RBIS.INSURANCE_PLAN_VARIANT_DDCTL_MOOP: Insurance Plan Individual Deductible Amount
     copay: float # fixed amount paid for each service; RBIS.INSURANCE_PLAN_BENEFIT_COST_SHARE: Co Payment
-    out_of_pocket_max: float # max annual out-of-pocket expenses; RBIS.INSURANCE_PLAN_VARIANT_DDCTBL_MOOP: Insurance Plan Annual Out of Pocket Limit Amount
+    out_of_pocket_max: str # max annual out-of-pocket expenses; RBIS.INSURANCE_PLAN_VARIANT_DDCTBL_MOOP: Insurance Plan Annual Out of Pocket Limit Amount
     covered_medications: list[str] # list of covered medications; RBIS.INSURANCE_PLAN_BENEFITS: Benefit
     num_dependents: int
     couple_or_primary: str
