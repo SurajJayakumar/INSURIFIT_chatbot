@@ -228,8 +228,159 @@ class HISearcher(HIPlanSearchInterface):
     def __init__(self):
         return
 
-    def RetrievePlanInfo(PlanID: str) -> HIPlanInfo:
-        return None
+    def RetrievePlanInfo(self, plan_id: str, profile: UserProfile) -> HIPlanInfo|None:
+        """
+        Fetches detailed information for a single plan ID from various CSV files
+        using the HIDatabase instance (defaultDB).
+        Returns a populated HIPlanInfo object or None if essential data is missing.
+        """
+        print(f"    Retrieving details for Plan ID: {plan_id}")
+        if not plan_id or not defaultDB:
+            print("      Error: Invalid plan_id or database instance.")
+            return None
+
+        # Use a dictionary to gather info before creating the object
+        plan_data = {'plan_id': plan_id}
+
+        try:
+            # --- 1. Get Overview Data ---
+            overview_cols = ['HIOS Plan ID', 'Plan Marketing Name', 'Market Coverage',
+                             'Service Area ID', 'Plan Type', 'Level of Coverage']
+            # Filter by the specific plan ID
+            overview_info = defaultDB.pullData(defaultDB.Files_Overview, overview_cols,
+                                              [[plan_id], [], [], [], [], []], True)
+            if not overview_info:
+                print(f"      Error: No overview data found for Plan ID {plan_id}")
+                # Decide if this is critical; maybe return None or continue with defaults
+                return None
+            # Assuming plan_id is unique in overview, take the first result
+            plan_data.update(overview_info[0])
+            print(f"      Fetched overview: Name='{plan_data.get('Plan Marketing Name')}', Level='{plan_data.get('Level of Coverage')}'")
+
+            # --- 2. Get Base Rate (Premium) ---
+            # Requires age, tobacco status, and rating area for accuracy
+            ageVal = ""
+            if profile.age <= 14: ageVal = "0-14"
+            elif profile.age >= 64: ageVal = "64 and over"
+            else: ageVal = str(profile.age)
+
+            if profile.tobacco_use is True: tobaccoVal = ["Tobacco User"]
+            elif profile.tobacco_use is False: tobaccoVal = ["Non-Tobacco User"]
+            else: tobaccoVal = ["Non-Tobacco User", "Tobacco User/Non-Tobacco User"] # Fallback?
+
+            groupVal = "Individual" if profile.dependents == 0 else "Small Group"
+            rating_area_cols = ['Rating Area ID', 'Market', 'County']
+            ratingAreaInfo = defaultDB.pullData(defaultDB.Files_RatingArea, rating_area_cols,
+                                               [[], [groupVal], [profile.location]], True)
+            ratingAreaNames = []
+            if ratingAreaInfo:
+                rating_df = pd.DataFrame(ratingAreaInfo)
+                ratingAreaInts = pd.to_numeric(rating_df['Rating Area ID'], errors='coerce').dropna().unique()
+                ratingAreaNames = [f"Rating Area {int(id)}" for id in ratingAreaInts]
+
+            rate_cols = ['Plan ID', 'Age', 'Tobacco', 'Rating Area ID', 'Individual Rate', 'Individual Tobacco Rate']
+            rate_info_list = []
+            for rate_file in defaultDB.Files_BaseRate:
+                # Fetch all rates for this plan ID first, then filter
+                chunk_rate_info = defaultDB.pullData(rate_file, rate_cols, [[plan_id], [], [], [], [], []], True)
+                rate_info_list.extend(chunk_rate_info)
+
+            effective_rate = None
+            if rate_info_list:
+                rate_df = pd.DataFrame(rate_info_list)
+                rate_df = rate_df[rate_df['Age'] == ageVal]
+                rate_df = rate_df[rate_df['Tobacco'].isin(tobaccoVal)]
+                if ratingAreaNames:
+                    rate_df = rate_df[rate_df['Rating Area ID'].isin(ratingAreaNames)]
+
+                if not rate_df.empty:
+                    rate_df['Effective Rate'] = pd.to_numeric(rate_df['Individual Rate'], errors='coerce')
+                    if profile.tobacco_use is True:
+                        tobacco_rate = pd.to_numeric(rate_df['Individual Tobacco Rate'], errors='coerce')
+                        rate_df['Effective Rate'] = rate_df['Effective Rate'].mask(tobacco_rate.notna(), tobacco_rate)
+                    valid_rates = rate_df['Effective Rate'].dropna()
+                    if not valid_rates.empty: effective_rate = valid_rates.min() # Get lowest applicable rate
+
+            plan_data['premium'] = effective_rate
+            print(f"      Fetched premium: {effective_rate}")
+
+
+            # --- 3. Get Deductible / OOP Max ---
+            # Assumes columns like 'Individual Deductible', 'Individual MOOP' exist
+            # May need filtering by CSR Variation Type if applicable (e.g., 'Standard')
+            ddctbl_cols = [
+                #TODO
+            ]
+            ddctbl_info = defaultDB.pullData(defaultDB.Files_DDCTBL_MOOP, ddctbl_cols, [[plan_id], [], []], True)
+            if ddctbl_info:
+                # Simplistic: take the first row found. May need logic for CSR variations.
+                plan_data['deductible'] = pd.to_numeric(ddctbl_info[0].get('Individual Deductible'), errors='coerce')
+                plan_data['out_of_pocket_max'] = pd.to_numeric(ddctbl_info[0].get('Individual MOOP'), errors='coerce')
+            else:
+                plan_data['deductible'] = None
+                plan_data['out_of_pocket_max'] = None
+            print(f"      Fetched deductible: {plan_data['deductible']}, OOP Max: {plan_data['out_of_pocket_max']}")
+
+
+            # --- 4. Get Copay (Example: Primary Care Visit) ---
+            # Assumes columns like 'Benefit Name', 'Copay In Network Tier 1' exist
+            cost_share_cols = ['HIOS Plan ID', 'Benefit Name', 'Copay In Network Tier 1'] # ADJUST COLUMN NAMES!
+            # Filter by plan ID and the specific benefit you want the copay for
+            cost_share_info = defaultDB.pullData(defaultDB.Files_BenefitCost, cost_share_cols,
+                                                [[plan_id], ["Primary Care Visit to Treat an Injury or Illness"], []], True)
+            if cost_share_info:
+                 # Simplistic: take the first row. May need tier/CSR logic.
+                 plan_data['copay'] = pd.to_numeric(cost_share_info[0].get('Copay In Network Tier 1'), errors='coerce')
+            else:
+                 plan_data['copay'] = None
+            print(f"      Fetched primary care copay: {plan_data['copay']}")
+
+
+            # --- 5. Get Covered Medications (Example - Needs Refinement) ---
+            # This is complex. You'd likely need to query Files_Benefits for relevant
+            # pharmacy/drug benefits and potentially cross-reference with a formulary file (not listed).
+            # Placeholder:
+            plan_data['covered_medications'] = ["Metformin", "Lisinopril"] # Replace with actual logic
+            print(f"      Fetched covered meds (placeholder): {plan_data['covered_medications']}")
+
+
+            # --- 6. Determine In-Network Status (Example - Needs Refinement) ---
+            # Compare plan's Service Area ID (from overview_data) with user's county/location.
+            # Requires more robust logic based on your service area definitions.
+            # Placeholder:
+            plan_data['in_network'] = True # Assume true for now
+            print(f"      Determined in_network (placeholder): {plan_data['in_network']}")
+
+
+            # --- 7. Determine Num Dependents Covered / Couple Status ---
+            # This might come from plan variant data or overview. Using estimates.
+            plan_data['num_dependents'] = profile.dependents # Estimate based on user profile
+            plan_data['couple_or_primary'] = "Couple" if profile.dependents > 0 else "Primary Only" # Estimate
+            print(f"      Determined dependents/couple (estimate): Deps={plan_data['num_dependents']}, Type='{plan_data['couple_or_primary']}'")
+
+
+            # --- Create HIPlanInfo Object ---
+            # Use .get() with defaults for all fields for safety
+            info_obj = HIPlanInfo(
+                plan_marketing_name=plan_data.get('Plan Marketing Name', 'N/A'),
+                in_network=plan_data.get('in_network', False),
+                coverage_level=plan_data.get('Level of Coverage', 'Unknown'),
+                service_area_id=plan_data.get('Service Area ID', 'N/A'),
+                premium=plan_data.get('premium'), # Already fetched/converted
+                deductible=plan_data.get('deductible'), # Already fetched/converted
+                copay=plan_data.get('copay'), # Already fetched/converted
+                out_of_pocket_max=plan_data.get('out_of_pocket_max'), # Already fetched/converted
+                covered_medications=plan_data.get('covered_medications', []),
+                num_dependents=plan_data.get('num_dependents', 0),
+                couple_or_primary=plan_data.get('couple_or_primary', 'Unknown')
+                # Add any other fields required by HIPlanInfo constructor
+            )
+            print(f"    Successfully created HIPlanInfo object for {plan_id}")
+            return info_obj
+
+        except Exception as e:
+            print(f"      Error during detail retrieval for Plan ID {plan_id}: {e}")
+            return None
 
     # can score 1 point per category base, multiplied by field weights
     def ScorePlan(self, profile: UserProfile, benefitList: list, plan: pd.DataFrame) -> float:
@@ -247,7 +398,7 @@ class HISearcher(HIPlanSearchInterface):
         # score base rate
         # 1 point for low rate; account for tobacco usage
         score_BaseRate = 0.0
-        useTobaccoRate = True #profile.tobacco #TODO: edit me to use profile tobacco
+        useTobaccoRate = profile.tobacco_use
         tobacco_rate = 0.0
         if 'Tobacco' in validColumns and planFrame['Tobacco'].iloc[0] == "No Preference":
             useTobaccoRate = False
@@ -432,23 +583,16 @@ class HISearcher(HIPlanSearchInterface):
         # -- Return results
         return topPlans
 
-def testFunc():
+def testFunc(age:int,desired_benefits:str,dependent_no:int,county:str,is_tobacco_user:bool)->list[HIPlan]:
     searcher = HISearcher()
     profile = UserProfile()
-    profile.location = "Dallas"
-    profile.age = 47
-    profile.preferences = "Diabetes"
-    searcher.MatchPlansFromProfile(profile, 10)
-    pass
-
-if __name__ == "__main__":
-
-    # mytext = "I have diabetes and need tier 3 drugs."
-
-    # print(extractEntities(mytext, dec.BENEFIT_LABELS, 70))
+    profile.location = county
+    profile.tobacco_use=is_tobacco_user
+    profile.dependents=dependent_no
+    profile.age = age
+    profile.preferences = desired_benefits
+    topPlans=searcher.MatchPlansFromProfile(profile, 5)
+    return topPlans
     
-    executionTime = timeit.timeit(testFunc, number=1)
-    print(f"Execution time: {executionTime:.4f} seconds")
-    
-    # print(db.GetServicerInfoForCountyp("EL PASO"))
+
 
