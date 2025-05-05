@@ -308,35 +308,50 @@ class HISearcher(HIPlanSearchInterface):
             #DEDUCTIBLE AND OUT OF POCKET(NOT WORKING AS OF NOW TODO)
             
             ddctbl_cols = [
-                'Insurance Plan Identifier', 'Network Category Type Code', 'Insurance Plan Annual Out Of Pocket Limit Amount Per Person','Insurance Plan Annual Out Of Pocket Limit Amount Per Group'
+                'Insurance Plan Identifier', 'Insurance Plan Variant Component Type Name', 'Network Category Type Code', 'Insurance Plan Family Deductible Amount \ Insurance Plan Annual Out Of Pocket Limit Amount Per Person'
             ]
-            ddctbl_info = defaultDB.pullData(defaultDB.Files_DDCTBL_MOOP, ddctbl_cols, [[plan_id], ['In Network'], [],[]], True)
+            ddctbl_info = defaultDB.pullData(defaultDB.Files_DDCTBL_MOOP, ddctbl_cols, [[plan_id],  ['Non-Exchange variant'], ['In Network'], []], True)
             deductible_str = None
             oop_max_str = None
             if ddctbl_info:
-                first_match = ddctbl_info[0] # Assuming first match is relevant
+                ddctbl_row = ddctbl_info[0] # Assuming first match is relevant
+                moop_row = ddctbl_info[1]
+                num_ppl = 1 + profile.dependents
 
                 # Get the string value for the 'Per Person' limit
-                raw_deductible = first_match.get('Insurance Plan Annual Out Of Pocket Limit Amount Per Person')
+                raw_deductible = ddctbl_row.get('Insurance Plan Family Deductible Amount \ Insurance Plan Annual Out Of Pocket Limit Amount Per Person')
                 if raw_deductible is not None:
                     deductible_str = str(raw_deductible).strip()
                     # Remove " per person" suffix (case-insensitive)
                     suffix_index_person = deductible_str.lower().find(' per person')
                     if suffix_index_person != -1:
                         deductible_str = deductible_str[:suffix_index_person].strip()
+                    try:
+                        deductible_value = float(deductible_str.replace('$', '').replace(',', ''))
+                        total_deductible = deductible_value * num_ppl
+                        deductible_str = f"${total_deductible:,.2f}"
+                    except ValueError:
+                        deductible_str = "Not Available"
                 else:
                     deductible_str = "Not Available"
 
                 # Get the string value for the 'Per Group' limit
-                raw_oop_max = first_match.get('Insurance Plan Annual Out Of Pocket Limit Amount Per Group')
+                raw_oop_max = moop_row.get('Insurance Plan Family Deductible Amount \ Insurance Plan Annual Out Of Pocket Limit Amount Per Person')
                 if raw_oop_max is not None:
                     oop_max_str = str(raw_oop_max).strip()
-                    # Remove " per group" suffix (case-insensitive)
-                    suffix_index_group = oop_max_str.lower().find(' per group')
-                    if suffix_index_group != -1:
-                        oop_max_str = oop_max_str[:suffix_index_group].strip()
+                    # Remove " per person" suffix
+                    suffix_index_person = oop_max_str.lower().find(' per person')
+                    if suffix_index_person != -1:
+                        oop_max_str = oop_max_str[:suffix_index_person].strip()
+                    try:
+                        oop_max_value = float(oop_max_str.replace('$', '').replace(',', ''))
+                        total_oop_max = oop_max_value * num_ppl
+                        oop_max_str = f"${total_oop_max:,.2f}"
+                    except ValueError:
+                        oop_max_str = "Not Available"
                 else:
                     oop_max_str = "Not Available"
+
             else:
                 deductible_str = "Not Available"
                 oop_max_str = "Not Available"
@@ -346,15 +361,6 @@ class HISearcher(HIPlanSearchInterface):
             plan_data['deductible'] = deductible_str
             plan_data['out_of_pocket_max'] = oop_max_str
             print(f"      Fetched and cleaned deductible string: '{plan_data['deductible']}', OOP Max string: '{plan_data['out_of_pocket_max']}'")
-            # if ddctbl_info:
-            #     print(f"XXXXXXXXXXX{ddctbl_info}")
-            #     # Simplistic: take the first row found. May need logic for CSR variations.
-            #     plan_data['deductible'] = pd.to_numeric(ddctbl_info[0].get('Insurance Plan Annual Out Of Pocket Limit Amount Per Person'), errors='coerce')
-            #     plan_data['out_of_pocket_max'] = pd.to_numeric(ddctbl_info[0].get('Insurance Plan Annual Out Of Pocket Limit Amount Per Group'), errors='coerce')
-            # else:
-            #     plan_data['deductible'] = None
-            #     plan_data['out_of_pocket_max'] = None
-            # print(f"      Fetched deductible: {plan_data['deductible']}, OOP Max: {plan_data['out_of_pocket_max']}")
 
 
             # --- 4. Get coinsurance (Example: Primary Care Visit) ---
@@ -676,7 +682,7 @@ def main_test_retrieval():
     test_profile = UserProfile(
         age=44,
         location="brown",
-        dependents=0,
+        dependents=1,
         desiredPremium=(True, 300.00),       
         desiredDeductible=(True, 1500.00),    
         desiredCopay=(True, 40.00),           
