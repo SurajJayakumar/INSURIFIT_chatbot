@@ -5,3 +5,5 @@
  - Suraj Jayakumar 
  - Kevin Smith
  - Joshua Martin
+
+Run app.py, Deploy using ngrok
