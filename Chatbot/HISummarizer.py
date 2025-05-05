@@ -104,6 +104,13 @@ class HISummarizer():
 
         # Construct details safely using getattr and formatting helpers
         plan_details = (
+            f"This is a {coverage_level} health insurance plan called {name} (ID: {plan.id}, Match Score: {plan.score:.2f}). "
+            f"It is {in_network_string} and covers one person and up to 3 dependents. "
+            f"The deductible is ${deductible:.2f}, "
+            f"monthly premium is ${premium:.2f}"
+            #f"copay is ${copay:.2f} "
+            f"and out-of-pocket maximum is ${oop_max:.2f}."
+            f"It covers these medications: {covered_medications}"
             f"This is a {coverage_level} health insurance plan called '{name}' (ID: {plan_id}, Match Score: {score:.2f}). "
             f"It is {in_network_string} and covers a {couple_or_primary} plus {num_dependents} dependents. "
             f"The deductible is {deductible}, "
