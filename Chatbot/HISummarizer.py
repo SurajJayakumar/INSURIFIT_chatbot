@@ -1,13 +1,73 @@
 from Interfaces import *
+from HISearcher import *
 from google import genai
+import pandas as pd
 
 
 class HISummarizer():
-    def __init__(self):
+    def __init__(self, user: UserProfile):
         """
         Initialize HIFormatter with NLP text generation.
         """
         self.client = genai.Client(api_key="AIzaSyD9AbZEe1YMquELbS7v9pZs3LBsk4imvDQ")
+        self.user = user
+
+    def create_plan_from_dataframe(self, df: pd.Series) -> HIPlan:
+        plan_marketing_name = df.get('Plan Marketing Name')
+        if pd.isna(plan_marketing_name):
+            raise ValueError("Missing required field: 'Plan Marketing Name'")
+        
+        in_network = True
+        coverage_level = df.get('Level of Coverage')
+        if pd.isna(coverage_level):
+            raise ValueError("Missing required field: 'Level of Coverage'")
+        
+        service_area_id = df.get('Service Area ID')
+        if pd.isna(service_area_id):
+            raise ValueError("Missing required field: 'Service Area ID'")
+        
+        premium_col = "Individual Tobacco Rate" if self.user.tobacco_use == True else "Individual Rate"
+        premium = df.get(premium_col)
+        if pd.isna(premium):
+            raise ValueError("Missing required field: 'Individual Rate/Individual Tobacco Rate'")
+        
+        ddctbl_moop_frame = df.get('MoopSubframe')
+        deductible_row = ddctbl_moop_frame.iloc[1]
+        moop_row = ddctbl_moop_frame.iloc[4]
+
+        ddctbl_moop_col = "Insurance Plan Individual Deductible Amount \ Insurance Plan Annual Out Of Pocket Limit Amount"
+        deductible = deductible_row.get(ddctbl_moop_col)
+        moop = moop_row.get(ddctbl_moop_col)
+        if self.user.dependents != None and self.user.dependents > 0:
+            deductible *= 2
+            moop *= 2
+
+        if pd.isna(deductible):
+            raise ValueError("Missing required field: 'Deductible'")
+        
+        if pd.isna(moop):
+            raise ValueError("Missing required field: 'Deductible'")
+        
+        benefits = df.get('Benefits')
+        if not benefits or 'Benefit Array' not in benefits:
+            raise ValueError("Missing or malformed 'Benefits' data")
+        
+        covered_medications = benefits['Benefit Array']
+
+        score = df.get('Score')
+
+        info = HIPlanInfo(plan_marketing_name = plan_marketing_name,
+            in_network = in_network,
+            coverage_level = coverage_level,
+            service_area_id = service_area_id,
+            premium = premium,
+            deductible = deductible,
+            # copay = 30.00,
+            out_of_pocket_max = moop,
+            covered_medications = covered_medications,
+        )
+
+        return info
 
     def summarize_plan(self, plan: HIPlan) -> str:
         """
@@ -28,11 +88,9 @@ class HISummarizer():
         area_id = info.service_area_id
         premium = info.premium
         deductible = info.deductible
-        copay = info.copay
+        #copay = info.copay
         oop_max = info.out_of_pocket_max
         covered_medications = info.covered_medications
-        num_dependents = info.num_dependents
-        couple_or_primary = info.couple_or_primary
 
         in_network_string = "in network"
         if in_network == False:
@@ -41,10 +99,10 @@ class HISummarizer():
 
         plan_details = (
             f"This is a {coverage_level} health insurance plan called {name} (ID: {plan.id}, Match Score: {plan.score:.2f}). "
-            f"It is {in_network} and covers a {couple_or_primary} and {num_dependents} dependents. "
+            f"It is {in_network_string} and covers one person and up to 3 dependents. "
             f"The deductible is ${deductible:.2f}, "
             f"monthly premium is ${premium:.2f}"
-            f"copay is ${copay:.2f} "
+            #f"copay is ${copay:.2f} "
             f"and out-of-pocket maximum is ${oop_max:.2f}."
             f"It covers these medications: {covered_medications}"
         )
@@ -60,7 +118,7 @@ class HISummarizer():
         return generated.text
 
     
-    def compare_plan_and_preferences(self, user: UserProfile, plan: HIPlan) -> str:
+    def compare_plan_and_preferences(self, plan: HIPlan) -> str:
         """
         Compare a health insurance plan to user preferences and explain why it’s good or bad.
         
@@ -79,50 +137,50 @@ class HISummarizer():
         info = plan.info
 
         # Location
-        if user.location:
+        if self.user.location:
             if info.in_network:
-                pros.append(f"in-network for {user.location}, keeping costs low")
+                pros.append(f"in-network for {self.user.location}, keeping costs low")
             else:
-                cons.append(f"out-of-network in {user.location}, which may increase costs")
+                cons.append(f"out-of-network in {self.user.location}, which may increase costs")
 
         # Dependents
-        if user.dependents > 0:
-            if info.num_dependents >= user.dependents:
-                pros.append(f"covers {info.num_dependents} people, enough for your {user.dependents} dependents")
+        if self.user.dependents > 0:
+            if 3 >= self.user.dependents:
+                pros.append(f"covers up to 3 dependents, enough for your {self.user.dependents} dependents")
             else:
-                cons.append(f"only covers {plan.num_covered} people, not enough for your {user.dependents} dependents")
+                cons.append(f"only covers 3 dependents, not enough for your {self.user.dependents} dependents")
 
         # Premium
-        if user.desiredPremium[0]:
-            if info.premium <= user.desiredPremium[1]:
-                pros.append(f"premium of ${info.premium:.2f} fits your budget of ${user.desiredPremium[1]:.2f}")
+        if self.user.desiredPremium[0]:
+            if info.premium <= self.user.desiredPremium[1]:
+                pros.append(f"premium of ${info.premium:.2f} fits your budget of ${self.user.desiredPremium[1]:.2f}")
             else:
-                cons.append(f"premium of ${info.premium:.2f} exceeds your budget of ${user.desiredPremium[1]:.2f}")
+                cons.append(f"premium of ${info.premium:.2f} exceeds your budget of ${self.user.desiredPremium[1]:.2f}")
 
         # Deductible
-        if user.desiredDeductible[0]:
-            if info.deductible <= user.desiredDeductible[1]:
-                pros.append(f"deductible of ${info.deductible:.2f} within your limit of ${user.desiredDeductible[1]:.2f}")
+        if self.user.desiredDeductible[0]:
+            if info.deductible <= self.user.desiredDeductible[1]:
+                pros.append(f"deductible of ${info.deductible:.2f} within your limit of ${self.user.desiredDeductible[1]:.2f}")
             else:
-                cons.append(f"deductible of ${info.deductible:.2f} exceeds your limit of ${user.desiredDeductible[1]:.2f}")
+                cons.append(f"deductible of ${info.deductible:.2f} exceeds your limit of ${self.user.desiredDeductible[1]:.2f}")
 
-        # Copay
-        if user.desiredCopay[0]:
-            if info.copay <= user.desiredCopay[1]:
-                pros.append(f"copay of ${info.copay:.2f} meets your target of ${user.desiredCopay[1]:.2f}")
-            else:
-                cons.append(f"copay of ${info.copay:.2f} higher than your target of ${user.desiredCopay[1]:.2f}")
+        # # Copay
+        # if self.user.desiredCopay[0]:
+        #     if info.copay <= self.user.desiredCopay[1]:
+        #         pros.append(f"copay of ${info.copay:.2f} meets your target of ${self.user.desiredCopay[1]:.2f}")
+        #     else:
+        #         cons.append(f"copay of ${info.copay:.2f} higher than your target of ${self.user.desiredCopay[1]:.2f}")
 
         # Out-of-pocket max
-        if user.desiredOOP[0]:
-            if info.out_of_pocket_max <= user.desiredOOP[1]:
-                pros.append(f"out-of-pocket max of ${info.out_of_pocket_max:.2f} within your limit of ${user.desiredOOP[1]:.2f}")
+        if self.user.desiredOOP[0]:
+            if info.out_of_pocket_max <= self.user.desiredOOP[1]:
+                pros.append(f"out-of-pocket max of ${info.out_of_pocket_max:.2f} within your limit of ${self.user.desiredOOP[1]:.2f}")
             else:
-                cons.append(f"out-of-pocket max of ${info.out_of_pocket_max:.2f} exceeds your limit of ${user.desiredOOP[1]:.2f}")
+                cons.append(f"out-of-pocket max of ${info.out_of_pocket_max:.2f} exceeds your limit of ${self.user.desiredOOP[1]:.2f}")
 
         # Medications
-        if user.medications:
-            uncovered = [med for med in user.medications if med not in info.covered_medications]
+        if self.user.medications:
+            uncovered = [med for med in self.user.medications if med not in info.covered_medications]
             if not uncovered:
                 pros.append("covers all your medications")
             else:
@@ -148,41 +206,27 @@ class HISummarizer():
         return generated.text
         
 def main():
-    summarizer = HISummarizer()
-
-    id = 1
-    rank = 1
-    score = 1
+    searcher = HISearcher()
 
     user = UserProfile(
-        age="44",
-        location="TX001",
+        age=44,
+        location="Collin",
         dependents=2,
         desiredPremium=(True, 300.00),       
         desiredDeductible=(True, 1500.00),    
-        desiredCopay=(True, 40.00),           
+        # desiredCopay=(True, 40.00),           
         desiredOOP=(True, 8000.00),           
         medications=["Metformin", "Atorvastatin"],
-        preferences="Looking for in-network plans with solid coverage for a couple and kids",
+        preferences="",
         tobacco_use=False
     )
 
-    info = HIPlanInfo(plan_marketing_name = "HealthyChoice Silver",
-        in_network = True,
-        coverage_level = "Silver",
-        service_area_id = "TX001",
-        premium = 350.50,
-        deductible = 2000.00,
-        copay = 30.00,
-        out_of_pocket_max = 7500.00,
-        covered_medications = ["Metformin", "Atorvastatin"],
-        num_dependents = 3,
-        couple_or_primary = "Couple"
-    )
+    summarizer = HISummarizer(user=user)
 
-    plan = HIPlan(id=id, rank=rank, score=score, info=info)
-    
-    summarizer.compare_plan_and_preferences(plan=plan, user=user)
+    plans = searcher.MatchPlansFromProfile(user, 3)
+    first_plan = plans.iloc[0]
+
+    plan = summarizer.create_plan_from_dataframe(first_plan)
 
 if __name__ == "__main__":
     main()
