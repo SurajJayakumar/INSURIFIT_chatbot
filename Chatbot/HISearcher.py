@@ -295,15 +295,21 @@ class HISearcher(HIPlanSearchInterface):
                     
                 if not rate_df.empty:
                     
-                    rate_df['Effective Rate'] = pd.to_numeric(rate_df['Individual Rate'], errors='coerce')
+                    dependent_rates = pd.to_numeric(rate_df['Individual Rate'], errors='coerce')
+                    effective_dependent_rate = dependent_rates.min()
                     if profile.tobacco_use is True:
                         tobacco_rate = pd.to_numeric(rate_df['Individual Tobacco Rate'], errors='coerce')
                         rate_df['Effective Rate'] = rate_df['Effective Rate'].mask(tobacco_rate.notna(), tobacco_rate)
+                    else:
+                        rate_df['Effective Rate'] = dependent_rates
                     valid_rates = rate_df['Effective Rate'].dropna()
                     if not valid_rates.empty: effective_rate = valid_rates.min() # Get lowest applicable rate
 
-            plan_data['premium'] = effective_rate
-            print(f"      Fetched premium: {effective_rate}")
+            premium = effective_rate
+            if profile.dependents > 0:
+                premium = effective_rate + profile.dependents * effective_dependent_rate
+            plan_data['premium'] = premium
+            print(f"      Fetched premium: {premium}")
 
             #DEDUCTIBLE AND OUT OF POCKET(NOT WORKING AS OF NOW TODO)
             
@@ -407,8 +413,7 @@ class HISearcher(HIPlanSearchInterface):
             # --- 7. Determine Num Dependents Covered / Couple Status ---
             # This might come from plan variant data or overview. Using estimates.
             plan_data['num_dependents'] = profile.dependents # Estimate based on user profile
-            plan_data['couple_or_primary'] = "Couple" if profile.dependents > 0 else "Primary Only" # Estimate
-            print(f"      Determined dependents/couple (estimate): Deps={plan_data['num_dependents']}, Type='{plan_data['couple_or_primary']}'")
+            print(f"      Determined dependents/couple (estimate): Deps={plan_data['num_dependents']}'")
 
 
             # --- Create HIPlanInfo Object ---
@@ -424,7 +429,6 @@ class HISearcher(HIPlanSearchInterface):
                 out_of_pocket_max=plan_data.get('out_of_pocket_max'), # Already fetched/converted
                 covered_medications=plan_data.get('covered_medications', []),
                 num_dependents=plan_data.get('num_dependents', 0),
-                couple_or_primary=plan_data.get('couple_or_primary', 'Unknown')
                 # Add any other fields required by HIPlanInfo constructor
             )
             print(f"    Successfully created HIPlanInfo object for {plan_id}")
