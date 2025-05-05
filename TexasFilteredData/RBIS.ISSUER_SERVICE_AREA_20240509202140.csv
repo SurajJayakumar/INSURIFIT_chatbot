@@ -1,0 +1,2338 @@
+HIOS Issuer ID,Service Area ID,Service Area Name,State,County Name,Partial County,Service Area Zip Code (s) ,Partial County Justification,Market
+30609,TXS001,Service Area One,No,BRAZORIA,No,,,Individual
+30609,TXS001,Service Area One,No,FORT BEND,No,,,Individual
+30609,TXS001,Service Area One,No,GALVESTON,No,,,Individual
+30609,TXS001,Service Area One,No,HARRIS,No,,,Individual
+30609,TXS001,Service Area One,No,MONTGOMERY,No,,,Individual
+30609,TXS001,Service Area One,No,WALKER,No,,,Individual
+30609,TXS001,Service Area One,No,WALLER,No,,,Individual
+30609,TXS001,Service Area One,No,WHARTON,No,,,Individual
+87226,TXS001,Ambetter from Superior Healthplan 1 Value,No,TRAVIS,No,,,Individual
+87226,TXS001,Ambetter from Superior Healthplan 1 Value,No,WILLIAMSON,No,,,Individual
+87226,TXS002,Ambetter from Superior Healthplan 2 Value,No,COLLIN,No,,,Individual
+87226,TXS002,Ambetter from Superior Healthplan 2 Value,No,DALLAS,No,,,Individual
+87226,TXS002,Ambetter from Superior Healthplan 2 Value,No,DENTON,No,,,Individual
+87226,TXS002,Ambetter from Superior Healthplan 2 Value,No,ROCKWALL,No,,,Individual
+87226,TXS002,Ambetter from Superior Healthplan 2 Value,No,TARRANT,No,,,Individual
+87226,TXS003,Ambetter from Superior Healthplan 3 Value,No,FORT BEND,No,,,Individual
+87226,TXS003,Ambetter from Superior Healthplan 3 Value,No,HARRIS,No,,,Individual
+87226,TXS003,Ambetter from Superior Healthplan 3 Value,No,MONTGOMERY,No,,,Individual
+87226,TXS004,Ambetter from Superior Healthplan 4 Value,No,BEXAR,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,ANDREWS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,ARANSAS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,ARMSTRONG,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,ATASCOSA,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,AUSTIN,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,BANDERA,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,BASTROP,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,BELL,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,BEXAR,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,BLANCO,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,BOSQUE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,BRAZORIA,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,BRAZOS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,BREWSTER,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,BROOKS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,BROWN,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,BURLESON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,BURNET,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,CALDWELL,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,CALHOUN,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,CAMERON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,CAMP,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,CARSON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,CASTRO,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,CHAMBERS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,CHEROKEE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,COKE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,COLEMAN,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,COLLIN,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,COLLINGSWORTH,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,COLORADO,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,COMAL,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,COMANCHE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,CONCHO,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,COOKE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,DALLAM,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,DALLAS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,DEAF SMITH,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,DELTA,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,DENTON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,DE WITT,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,DONLEY,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,ECTOR,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,EDWARDS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,ELLIS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,EL PASO,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,FALLS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,FANNIN,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,FAYETTE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,FISHER,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,FORT BEND,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,FREESTONE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,FRIO,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,GALVESTON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,GILLESPIE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,GOLIAD,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,GONZALES,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,GRAY,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,GRAYSON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,GREGG,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,GRIMES,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,GUADALUPE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,HAMILTON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,HARDIN,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,HARRIS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,HARTLEY,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,HAYS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,HENDERSON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,HIDALGO,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,HILL,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,HOOD,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,HOUSTON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,HUNT,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,IRION,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,JACK,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,JACKSON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,JEFFERSON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,JOHNSON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,KENDALL,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,KERR,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,KIMBLE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,KINNEY,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,LAMPASAS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,LAVACA,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,LEE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,LEON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,LIBERTY,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,LIMESTONE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,LLANO,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,MCCULLOCH,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,MCLENNAN,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,MADISON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,MASON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,MATAGORDA,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,MAVERICK,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,MEDINA,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,MENARD,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,MILAM,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,MILLS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,MITCHELL,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,MONTAGUE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,MONTGOMERY,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,NACOGDOCHES,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,NAVARRO,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,NUECES,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,OLDHAM,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,ORANGE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,PALO PINTO,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,PANOLA,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,PARKER,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,PARMER,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,POTTER,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,RAINS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,RANDALL,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,REAL,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,REFUGIO,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,ROBERTSON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,ROCKWALL,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,RUNNELS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,RUSK,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,SAN JACINTO,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,SAN SABA,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,SCHLEICHER,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,SCURRY,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,SHERMAN,No,,,Individual
+17933,TXS001,Moda Select,No,HAYS,No,,,Individual
+17933,TXS001,Moda Select,No,TRAVIS,No,,,Individual
+17933,TXS001,Moda Select,No,WILLIAMSON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,SMITH,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,SOMERVELL,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,STARR,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,STERLING,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,STONEWALL,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,SUTTON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,TARRANT,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,TOM GREEN,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,TRAVIS,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,TRINITY,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,TYLER,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,VAL VERDE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,VAN ZANDT,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,VICTORIA,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,WALKER,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,WALLER,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,WEBB,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,WHARTON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,WHEELER,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,WILLACY,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,WILLIAMSON,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,WISE,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,WOOD,No,,,Individual
+87226,TXS005,Ambetter from Superior Healthplan 5 Virtual,No,ZAPATA,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,AUSTIN,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,BRAZORIA,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,CHAMBERS,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,FORT BEND,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,GALVESTON,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,HARDIN,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,HARRIS,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,JASPER,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,JEFFERSON,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,LIBERTY,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,MATAGORDA,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,MONTGOMERY,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,NEWTON,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,ORANGE,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,POLK,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,SAN JACINTO,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,TYLER,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,WALKER,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,WALLER,No,,,Individual
+27248,TXS001,Community Gulf Coast,No,WHARTON,No,,,Individual
+27248,TXS002,Community Gulf Coast PP,No,HARRIS,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,BROWN,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,CALLAHAN,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,COLEMAN,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,COMANCHE,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,EASTLAND,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,FISHER,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,HASKELL,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,JONES,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,KENT,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,MITCHELL,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,NOLAN,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,RUNNELS,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,SCURRY,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,SHACKELFORD,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,STEPHENS,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,STONEWALL,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,TAYLOR,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,THROCKMORTON,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,ARMSTRONG,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,BRISCOE,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,CARSON,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,CASTRO,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,CHILDRESS,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,COLLINGSWORTH,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,DALLAM,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,DEAF SMITH,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,DONLEY,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,GRAY,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,HALL,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,HANSFORD,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,HARTLEY,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,HEMPHILL,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,HUTCHINSON,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,LIPSCOMB,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,MOORE,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,OCHILTREE,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,OLDHAM,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,PARMER,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,POTTER,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,RANDALL,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,ROBERTS,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,SHERMAN,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,SWISHER,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,WHEELER,No,,,Small Group
+33602,TXS031,Blue Advantage HMO,No,BASTROP,No,,,Small Group
+33602,TXS031,Blue Advantage HMO,No,BLANCO,No,,,Small Group
+33602,TXS031,Blue Advantage HMO,No,BURNET,No,,,Small Group
+33602,TXS031,Blue Advantage HMO,No,CALDWELL,No,,,Small Group
+33602,TXS031,Blue Advantage HMO,No,FAYETTE,No,,,Small Group
+33602,TXS031,Blue Advantage HMO,No,HAYS,No,,,Small Group
+33602,TXS031,Blue Advantage HMO,No,LEE,No,,,Small Group
+33602,TXS031,Blue Advantage HMO,No,LLANO,No,,,Small Group
+33602,TXS031,Blue Advantage HMO,No,TRAVIS,No,,,Small Group
+33602,TXS031,Blue Advantage HMO,No,WILLIAMSON,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,ANGELINA,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,HARDIN,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,HOUSTON,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,JASPER,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,JEFFERSON,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,NACOGDOCHES,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,NEWTON,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,ORANGE,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,POLK,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,SABINE,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,SAN AUGUSTINE,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,SAN JACINTO,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,SHELBY,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,TRINITY,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,TYLER,No,,,Small Group
+33602,TXS051,Blue Advantage HMO,No,CAMERON,No,,,Small Group
+33602,TXS051,Blue Advantage HMO,No,KENEDY,No,,,Small Group
+33602,TXS051,Blue Advantage HMO,No,WILLACY,No,,,Small Group
+33602,TXS061,Blue Advantage HMO,No,BRAZOS,No,,,Small Group
+33602,TXS061,Blue Advantage HMO,No,BURLESON,No,,,Small Group
+33602,TXS061,Blue Advantage HMO,No,GRIMES,No,,,Small Group
+33602,TXS061,Blue Advantage HMO,No,LEON,No,,,Small Group
+33602,TXS061,Blue Advantage HMO,No,MADISON,No,,,Small Group
+33602,TXS061,Blue Advantage HMO,No,MILAM,No,,,Small Group
+33602,TXS061,Blue Advantage HMO,No,ROBERTSON,No,,,Small Group
+33602,TXS061,Blue Advantage HMO,No,WASHINGTON,No,,,Small Group
+33602,TXS071,Blue Advantage HMO,No,ARANSAS,No,,,Small Group
+33602,TXS071,Blue Advantage HMO,No,BEE,No,,,Small Group
+33602,TXS071,Blue Advantage HMO,No,JIM WELLS,No,,,Small Group
+33602,TXS071,Blue Advantage HMO,No,KLEBERG,No,,,Small Group
+33602,TXS071,Blue Advantage HMO,No,LIVE OAK,No,,,Small Group
+33602,TXS071,Blue Advantage HMO,No,NUECES,No,,,Small Group
+33602,TXS071,Blue Advantage HMO,No,REFUGIO,No,,,Small Group
+33602,TXS071,Blue Advantage HMO,No,SAN PATRICIO,No,,,Small Group
+33602,TXS081,Blue Advantage HMO,No,COLLIN,No,,,Small Group
+33602,TXS081,Blue Advantage HMO,No,DALLAS,No,,,Small Group
+33602,TXS081,Blue Advantage HMO,No,ELLIS,No,,,Small Group
+33602,TXS081,Blue Advantage HMO,No,HUNT,No,,,Small Group
+33602,TXS081,Blue Advantage HMO,No,KAUFMAN,No,,,Small Group
+33602,TXS081,Blue Advantage HMO,No,NAVARRO,No,,,Small Group
+33602,TXS081,Blue Advantage HMO,No,ROCKWALL,No,,,Small Group
+33602,TXS091,Blue Advantage HMO,No,BREWSTER,No,,,Small Group
+33602,TXS091,Blue Advantage HMO,No,CULBERSON,No,,,Small Group
+33602,TXS091,Blue Advantage HMO,No,EL PASO,No,,,Small Group
+33602,TXS091,Blue Advantage HMO,No,HUDSPETH,No,,,Small Group
+33602,TXS091,Blue Advantage HMO,No,JEFF DAVIS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,JOHNSON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,JONES,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,KENT,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,KIMBLE,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,KING,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,KNOX,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,LAMB,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,LAMPASAS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,LEE,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,LEON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,LIMESTONE,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,LIPSCOMB,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,LLANO,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,LOVING,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,LUBBOCK,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,LYNN,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,MCCULLOCH,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,MCLENNAN,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,MADISON,No,,,Small Group
+29418,TXS001,Superior Health Plan 1,No,ANDREWS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,ARANSAS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,ARMSTRONG,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,ATASCOSA,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,AUSTIN,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,BANDERA,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,BASTROP,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,BELL,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,BEXAR,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,BLANCO,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,BOSQUE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,BRAZORIA,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,BRAZOS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,BREWSTER,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,BROOKS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,BROWN,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,BURLESON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,BURNET,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,CALDWELL,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,CALHOUN,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,CAMERON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,CAMP,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,CARSON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,CASTRO,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,CHAMBERS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,CHEROKEE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,COKE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,COLEMAN,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,COLLIN,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,COLLINGSWORTH,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,COLORADO,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,COMAL,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,COMANCHE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,CONCHO,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,COOKE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,DALLAM,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,DALLAS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,DEAF SMITH,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,DELTA,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,DENTON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,DE WITT,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,DONLEY,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,ECTOR,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,EDWARDS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,ELLIS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,EL PASO,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,FALLS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,FANNIN,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,FAYETTE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,FISHER,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,FORT BEND,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,FREESTONE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,FRIO,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,GALVESTON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,GILLESPIE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,GOLIAD,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,GONZALES,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,GRAY,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,GRAYSON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,GREGG,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,GRIMES,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,GUADALUPE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,HAMILTON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,HARDIN,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,HARRIS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,HARTLEY,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,HAYS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,HENDERSON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,HIDALGO,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,HILL,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,HOOD,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,HOUSTON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,HUNT,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,IRION,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,JACK,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,JACKSON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,JEFFERSON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,JOHNSON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,KENDALL,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,KERR,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,KIMBLE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,KINNEY,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,LAMPASAS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,LAVACA,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,LEE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,LEON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,LIBERTY,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,LIMESTONE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,LLANO,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,MCCULLOCH,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,MCLENNAN,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,MADISON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,MASON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,MATAGORDA,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,MAVERICK,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,MEDINA,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,MENARD,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,MILAM,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,MILLS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,MITCHELL,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,MONTAGUE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,MONTGOMERY,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,NACOGDOCHES,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,NAVARRO,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,NUECES,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,OLDHAM,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,ORANGE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,PALO PINTO,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,PANOLA,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,PARKER,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,PARMER,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,POTTER,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,RAINS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,RANDALL,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,REAL,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,REFUGIO,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,ROBERTSON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,ROCKWALL,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,RUNNELS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,RUSK,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,SAN JACINTO,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,SAN SABA,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,SCHLEICHER,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,SCURRY,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,SHERMAN,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,SMITH,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,SOMERVELL,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,STARR,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,STERLING,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,STONEWALL,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,SUTTON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,TARRANT,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,TOM GREEN,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,TRAVIS,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,TRINITY,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,TYLER,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,VAL VERDE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,VAN ZANDT,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,VICTORIA,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,WALKER,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,WALLER,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,WEBB,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,WHARTON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,WHEELER,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,WILLACY,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,WILLIAMSON,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,WISE,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,WOOD,No,,,Individual
+29418,TXS001,Superior Health Plan 1,No,ZAPATA,No,,,Individual
+33602,TXS091,Blue Advantage HMO,No,PRESIDIO,No,,,Small Group
+33602,TXS101,Blue Advantage HMO,No,GALVESTON,No,,,Small Group
+33602,TXS101,Blue Advantage HMO,No,HARRIS,No,,,Small Group
+33602,TXS111,Blue Advantage HMO,No,BELL,No,,,Small Group
+33602,TXS111,Blue Advantage HMO,No,CORYELL,No,,,Small Group
+33602,TXS111,Blue Advantage HMO,No,HAMILTON,No,,,Small Group
+33602,TXS111,Blue Advantage HMO,No,LAMPASAS,No,,,Small Group
+33602,TXS111,Blue Advantage HMO,No,MILLS,No,,,Small Group
+33602,TXS111,Blue Advantage HMO,No,SAN SABA,No,,,Small Group
+33602,TXS121,Blue Advantage HMO,No,DUVAL,No,,,Small Group
+33602,TXS121,Blue Advantage HMO,No,JIM HOGG,No,,,Small Group
+33602,TXS121,Blue Advantage HMO,No,MCMULLEN,No,,,Small Group
+33602,TXS121,Blue Advantage HMO,No,WEBB,No,,,Small Group
+33602,TXS121,Blue Advantage HMO,No,ZAPATA,No,,,Small Group
+33602,TXS131,Blue Advantage HMO,No,GREGG,No,,,Small Group
+33602,TXS131,Blue Advantage HMO,No,HARRISON,No,,,Small Group
+33602,TXS131,Blue Advantage HMO,No,MARION,No,,,Small Group
+33602,TXS131,Blue Advantage HMO,No,PANOLA,No,,,Small Group
+33602,TXS131,Blue Advantage HMO,No,RUSK,No,,,Small Group
+33602,TXS131,Blue Advantage HMO,No,UPSHUR,No,,,Small Group
+33602,TXS141,Blue Advantage HMO,No,BAILEY,No,,,Small Group
+33602,TXS141,Blue Advantage HMO,No,COCHRAN,No,,,Small Group
+33602,TXS141,Blue Advantage HMO,No,CROSBY,No,,,Small Group
+33602,TXS141,Blue Advantage HMO,No,DICKENS,No,,,Small Group
+33602,TXS141,Blue Advantage HMO,No,FLOYD,No,,,Small Group
+33602,TXS141,Blue Advantage HMO,No,GARZA,No,,,Small Group
+33602,TXS141,Blue Advantage HMO,No,HALE,No,,,Small Group
+33602,TXS141,Blue Advantage HMO,No,HOCKLEY,No,,,Small Group
+33602,TXS141,Blue Advantage HMO,No,KING,No,,,Small Group
+33602,TXS141,Blue Advantage HMO,No,LAMB,No,,,Small Group
+33602,TXS141,Blue Advantage HMO,No,LUBBOCK,No,,,Small Group
+33602,TXS141,Blue Advantage HMO,No,LYNN,No,,,Small Group
+33602,TXS141,Blue Advantage HMO,No,MOTLEY,No,,,Small Group
+33602,TXS141,Blue Advantage HMO,No,TERRY,No,,,Small Group
+33602,TXS141,Blue Advantage HMO,No,YOAKUM,No,,,Small Group
+33602,TXS151,Blue Advantage HMO,No,BROOKS,No,,,Small Group
+33602,TXS151,Blue Advantage HMO,No,HIDALGO,No,,,Small Group
+33602,TXS011,Blue Advantage HMO,No,BROWN,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,CALLAHAN,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,COLEMAN,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,COMANCHE,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,EASTLAND,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,FISHER,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,HASKELL,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,JONES,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,KENT,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,MITCHELL,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,NOLAN,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,RUNNELS,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,SCURRY,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,SHACKELFORD,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,STEPHENS,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,STONEWALL,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,TAYLOR,No,,,Individual
+33602,TXS011,Blue Advantage HMO,No,THROCKMORTON,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,ARMSTRONG,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,BRISCOE,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,CARSON,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,CASTRO,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,CHILDRESS,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,COLLINGSWORTH,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,DALLAM,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,DEAF SMITH,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,DONLEY,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,GRAY,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,HALL,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,HANSFORD,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,HARTLEY,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,HEMPHILL,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,HUTCHINSON,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,LIPSCOMB,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,MOORE,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,OCHILTREE,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,OLDHAM,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,PARMER,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,POTTER,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,RANDALL,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,ROBERTS,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,SHERMAN,No,,,Individual
+33602,TXS021,Blue Advantage HMO,No,SWISHER,No,,,Individual
+33602,TXS151,Blue Advantage HMO,No,STARR,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,ANDREWS,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,BORDEN,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,CRANE,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,DAWSON,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,ECTOR,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,GAINES,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,GLASSCOCK,No,,,Small Group
+33602,TXS021,Blue Advantage HMO,No,WHEELER,No,,,Individual
+33602,TXS031,Blue Advantage HMO,No,BASTROP,No,,,Individual
+33602,TXS031,Blue Advantage HMO,No,BLANCO,No,,,Individual
+33602,TXS031,Blue Advantage HMO,No,BURNET,No,,,Individual
+33602,TXS031,Blue Advantage HMO,No,CALDWELL,No,,,Individual
+33602,TXS031,Blue Advantage HMO,No,FAYETTE,No,,,Individual
+33602,TXS031,Blue Advantage HMO,No,HAYS,No,,,Individual
+33602,TXS031,Blue Advantage HMO,No,LEE,No,,,Individual
+33602,TXS031,Blue Advantage HMO,No,LLANO,No,,,Individual
+33602,TXS031,Blue Advantage HMO,No,TRAVIS,No,,,Individual
+33602,TXS031,Blue Advantage HMO,No,WILLIAMSON,No,,,Individual
+33602,TXS038,MyBlue Health,No,TRAVIS,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,HOWARD,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,LOVING,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,MARTIN,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,MIDLAND,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,PECOS,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,REEVES,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,TERRELL,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,UPTON,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,WARD,No,,,Small Group
+33602,TXS161,Blue Advantage HMO,No,WINKLER,No,,,Small Group
+33602,TXS171,Blue Advantage HMO,No,COKE,No,,,Small Group
+33602,TXS171,Blue Advantage HMO,No,CONCHO,No,,,Small Group
+33602,TXS171,Blue Advantage HMO,No,CROCKETT,No,,,Small Group
+33602,TXS171,Blue Advantage HMO,No,IRION,No,,,Small Group
+33602,TXS171,Blue Advantage HMO,No,KIMBLE,No,,,Small Group
+33602,TXS171,Blue Advantage HMO,No,MCCULLOCH,No,,,Small Group
+33602,TXS171,Blue Advantage HMO,No,MASON,No,,,Small Group
+33602,TXS171,Blue Advantage HMO,No,MENARD,No,,,Small Group
+33602,TXS171,Blue Advantage HMO,No,REAGAN,No,,,Small Group
+33602,TXS171,Blue Advantage HMO,No,SCHLEICHER,No,,,Small Group
+33602,TXS171,Blue Advantage HMO,No,STERLING,No,,,Small Group
+33602,TXS171,Blue Advantage HMO,No,SUTTON,No,,,Small Group
+33602,TXS171,Blue Advantage HMO,No,TOM GREEN,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,ATASCOSA,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,BANDERA,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,BEXAR,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,COMAL,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,DIMMIT,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,EDWARDS,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,FRIO,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,GILLESPIE,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,GONZALES,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,GUADALUPE,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,KENDALL,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,KERR,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,KINNEY,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,LA SALLE,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,MAVERICK,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,MEDINA,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,REAL,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,UVALDE,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,VAL VERDE,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,WILSON,No,,,Small Group
+33602,TXS181,Blue Advantage HMO,No,ZAVALA,No,,,Small Group
+33602,TXS191,Blue Advantage HMO,No,COOKE,No,,,Small Group
+33602,TXS191,Blue Advantage HMO,No,FANNIN,No,,,Small Group
+33602,TXS191,Blue Advantage HMO,No,GRAYSON,No,,,Small Group
+33602,TXS201,Blue Advantage HMO,No,BOWIE,No,,,Small Group
+33602,TXS201,Blue Advantage HMO,No,CAMP,No,,,Small Group
+33602,TXS201,Blue Advantage HMO,No,CASS,No,,,Small Group
+33602,TXS201,Blue Advantage HMO,No,DELTA,No,,,Small Group
+33602,TXS201,Blue Advantage HMO,No,FRANKLIN,No,,,Small Group
+33602,TXS201,Blue Advantage HMO,No,HOPKINS,No,,,Small Group
+33602,TXS201,Blue Advantage HMO,No,LAMAR,No,,,Small Group
+33602,TXS201,Blue Advantage HMO,No,MORRIS,No,,,Small Group
+33602,TXS201,Blue Advantage HMO,No,RED RIVER,No,,,Small Group
+33602,TXS201,Blue Advantage HMO,No,TITUS,No,,,Small Group
+33602,TXS211,Blue Advantage HMO,No,ANDERSON,No,,,Small Group
+33602,TXS211,Blue Advantage HMO,No,CHEROKEE,No,,,Small Group
+33602,TXS211,Blue Advantage HMO,No,HENDERSON,No,,,Small Group
+33602,TXS211,Blue Advantage HMO,No,RAINS,No,,,Small Group
+33602,TXS211,Blue Advantage HMO,No,SMITH,No,,,Small Group
+33602,TXS211,Blue Advantage HMO,No,VAN ZANDT,No,,,Small Group
+33602,TXS211,Blue Advantage HMO,No,WOOD,No,,,Small Group
+33602,TXS221,Blue Advantage HMO,No,CALHOUN,No,,,Small Group
+33602,TXS221,Blue Advantage HMO,No,DE WITT,No,,,Small Group
+33602,TXS221,Blue Advantage HMO,No,GOLIAD,No,,,Small Group
+33602,TXS221,Blue Advantage HMO,No,JACKSON,No,,,Small Group
+33602,TXS221,Blue Advantage HMO,No,KARNES,No,,,Small Group
+33602,TXS221,Blue Advantage HMO,No,LAVACA,No,,,Small Group
+33602,TXS221,Blue Advantage HMO,No,VICTORIA,No,,,Small Group
+33602,TXS231,Blue Advantage HMO,No,BOSQUE,No,,,Small Group
+33602,TXS231,Blue Advantage HMO,No,FALLS,No,,,Small Group
+33602,TXS231,Blue Advantage HMO,No,FREESTONE,No,,,Small Group
+33602,TXS231,Blue Advantage HMO,No,HILL,No,,,Small Group
+33602,TXS231,Blue Advantage HMO,No,LIMESTONE,No,,,Small Group
+33602,TXS231,Blue Advantage HMO,No,MCLENNAN,No,,,Small Group
+33602,TXS241,Blue Advantage HMO,No,ARCHER,No,,,Small Group
+33602,TXS241,Blue Advantage HMO,No,BAYLOR,No,,,Small Group
+33602,TXS241,Blue Advantage HMO,No,CLAY,No,,,Small Group
+33602,TXS241,Blue Advantage HMO,No,COTTLE,No,,,Small Group
+33602,TXS241,Blue Advantage HMO,No,FOARD,No,,,Small Group
+33602,TXS241,Blue Advantage HMO,No,HARDEMAN,No,,,Small Group
+33602,TXS241,Blue Advantage HMO,No,JACK,No,,,Small Group
+33602,TXS241,Blue Advantage HMO,No,KNOX,No,,,Small Group
+33602,TXS241,Blue Advantage HMO,No,MONTAGUE,No,,,Small Group
+33602,TXS241,Blue Advantage HMO,No,WICHITA,No,,,Small Group
+33602,TXS241,Blue Advantage HMO,No,WILBARGER,No,,,Small Group
+33602,TXS241,Blue Advantage HMO,No,YOUNG,No,,,Small Group
+33602,TXS251,Blue Advantage HMO,No,DENTON,No,,,Small Group
+33602,TXS251,Blue Advantage HMO,No,ERATH,No,,,Small Group
+33602,TXS251,Blue Advantage HMO,No,HOOD,No,,,Small Group
+33602,TXS251,Blue Advantage HMO,No,JOHNSON,No,,,Small Group
+33602,TXS251,Blue Advantage HMO,No,PALO PINTO,No,,,Small Group
+33602,TXS251,Blue Advantage HMO,No,PARKER,No,,,Small Group
+66252,TXS009,Austin,No,HAYS,Yes,78666,66252_TX_service_area_partial_county,Individual
+66252,TXS001,Tyler,No,ANDERSON,No,,,Individual
+66252,TXS001,Tyler,No,CHEROKEE,No,,,Individual
+66252,TXS001,Tyler,No,RAINS,No,,,Individual
+66252,TXS001,Tyler,No,SMITH,No,,,Individual
+66252,TXS001,Tyler,No,VAN ZANDT,No,,,Individual
+66252,TXS001,Tyler,No,WOOD,No,,,Individual
+66252,TXS002,Beaumont,No,HARDIN,No,,,Individual
+66252,TXS002,Beaumont,No,JASPER,No,,,Individual
+66252,TXS002,Beaumont,No,JEFFERSON,No,,,Individual
+66252,TXS002,Beaumont,No,NEWTON,No,,,Individual
+66252,TXS002,Beaumont,No,ORANGE,No,,,Individual
+66252,TXS002,Beaumont,No,TYLER,No,,,Individual
+66252,TXS003,Corpus Christi,No,ARANSAS,No,,,Individual
+66252,TXS003,Corpus Christi,No,BEE,No,,,Individual
+66252,TXS003,Corpus Christi,No,JIM WELLS,No,,,Individual
+66252,TXS003,Corpus Christi,No,KLEBERG,No,,,Individual
+66252,TXS003,Corpus Christi,No,LIVE OAK,No,,,Individual
+66252,TXS003,Corpus Christi,No,NUECES,No,,,Individual
+66252,TXS003,Corpus Christi,No,REFUGIO,No,,,Individual
+66252,TXS003,Corpus Christi,No,SAN PATRICIO,No,,,Individual
+66252,TXS006,Victoria,No,KARNES,No,,,Individual
+66252,TXS007,Longview,No,GREGG,No,,,Individual
+66252,TXS007,Longview,No,HARRISON,No,,,Individual
+66252,TXS007,Longview,No,MARION,No,,,Individual
+66252,TXS007,Longview,No,UPSHUR,No,,,Individual
+66252,TXS009,Austin,No,CALDWELL,No,78666,,Individual
+66252,TXS010,Brownsville,No,KENEDY,No,,,Individual
+66252,TXS011,McAllen,No,BROOKS,No,,,Individual
+66252,TXS012,San Antonio,No,COMAL,No,,,Individual
+66252,TXS012,San Antonio,No,GUADALUPE,No,,,Individual
+66252,TXS013,Texarkana,No,BOWIE,No,,,Individual
+66252,TXS013,Texarkana,No,CASS,No,,,Individual
+66252,TXS013,Texarkana,No,FRANKLIN,No,,,Individual
+66252,TXS013,Texarkana,No,HOPKINS,No,,,Individual
+66252,TXS013,Texarkana,No,MORRIS,No,,,Individual
+66252,TXS013,Texarkana,No,RED RIVER,No,,,Individual
+66252,TXS013,Texarkana,No,TITUS,No,,,Individual
+33602,TXS251,Blue Advantage HMO,No,SOMERVELL,No,,,Small Group
+33602,TXS251,Blue Advantage HMO,No,TARRANT,No,,,Small Group
+33602,TXS251,Blue Advantage HMO,No,WISE,No,,,Small Group
+33602,TXS261,Blue Advantage HMO,No,AUSTIN,No,,,Small Group
+33602,TXS261,Blue Advantage HMO,No,BRAZORIA,No,,,Small Group
+33602,TXS261,Blue Advantage HMO,No,COLORADO,No,,,Small Group
+33602,TXS261,Blue Advantage HMO,No,FORT BEND,No,,,Small Group
+33602,TXS261,Blue Advantage HMO,No,MATAGORDA,No,,,Small Group
+33602,TXS261,Blue Advantage HMO,No,WALLER,No,,,Small Group
+33602,TXS261,Blue Advantage HMO,No,WHARTON,No,,,Small Group
+33602,TXS271,Blue Advantage HMO,No,CHAMBERS,No,,,Small Group
+33602,TXS271,Blue Advantage HMO,No,LIBERTY,No,,,Small Group
+33602,TXS271,Blue Advantage HMO,No,MONTGOMERY,No,,,Small Group
+33602,TXS271,Blue Advantage HMO,No,WALKER,No,,,Small Group
+20069,TXS001,Oscar Texas EPO Select Statewide,No,ATASCOSA,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,BANDERA,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,BASTROP,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,BEXAR,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,BLANCO,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,BURNET,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,CALDWELL,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,CAMERON,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,COLLIN,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,COMAL,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,COOKE,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,DALLAS,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,DENTON,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,ELLIS,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,EL PASO,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,GALVESTON,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,GONZALES,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,GUADALUPE,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,HARRIS,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,HAYS,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,HUDSPETH,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,JACK,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,KENDALL,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,KENEDY,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,LA SALLE,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,LEE,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,LLANO,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,MCMULLEN,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,MEDINA,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,MILAM,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,NACOGDOCHES,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,PARKER,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,ROCKWALL,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,SHELBY,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,TARRANT,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,TRAVIS,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,WILLACY,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,WILLIAMSON,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,WILSON,No,,,Individual
+20069,TXS001,Oscar Texas EPO Select Statewide,No,WISE,No,,,Individual
+20069,TXS002,Oscar Texas EPO Choice,No,AUSTIN,No,,,Individual
+20069,TXS002,Oscar Texas EPO Choice,No,BRAZORIA,No,,,Individual
+20069,TXS002,Oscar Texas EPO Choice,No,FORT BEND,No,,,Individual
+20069,TXS002,Oscar Texas EPO Choice,No,GALVESTON,No,,,Individual
+20069,TXS002,Oscar Texas EPO Choice,No,HARRIS,No,,,Individual
+20069,TXS002,Oscar Texas EPO Choice,No,LIBERTY,No,,,Individual
+20069,TXS002,Oscar Texas EPO Choice,No,MONTGOMERY,No,,,Individual
+20069,TXS002,Oscar Texas EPO Choice,No,SAN JACINTO,No,,,Individual
+20069,TXS002,Oscar Texas EPO Choice,No,WALKER,No,,,Individual
+20069,TXS002,Oscar Texas EPO Choice,No,WALLER,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,ATASCOSA,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,BANDERA,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,BASTROP,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,BEXAR,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,BLANCO,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,BURNET,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,CALDWELL,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,COLLIN,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,COMAL,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,DALLAS,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,DENTON,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,ELLIS,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,EL PASO,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,GALVESTON,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,GONZALES,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,GUADALUPE,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,HARRIS,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,HAYS,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,HUDSPETH,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,KENDALL,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,LA SALLE,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,LEE,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,LLANO,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,MEDINA,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,PARKER,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,ROCKWALL,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,TARRANT,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,TRAVIS,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,WILLIAMSON,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,WILSON,No,,,Individual
+20069,TXS003,Oscar Texas EPO Select Classic RAs Plus Houston,No,WISE,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,ATASCOSA,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,BANDERA,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,BASTROP,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,BEXAR,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,BLANCO,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,BURNET,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,CALDWELL,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,COLLIN,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,COMAL,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,DALLAS,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,DENTON,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,ELLIS,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,EL PASO,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,GONZALES,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,GUADALUPE,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,HAYS,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,HUDSPETH,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,KENDALL,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,LA SALLE,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,LEE,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,LLANO,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,MEDINA,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,PARKER,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,ROCKWALL,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,TARRANT,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,TRAVIS,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,WILLIAMSON,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,WILSON,No,,,Individual
+20069,TXS004,Oscar Texas EPO Select Classic RAs,No,WISE,No,,,Individual
+71837,TXS001,Travis,No,BASTROP,No,,,Individual
+71837,TXS001,Travis,No,BURNET,No,,,Individual
+71837,TXS001,Travis,No,CALDWELL,No,,,Individual
+71837,TXS001,Travis,No,FAYETTE,No,,,Individual
+71837,TXS001,Travis,No,HAYS,No,,,Individual
+71837,TXS001,Travis,No,LEE,No,,,Individual
+71837,TXS001,Travis,No,TRAVIS,No,,,Individual
+71837,TXS001,Travis,No,WILLIAMSON,No,,,Individual
+33602,TXS038,MyBlue Health,No,WILLIAMSON,No,,,Individual
+33602,TXS041,Blue Advantage HMO,No,ANGELINA,No,,,Individual
+33602,TXS041,Blue Advantage HMO,No,HARDIN,No,,,Individual
+33602,TXS041,Blue Advantage HMO,No,HOUSTON,No,,,Individual
+33602,TXS041,Blue Advantage HMO,No,JASPER,No,,,Individual
+33602,TXS041,Blue Advantage HMO,No,JEFFERSON,No,,,Individual
+33602,TXS041,Blue Advantage HMO,No,NACOGDOCHES,No,,,Individual
+33602,TXS041,Blue Advantage HMO,No,NEWTON,No,,,Individual
+33602,TXS041,Blue Advantage HMO,No,ORANGE,No,,,Individual
+33602,TXS041,Blue Advantage HMO,No,POLK,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,ANDREWS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,ANGELINA,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,ARANSAS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,ARMSTRONG,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,ATASCOSA,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,AUSTIN,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,BAILEY,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,BANDERA,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,BEE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,BELL,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,BEXAR,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,BLANCO,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,BORDEN,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,BOWIE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,BRAZORIA,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,BRAZOS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,BREWSTER,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,BRISCOE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,BROOKS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,BURLESON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,BURNET,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,CALDWELL,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,CALHOUN,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,CAMERON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,CAMP,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,CARSON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,CASS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,CASTRO,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,CHAMBERS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,CHILDRESS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,COCHRAN,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,COKE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,COLLIN,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,COLLINGSWORTH,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,COLORADO,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,COMAL,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,CONCHO,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,COOKE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,CORYELL,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,CRANE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,CROCKETT,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,CROSBY,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,CULBERSON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,DALLAM,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,DALLAS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,DAWSON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,DEAF SMITH,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,DELTA,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,DENTON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,DE WITT,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,DICKENS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,DIMMIT,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,DONLEY,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,DUVAL,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,ECTOR,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,EDWARDS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,ELLIS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,EL PASO,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,ERATH,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,FANNIN,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,FAYETTE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,FLOYD,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,FORT BEND,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,FRANKLIN,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,FRIO,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,GAINES,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,GALVESTON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,GARZA,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,GLASSCOCK,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,GOLIAD,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,GONZALES,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,GRAY,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,GRAYSON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,GREGG,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,GRIMES,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,GUADALUPE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HALE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HALL,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HAMILTON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HANSFORD,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HARDIN,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HARRIS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HARTLEY,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HAYS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HEMPHILL,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HIDALGO,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HOCKLEY,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HOOD,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HOPKINS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HOUSTON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HOWARD,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HUDSPETH,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HUNT,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,HUTCHINSON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,IRION,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,JACK,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,JACKSON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,JASPER,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,JEFF DAVIS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,JEFFERSON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,JIM HOGG,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,JIM WELLS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,JOHNSON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,KARNES,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,KAUFMAN,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,KENDALL,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,KENEDY,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,KIMBLE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,KING,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,KINNEY,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,KLEBERG,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,LAMAR,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,LAMB,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,LAMPASAS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,LA SALLE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,LAVACA,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,LEE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,LEON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,LIBERTY,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,LIPSCOMB,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,LIVE OAK,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,LLANO,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,LOVING,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,LUBBOCK,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,LYNN,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MCCULLOCH,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MCMULLEN,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MADISON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MARION,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MARTIN,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MASON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MATAGORDA,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MAVERICK,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MEDINA,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MENARD,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MIDLAND,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MILAM,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MILLS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MONTAGUE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MONTGOMERY,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MOORE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MORRIS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,MOTLEY,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,NACOGDOCHES,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,NAVARRO,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,NEWTON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,NUECES,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,OCHILTREE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,OLDHAM,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,ORANGE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,PALO PINTO,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,PARKER,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,PARMER,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,PECOS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,POLK,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,POTTER,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,PRESIDIO,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,RANDALL,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,REAGAN,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,REAL,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,RED RIVER,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,REEVES,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,REFUGIO,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,ROBERTS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,ROBERTSON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,ROCKWALL,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,SABINE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,SAN AUGUSTINE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,SAN JACINTO,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,SAN PATRICIO,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,SAN SABA,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,SCHLEICHER,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,SHELBY,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,SHERMAN,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,SOMERVELL,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,STARR,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,STERLING,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,SUTTON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,SWISHER,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,TARRANT,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,TERRELL,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,TERRY,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,TITUS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,TOM GREEN,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,TRAVIS,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,TRINITY,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,TYLER,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,UPSHUR,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,UPTON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,UVALDE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,VAL VERDE,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,VICTORIA,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,WALKER,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,WALLER,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,WARD,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,WEBB,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,WHARTON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,WHEELER,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,WILLACY,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,WILLIAMSON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,WILSON,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,WINKLER,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,YOAKUM,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,YOUNG,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,ZAPATA,No,,,Individual
+40220,TXS001,Individual Exchange 001,No,ZAVALA,No,,,Individual
+40220,TXS002,Individual Exchange 002,No,BRAZORIA,No,,,Individual
+40220,TXS002,Individual Exchange 002,No,FORT BEND,No,,,Individual
+40220,TXS002,Individual Exchange 002,No,GALVESTON,No,,,Individual
+40220,TXS002,Individual Exchange 002,No,HARRIS,No,,,Individual
+40220,TXS002,Individual Exchange 002,No,MONTGOMERY,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,ANDREWS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,ANGELINA,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,ARANSAS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,ARMSTRONG,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,ATASCOSA,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,AUSTIN,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,BAILEY,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,BANDERA,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,BEE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,BELL,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,BEXAR,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,BLANCO,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,BORDEN,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,BOWIE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,BRAZOS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,BREWSTER,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,BRISCOE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,BROOKS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,BURLESON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,BURNET,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,CALDWELL,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,CALHOUN,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,CAMERON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,CAMP,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,CARSON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,CASS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,CASTRO,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,CHAMBERS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,CHILDRESS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,COCHRAN,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,COKE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,COLLIN,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,COLLINGSWORTH,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,COLORADO,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,COMAL,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,CONCHO,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,COOKE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,CORYELL,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,CRANE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,CROCKETT,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,CROSBY,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,CULBERSON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,DALLAM,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,DALLAS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,DAWSON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,DEAF SMITH,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,DELTA,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,DENTON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,DE WITT,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,DICKENS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,DIMMIT,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,DONLEY,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,DUVAL,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,ECTOR,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,EDWARDS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,ELLIS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,EL PASO,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,ERATH,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,FANNIN,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,FAYETTE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,FLOYD,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,FRANKLIN,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,FRIO,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,GAINES,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,GARZA,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,GLASSCOCK,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,GOLIAD,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,GONZALES,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,GRAY,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,GRAYSON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,GREGG,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,GRIMES,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,GUADALUPE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HALE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HALL,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HAMILTON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HANSFORD,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HARDIN,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HARTLEY,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HAYS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HEMPHILL,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HIDALGO,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HOCKLEY,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HOOD,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HOPKINS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HOUSTON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HOWARD,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HUDSPETH,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HUNT,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,HUTCHINSON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,IRION,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,JACK,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,JACKSON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,JASPER,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,JEFF DAVIS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,JEFFERSON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,JIM HOGG,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,JIM WELLS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,JOHNSON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,KARNES,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,KAUFMAN,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,KENDALL,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,KENEDY,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,KIMBLE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,KING,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,KINNEY,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,KLEBERG,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,LAMAR,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,LAMB,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,LAMPASAS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,LA SALLE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,LAVACA,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,LEE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,LEON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,LIBERTY,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,LIPSCOMB,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,LIVE OAK,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,LLANO,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,LOVING,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,LUBBOCK,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,LYNN,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MCCULLOCH,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MCMULLEN,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MADISON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MARION,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MARTIN,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MASON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MATAGORDA,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MAVERICK,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MEDINA,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MENARD,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MIDLAND,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MILAM,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MILLS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MONTAGUE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MOORE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MORRIS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,MOTLEY,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,NACOGDOCHES,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,NAVARRO,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,NEWTON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,NUECES,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,OCHILTREE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,OLDHAM,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,ORANGE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,PALO PINTO,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,PARKER,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,PARMER,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,PECOS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,POLK,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,POTTER,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,PRESIDIO,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,RANDALL,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,REAGAN,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,REAL,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,RED RIVER,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,REEVES,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,REFUGIO,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,ROBERTS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,ROBERTSON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,ROCKWALL,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,SABINE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,SAN AUGUSTINE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,SAN JACINTO,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,SAN PATRICIO,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,SAN SABA,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,SCHLEICHER,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,SHELBY,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,SHERMAN,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,SOMERVELL,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,STARR,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,STERLING,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,SUTTON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,SWISHER,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,TARRANT,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,TERRELL,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,TERRY,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,TITUS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,TOM GREEN,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,TRAVIS,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,TRINITY,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,TYLER,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,UPSHUR,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,UPTON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,UVALDE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,VAL VERDE,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,VICTORIA,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,WALKER,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,WALLER,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,WARD,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,WEBB,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,WHARTON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,WHEELER,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,WILLACY,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,WILLIAMSON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,WILSON,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,WINKLER,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,YOAKUM,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,YOUNG,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,ZAPATA,No,,,Individual
+40220,TXS003,Individual Exchange 003,No,ZAVALA,No,,,Individual
+30609,TXS001,Service Area One,No,BRAZORIA,No,,,Small Group
+30609,TXS001,Service Area One,No,FORT BEND,No,,,Small Group
+30609,TXS001,Service Area One,No,GALVESTON,No,,,Small Group
+30609,TXS001,Service Area One,No,HARRIS,No,,,Small Group
+33602,TXS041,Blue Advantage HMO,No,SABINE,No,,,Individual
+33602,TXS041,Blue Advantage HMO,No,SAN AUGUSTINE,No,,,Individual
+33602,TXS041,Blue Advantage HMO,No,SAN JACINTO,No,,,Individual
+33602,TXS041,Blue Advantage HMO,No,SHELBY,No,,,Individual
+33602,TXS041,Blue Advantage HMO,No,TRINITY,No,,,Individual
+33602,TXS041,Blue Advantage HMO,No,TYLER,No,,,Individual
+33602,TXS051,Blue Advantage HMO,No,CAMERON,No,,,Individual
+33602,TXS051,Blue Advantage HMO,No,KENEDY,No,,,Individual
+33602,TXS051,Blue Advantage HMO,No,WILLACY,No,,,Individual
+33602,TXS058,MyBlue Health,No,CAMERON,No,,,Individual
+33602,TXS061,Blue Advantage HMO,No,BRAZOS,No,,,Individual
+33602,TXS061,Blue Advantage HMO,No,BURLESON,No,,,Individual
+33602,TXS061,Blue Advantage HMO,No,GRIMES,No,,,Individual
+33602,TXS061,Blue Advantage HMO,No,LEON,No,,,Individual
+33602,TXS061,Blue Advantage HMO,No,MADISON,No,,,Individual
+33602,TXS061,Blue Advantage HMO,No,MILAM,No,,,Individual
+33602,TXS061,Blue Advantage HMO,No,ROBERTSON,No,,,Individual
+33602,TXS061,Blue Advantage HMO,No,WASHINGTON,No,,,Individual
+33602,TXS071,Blue Advantage HMO,No,ARANSAS,No,,,Individual
+33602,TXS071,Blue Advantage HMO,No,BEE,No,,,Individual
+33602,TXS071,Blue Advantage HMO,No,JIM WELLS,No,,,Individual
+33602,TXS071,Blue Advantage HMO,No,KLEBERG,No,,,Individual
+30609,TXS001,Service Area One,No,MONTGOMERY,No,,,Small Group
+30609,TXS001,Service Area One,No,WALKER,No,,,Small Group
+30609,TXS001,Service Area One,No,WALLER,No,,,Small Group
+30609,TXS001,Service Area One,No,WHARTON,No,,,Small Group
+76589,TXS001,Texas Connect HMO,No,COLLIN,No,,,Individual
+76589,TXS001,Texas Connect HMO,No,CROSBY,No,,,Individual
+76589,TXS001,Texas Connect HMO,No,DALLAS,No,,,Individual
+76589,TXS001,Texas Connect HMO,No,ELLIS,No,,,Individual
+76589,TXS001,Texas Connect HMO,No,EL PASO,No,,,Individual
+76589,TXS001,Texas Connect HMO,No,HUNT,No,,,Individual
+76589,TXS001,Texas Connect HMO,No,JOHNSON,No,,,Individual
+76589,TXS001,Texas Connect HMO,No,KAUFMAN,No,,,Individual
+76589,TXS001,Texas Connect HMO,No,LUBBOCK,No,,,Individual
+76589,TXS001,Texas Connect HMO,No,ROCKWALL,No,,,Individual
+76589,TXS001,Texas Connect HMO,No,TARRANT,No,,,Individual
+33602,TXS071,Blue Advantage HMO,No,LIVE OAK,No,,,Individual
+33602,TXS071,Blue Advantage HMO,No,NUECES,No,,,Individual
+33602,TXS071,Blue Advantage HMO,No,REFUGIO,No,,,Individual
+33602,TXS071,Blue Advantage HMO,No,SAN PATRICIO,No,,,Individual
+33602,TXS081,Blue Advantage HMO,No,COLLIN,No,,,Individual
+33602,TXS081,Blue Advantage HMO,No,DALLAS,No,,,Individual
+33602,TXS081,Blue Advantage HMO,No,ELLIS,No,,,Individual
+33602,TXS081,Blue Advantage HMO,No,HUNT,No,,,Individual
+33602,TXS081,Blue Advantage HMO,No,KAUFMAN,No,,,Individual
+33602,TXS081,Blue Advantage HMO,No,NAVARRO,No,,,Individual
+33602,TXS081,Blue Advantage HMO,No,ROCKWALL,No,,,Individual
+33602,TXS088,MyBlue Health,No,COLLIN,No,,,Individual
+33602,TXS088,MyBlue Health,No,DALLAS,No,,,Individual
+33602,TXS088,MyBlue Health,No,ROCKWALL,No,,,Individual
+33602,TXS091,Blue Advantage HMO,No,BREWSTER,No,,,Individual
+33602,TXS091,Blue Advantage HMO,No,CULBERSON,No,,,Individual
+33602,TXS091,Blue Advantage HMO,No,EL PASO,No,,,Individual
+33602,TXS091,Blue Advantage HMO,No,HUDSPETH,No,,,Individual
+33602,TXS091,Blue Advantage HMO,No,JEFF DAVIS,No,,,Individual
+33602,TXS091,Blue Advantage HMO,No,PRESIDIO,No,,,Individual
+33602,TXS098,MyBlue Health,No,EL PASO,No,,,Individual
+33602,TXS101,Blue Advantage HMO,No,GALVESTON,No,,,Individual
+33602,TXS101,Blue Advantage HMO,No,HARRIS,No,,,Individual
+33602,TXS108,MyBlue Health,No,HARRIS,No,,,Individual
+33602,TXS111,Blue Advantage HMO,No,BELL,No,,,Individual
+33602,TXS111,Blue Advantage HMO,No,CORYELL,No,,,Individual
+33602,TXS111,Blue Advantage HMO,No,HAMILTON,No,,,Individual
+33602,TXS111,Blue Advantage HMO,No,LAMPASAS,No,,,Individual
+33602,TXS111,Blue Advantage HMO,No,MILLS,No,,,Individual
+33602,TXS111,Blue Advantage HMO,No,SAN SABA,No,,,Individual
+33602,TXS121,Blue Advantage HMO,No,DUVAL,No,,,Individual
+33602,TXS121,Blue Advantage HMO,No,JIM HOGG,No,,,Individual
+33602,TXS121,Blue Advantage HMO,No,MCMULLEN,No,,,Individual
+33602,TXS121,Blue Advantage HMO,No,WEBB,No,,,Individual
+33602,TXS121,Blue Advantage HMO,No,ZAPATA,No,,,Individual
+33602,TXS131,Blue Advantage HMO,No,GREGG,No,,,Individual
+33602,TXS131,Blue Advantage HMO,No,HARRISON,No,,,Individual
+33602,TXS131,Blue Advantage HMO,No,MARION,No,,,Individual
+33602,TXS131,Blue Advantage HMO,No,PANOLA,No,,,Individual
+33602,TXS131,Blue Advantage HMO,No,RUSK,No,,,Individual
+33602,TXS131,Blue Advantage HMO,No,UPSHUR,No,,,Individual
+33602,TXS141,Blue Advantage HMO,No,BAILEY,No,,,Individual
+33602,TXS141,Blue Advantage HMO,No,COCHRAN,No,,,Individual
+33602,TXS141,Blue Advantage HMO,No,CROSBY,No,,,Individual
+33602,TXS141,Blue Advantage HMO,No,DICKENS,No,,,Individual
+33602,TXS141,Blue Advantage HMO,No,FLOYD,No,,,Individual
+33602,TXS141,Blue Advantage HMO,No,GARZA,No,,,Individual
+33602,TXS141,Blue Advantage HMO,No,HALE,No,,,Individual
+33602,TXS141,Blue Advantage HMO,No,HOCKLEY,No,,,Individual
+33602,TXS141,Blue Advantage HMO,No,KING,No,,,Individual
+33602,TXS141,Blue Advantage HMO,No,LAMB,No,,,Individual
+33602,TXS141,Blue Advantage HMO,No,LUBBOCK,No,,,Individual
+33602,TXS141,Blue Advantage HMO,No,LYNN,No,,,Individual
+33602,TXS141,Blue Advantage HMO,No,MOTLEY,No,,,Individual
+33602,TXS141,Blue Advantage HMO,No,TERRY,No,,,Individual
+33602,TXS141,Blue Advantage HMO,No,YOAKUM,No,,,Individual
+33602,TXS151,Blue Advantage HMO,No,BROOKS,No,,,Individual
+33602,TXS151,Blue Advantage HMO,No,HIDALGO,No,,,Individual
+33602,TXS151,Blue Advantage HMO,No,STARR,No,,,Individual
+33602,TXS158,MyBlue Health,No,HIDALGO,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,ANDREWS,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,BORDEN,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,CRANE,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,DAWSON,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,ECTOR,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,GAINES,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,GLASSCOCK,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,HOWARD,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,LOVING,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,MARTIN,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,MIDLAND,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,PECOS,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,REEVES,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,TERRELL,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,UPTON,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,WARD,No,,,Individual
+33602,TXS161,Blue Advantage HMO,No,WINKLER,No,,,Individual
+33602,TXS171,Blue Advantage HMO,No,COKE,No,,,Individual
+33602,TXS171,Blue Advantage HMO,No,CONCHO,No,,,Individual
+33602,TXS171,Blue Advantage HMO,No,CROCKETT,No,,,Individual
+33602,TXS171,Blue Advantage HMO,No,IRION,No,,,Individual
+33602,TXS171,Blue Advantage HMO,No,KIMBLE,No,,,Individual
+33602,TXS171,Blue Advantage HMO,No,MCCULLOCH,No,,,Individual
+33602,TXS171,Blue Advantage HMO,No,MASON,No,,,Individual
+33602,TXS171,Blue Advantage HMO,No,MENARD,No,,,Individual
+33602,TXS171,Blue Advantage HMO,No,REAGAN,No,,,Individual
+33602,TXS171,Blue Advantage HMO,No,SCHLEICHER,No,,,Individual
+58840,TXS001,HMO_TX_Austin,No,HAYS,No,,,Individual
+58840,TXS001,HMO_TX_Austin,No,TRAVIS,No,,,Individual
+58840,TXS001,HMO_TX_Austin,No,WILLIAMSON,No,,,Individual
+58840,TXS002,HMO_TX_San Antonio,No,BEXAR,No,,,Individual
+58840,TXS002,HMO_TX_San Antonio,No,COMAL,No,,,Individual
+58840,TXS002,HMO_TX_San Antonio,No,GUADALUPE,No,,,Individual
+58840,TXS002,HMO_TX_San Antonio,No,KENDALL,No,,,Individual
+58840,TXS003,HMO_TX_Houston,No,BRAZORIA,No,,,Individual
+58840,TXS003,HMO_TX_Houston,No,FORT BEND,No,,,Individual
+58840,TXS003,HMO_TX_Houston,No,GALVESTON,No,,,Individual
+58840,TXS003,HMO_TX_Houston,No,HARRIS,No,,,Individual
+58840,TXS003,HMO_TX_Houston,No,MONTGOMERY,No,,,Individual
+58840,TXS004,HMO_TX_El Paso,No,EL PASO,No,,,Individual
+58840,TXS005,HMO_TX_Dallas,No,COLLIN,No,,,Individual
+58840,TXS005,HMO_TX_Dallas,No,DALLAS,No,,,Individual
+58840,TXS005,HMO_TX_Dallas,No,DENTON,No,,,Individual
+58840,TXS005,HMO_TX_Dallas,No,ELLIS,No,,,Individual
+58840,TXS005,HMO_TX_Dallas,No,HUNT,No,,,Individual
+58840,TXS005,HMO_TX_Dallas,No,JOHNSON,No,,,Individual
+58840,TXS005,HMO_TX_Dallas,No,KAUFMAN,No,,,Individual
+58840,TXS005,HMO_TX_Dallas,No,PARKER,No,,,Individual
+58840,TXS005,HMO_TX_Dallas,No,ROCKWALL,No,,,Individual
+58840,TXS005,HMO_TX_Dallas,No,TARRANT,No,,,Individual
+58840,TXS005,HMO_TX_Dallas,No,WISE,No,,,Individual
+58840,TXS006,HMO_TX_Corpus Christi,No,ARANSAS,No,,,Individual
+58840,TXS006,HMO_TX_Corpus Christi,No,BEE,No,,,Individual
+58840,TXS006,HMO_TX_Corpus Christi,No,DUVAL,No,,,Individual
+58840,TXS006,HMO_TX_Corpus Christi,No,JIM WELLS,No,,,Individual
+58840,TXS006,HMO_TX_Corpus Christi,No,KLEBERG,No,,,Individual
+58840,TXS006,HMO_TX_Corpus Christi,No,NUECES,No,,,Individual
+58840,TXS006,HMO_TX_Corpus Christi,No,SAN PATRICIO,No,,,Individual
+58840,TXS007,HMO_TX_Midland-Odessa,No,ANDREWS,No,,,Individual
+58840,TXS007,HMO_TX_Midland-Odessa,No,CRANE,No,,,Individual
+58840,TXS007,HMO_TX_Midland-Odessa,No,ECTOR,No,,,Individual
+58840,TXS007,HMO_TX_Midland-Odessa,No,GLASSCOCK,No,,,Individual
+58840,TXS007,HMO_TX_Midland-Odessa,No,HOWARD,No,,,Individual
+58840,TXS007,HMO_TX_Midland-Odessa,No,MARTIN,No,,,Individual
+58840,TXS007,HMO_TX_Midland-Odessa,No,MIDLAND,No,,,Individual
+58840,TXS007,HMO_TX_Midland-Odessa,No,UPTON,No,,,Individual
+58840,TXS008,HMO_TX_Rio Grande Valley,No,CAMERON,No,,,Individual
+58840,TXS008,HMO_TX_Rio Grande Valley,No,WILLACY,No,,,Individual
+75655,TXS001,Service Area One,No,BRAZORIA,No,,,Small Group
+75655,TXS001,Service Area One,No,FORT BEND,No,,,Small Group
+75655,TXS001,Service Area One,No,GALVESTON,No,,,Small Group
+75655,TXS001,Service Area One,No,HARRIS,No,,,Small Group
+75655,TXS001,Service Area One,No,MONTGOMERY,No,,,Small Group
+75655,TXS001,Service Area One,No,WALKER,No,,,Small Group
+75655,TXS001,Service Area One,No,WALLER,No,,,Small Group
+75655,TXS001,Service Area One,No,WHARTON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,MARTIN,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,MASON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,MENARD,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,MIDLAND,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,MILAM,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,MILLS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,MITCHELL,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,MOORE,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,MOTLEY,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,NAVARRO,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,NOLAN,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,OCHILTREE,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,OLDHAM,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,PARMER,No,,,Small Group
+33602,TXS171,Blue Advantage HMO,No,STERLING,No,,,Individual
+33602,TXS171,Blue Advantage HMO,No,SUTTON,No,,,Individual
+37755,TXS003,EPO Individual,No,AUSTIN,No,,,Individual
+37755,TXS003,EPO Individual,No,BELL,No,,,Individual
+37755,TXS003,EPO Individual,No,BLANCO,No,,,Individual
+37755,TXS003,EPO Individual,No,BOSQUE,No,,,Individual
+37755,TXS003,EPO Individual,No,BRAZOS,No,,,Individual
+37755,TXS003,EPO Individual,No,BURLESON,No,,,Individual
+37755,TXS003,EPO Individual,No,BURNET,No,,,Individual
+37755,TXS003,EPO Individual,No,CALDWELL,No,,,Individual
+37755,TXS003,EPO Individual,No,COKE,No,,,Individual
+37755,TXS003,EPO Individual,No,COLEMAN,No,,,Individual
+37755,TXS003,EPO Individual,No,COLLIN,No,,,Individual
+37755,TXS003,EPO Individual,No,CONCHO,No,,,Individual
+37755,TXS003,EPO Individual,No,CORYELL,No,,,Individual
+37755,TXS003,EPO Individual,No,CROCKETT,No,,,Individual
+37755,TXS003,EPO Individual,No,DALLAS,No,,,Individual
+37755,TXS003,EPO Individual,No,DENTON,No,,,Individual
+37755,TXS003,EPO Individual,No,ELLIS,No,,,Individual
+37755,TXS003,EPO Individual,No,ERATH,No,,,Individual
+37755,TXS003,EPO Individual,No,FALLS,No,,,Individual
+37755,TXS003,EPO Individual,No,FAYETTE,No,,,Individual
+37755,TXS003,EPO Individual,No,FREESTONE,No,,,Individual
+37755,TXS003,EPO Individual,No,GRIMES,No,,,Individual
+37755,TXS003,EPO Individual,No,HAMILTON,No,,,Individual
+37755,TXS003,EPO Individual,No,HILL,No,,,Individual
+37755,TXS003,EPO Individual,No,HOOD,No,,,Individual
+37755,TXS003,EPO Individual,No,IRION,No,,,Individual
+37755,TXS003,EPO Individual,No,JOHNSON,No,,,Individual
+37755,TXS003,EPO Individual,No,KIMBLE,No,,,Individual
+37755,TXS003,EPO Individual,No,LAMPASAS,No,,,Individual
+37755,TXS003,EPO Individual,No,LEE,No,,,Individual
+37755,TXS003,EPO Individual,No,LEON,No,,,Individual
+37755,TXS003,EPO Individual,No,LIMESTONE,No,,,Individual
+37755,TXS003,EPO Individual,No,LLANO,No,,,Individual
+37755,TXS003,EPO Individual,No,MCCULLOCH,No,,,Individual
+37755,TXS003,EPO Individual,No,MCLENNAN,No,,,Individual
+37755,TXS003,EPO Individual,No,MADISON,No,,,Individual
+37755,TXS003,EPO Individual,No,MASON,No,,,Individual
+37755,TXS003,EPO Individual,No,MENARD,No,,,Individual
+37755,TXS003,EPO Individual,No,MILAM,No,,,Individual
+37755,TXS003,EPO Individual,No,MILLS,No,,,Individual
+37755,TXS003,EPO Individual,No,REAGAN,No,,,Individual
+37755,TXS003,EPO Individual,No,ROBERTSON,No,,,Individual
+37755,TXS003,EPO Individual,No,ROCKWALL,No,,,Individual
+37755,TXS003,EPO Individual,No,RUNNELS,No,,,Individual
+37755,TXS003,EPO Individual,No,SAN SABA,No,,,Individual
+37755,TXS003,EPO Individual,No,SCHLEICHER,No,,,Individual
+37755,TXS003,EPO Individual,No,SOMERVELL,No,,,Individual
+37755,TXS003,EPO Individual,No,STERLING,No,,,Individual
+37755,TXS003,EPO Individual,No,SUTTON,No,,,Individual
+37755,TXS003,EPO Individual,No,TARRANT,No,,,Individual
+37755,TXS003,EPO Individual,No,TOM GREEN,No,,,Individual
+37755,TXS003,EPO Individual,No,TRAVIS,No,,,Individual
+37755,TXS003,EPO Individual,No,WALLER,No,,,Individual
+37755,TXS003,EPO Individual,No,WASHINGTON,No,,,Individual
+37755,TXS003,EPO Individual,No,WILLIAMSON,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,ANDREWS,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,ARMSTRONG,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,BELL,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,BORDEN,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,BOSQUE,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,BRAZOS,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,BREWSTER,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,BRISCOE,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,BURNET,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,CALLAHAN,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,CARSON,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,CASTRO,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,CHILDRESS,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,COKE,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,COLEMAN,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,COLLIN,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,COLLINGSWORTH,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,COMANCHE,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,CORYELL,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,COTTLE,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,CRANE,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,CROSBY,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,DALLAM,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,DALLAS,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,DAWSON,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,DEAF SMITH,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,DICKENS,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,DONLEY,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,EASTLAND,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,ECTOR,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,ELLIS,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,FALLS,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,FISHER,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,FLOYD,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,FREESTONE,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,GAINES,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,GARZA,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,GLASSCOCK,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,GRAY,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,HALE,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,HALL,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,HAMILTON,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,HANSFORD,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,HARTLEY,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,HASKELL,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,HEMPHILL,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,HILL,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,HOCKLEY,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,HOWARD,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,HUTCHINSON,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,JONES,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,KENT,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,KING,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,KNOX,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,LAMB,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,LAMPASAS,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,LIMESTONE,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,LIPSCOMB,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,LLANO,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,LOVING,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,LUBBOCK,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,LYNN,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,MCCULLOCH,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,MCLENNAN,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,MARTIN,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,MIDLAND,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,MILAM,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,MILLS,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,MITCHELL,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,MOORE,No,,,Individual
+45786,TXS001,MHT,No,BEXAR,No,,,Individual
+45786,TXS001,MHT,No,CAMERON,No,,,Individual
+45786,TXS001,MHT,No,COLLIN,No,,,Individual
+45786,TXS001,MHT,No,DALLAS,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,MOTLEY,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,NAVARRO,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,NOLAN,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,OCHILTREE,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,OLDHAM,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,PARMER,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,PECOS,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,POTTER,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,RANDALL,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,REAGAN,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,REEVES,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,ROBERTS,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,ROCKWALL,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,RUNNELS,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,SAN SABA,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,SCURRY,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,SHACKELFORD,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,SHERMAN,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,SOMERVELL,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,STEPHENS,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,STONEWALL,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,SWISHER,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,TAYLOR,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,TERRY,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,THROCKMORTON,No,,,Individual
+45786,TXS001,MHT,No,DENTON,No,,,Individual
+45786,TXS001,MHT,No,EL PASO,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,TRAVIS,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,UPTON,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,WARD,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,WASHINGTON,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,WHEELER,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,WILLIAMSON,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,WINKLER,No,,,Individual
+40788,TXS001,BSW HMO Marketplace Service Area,No,YOAKUM,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,AUSTIN,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,BASTROP,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,BELL,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,BEXAR,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,BLANCO,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,BOSQUE,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,BRAZOS,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,BURLESON,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,BURNET,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,CALDWELL,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,COKE,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,COLEMAN,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,COLLIN,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,COMAL,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,CONCHO,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,CORYELL,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,CROCKETT,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,DALLAS,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,DENTON,No,,,Individual
+33602,TXS171,Blue Advantage HMO,No,TOM GREEN,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,ATASCOSA,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,BANDERA,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,BEXAR,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,COMAL,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,DIMMIT,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,EDWARDS,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,FRIO,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,GILLESPIE,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,GONZALES,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,GUADALUPE,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,KENDALL,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,KERR,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,KINNEY,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,LA SALLE,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,MAVERICK,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,MEDINA,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,REAL,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,UVALDE,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,VAL VERDE,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,WILSON,No,,,Individual
+33602,TXS181,Blue Advantage HMO,No,ZAVALA,No,,,Individual
+33602,TXS188,MyBlue Health,No,BEXAR,No,,,Individual
+33602,TXS188,MyBlue Health,No,COMAL,No,,,Individual
+33602,TXS191,Blue Advantage HMO,No,COOKE,No,,,Individual
+33602,TXS191,Blue Advantage HMO,No,FANNIN,No,,,Individual
+33602,TXS191,Blue Advantage HMO,No,GRAYSON,No,,,Individual
+33602,TXS201,Blue Advantage HMO,No,BOWIE,No,,,Individual
+33602,TXS201,Blue Advantage HMO,No,CAMP,No,,,Individual
+33602,TXS201,Blue Advantage HMO,No,CASS,No,,,Individual
+33602,TXS201,Blue Advantage HMO,No,DELTA,No,,,Individual
+33602,TXS201,Blue Advantage HMO,No,FRANKLIN,No,,,Individual
+33602,TXS201,Blue Advantage HMO,No,HOPKINS,No,,,Individual
+33602,TXS201,Blue Advantage HMO,No,LAMAR,No,,,Individual
+33602,TXS201,Blue Advantage HMO,No,MORRIS,No,,,Individual
+33602,TXS201,Blue Advantage HMO,No,RED RIVER,No,,,Individual
+33602,TXS201,Blue Advantage HMO,No,TITUS,No,,,Individual
+33602,TXS211,Blue Advantage HMO,No,ANDERSON,No,,,Individual
+33602,TXS211,Blue Advantage HMO,No,CHEROKEE,No,,,Individual
+33602,TXS211,Blue Advantage HMO,No,HENDERSON,No,,,Individual
+33602,TXS211,Blue Advantage HMO,No,RAINS,No,,,Individual
+33602,TXS211,Blue Advantage HMO,No,SMITH,No,,,Individual
+33602,TXS211,Blue Advantage HMO,No,VAN ZANDT,No,,,Individual
+33602,TXS211,Blue Advantage HMO,No,WOOD,No,,,Individual
+33602,TXS221,Blue Advantage HMO,No,CALHOUN,No,,,Individual
+33602,TXS221,Blue Advantage HMO,No,DE WITT,No,,,Individual
+33602,TXS221,Blue Advantage HMO,No,GOLIAD,No,,,Individual
+33602,TXS221,Blue Advantage HMO,No,JACKSON,No,,,Individual
+33602,TXS221,Blue Advantage HMO,No,KARNES,No,,,Individual
+33602,TXS221,Blue Advantage HMO,No,LAVACA,No,,,Individual
+33602,TXS221,Blue Advantage HMO,No,VICTORIA,No,,,Individual
+33602,TXS231,Blue Advantage HMO,No,BOSQUE,No,,,Individual
+33602,TXS231,Blue Advantage HMO,No,FALLS,No,,,Individual
+33602,TXS231,Blue Advantage HMO,No,FREESTONE,No,,,Individual
+33602,TXS231,Blue Advantage HMO,No,HILL,No,,,Individual
+33602,TXS231,Blue Advantage HMO,No,LIMESTONE,No,,,Individual
+33602,TXS231,Blue Advantage HMO,No,MCLENNAN,No,,,Individual
+33602,TXS238,MyBlue Health,No,MCLENNAN,No,,,Individual
+33602,TXS241,Blue Advantage HMO,No,ARCHER,No,,,Individual
+33602,TXS241,Blue Advantage HMO,No,BAYLOR,No,,,Individual
+57125,TXS001,USHL_TX,No,BASTROP,No,,,Individual
+57125,TXS001,USHL_TX,No,BURNET,No,,,Individual
+57125,TXS001,USHL_TX,No,CALDWELL,No,,,Individual
+57125,TXS001,USHL_TX,No,HAYS,No,,,Individual
+57125,TXS001,USHL_TX,No,MCLENNAN,No,,,Individual
+57125,TXS001,USHL_TX,No,TRAVIS,No,,,Individual
+57125,TXS001,USHL_TX,No,WILLIAMSON,No,,,Individual
+57125,TXS002,USHL_TX,No,BELL,No,,,Individual
+57125,TXS002,USHL_TX,No,BLANCO,No,,,Individual
+57125,TXS002,USHL_TX,No,BOSQUE,No,,,Individual
+57125,TXS002,USHL_TX,No,CORYELL,No,,,Individual
+57125,TXS002,USHL_TX,No,FALLS,No,,,Individual
+57125,TXS002,USHL_TX,No,FAYETTE,No,,,Individual
+57125,TXS002,USHL_TX,No,HAMILTON,No,,,Individual
+57125,TXS002,USHL_TX,No,HILL,No,,,Individual
+57125,TXS002,USHL_TX,No,LAMPASAS,No,,,Individual
+57125,TXS002,USHL_TX,No,LEE,No,,,Individual
+57125,TXS002,USHL_TX,No,LIMESTONE,No,,,Individual
+57125,TXS002,USHL_TX,No,LLANO,No,,,Individual
+40788,TXS002,BSWHP ACA SG HMO,No,PECOS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,POTTER,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,RANDALL,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,REAGAN,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,REEVES,No,,,Small Group
+33602,TXS241,Blue Advantage HMO,No,CLAY,No,,,Individual
+33602,TXS241,Blue Advantage HMO,No,COTTLE,No,,,Individual
+33602,TXS241,Blue Advantage HMO,No,FOARD,No,,,Individual
+33602,TXS241,Blue Advantage HMO,No,HARDEMAN,No,,,Individual
+33602,TXS241,Blue Advantage HMO,No,JACK,No,,,Individual
+33602,TXS241,Blue Advantage HMO,No,KNOX,No,,,Individual
+33602,TXS241,Blue Advantage HMO,No,MONTAGUE,No,,,Individual
+33602,TXS241,Blue Advantage HMO,No,WICHITA,No,,,Individual
+33602,TXS241,Blue Advantage HMO,No,WILBARGER,No,,,Individual
+33602,TXS241,Blue Advantage HMO,No,YOUNG,No,,,Individual
+33602,TXS251,Blue Advantage HMO,No,DENTON,No,,,Individual
+33602,TXS251,Blue Advantage HMO,No,ERATH,No,,,Individual
+33602,TXS251,Blue Advantage HMO,No,HOOD,No,,,Individual
+33602,TXS251,Blue Advantage HMO,No,JOHNSON,No,,,Individual
+33602,TXS251,Blue Advantage HMO,No,PALO PINTO,No,,,Individual
+33602,TXS251,Blue Advantage HMO,No,PARKER,No,,,Individual
+33602,TXS251,Blue Advantage HMO,No,SOMERVELL,No,,,Individual
+33602,TXS251,Blue Advantage HMO,No,TARRANT,No,,,Individual
+33602,TXS251,Blue Advantage HMO,No,WISE,No,,,Individual
+33602,TXS258,MyBlue Health,No,DENTON,No,,,Individual
+33602,TXS258,MyBlue Health,No,TARRANT,No,,,Individual
+33602,TXS261,Blue Advantage HMO,No,AUSTIN,No,,,Individual
+33602,TXS261,Blue Advantage HMO,No,BRAZORIA,No,,,Individual
+33602,TXS261,Blue Advantage HMO,No,COLORADO,No,,,Individual
+33602,TXS261,Blue Advantage HMO,No,FORT BEND,No,,,Individual
+33602,TXS261,Blue Advantage HMO,No,MATAGORDA,No,,,Individual
+33602,TXS261,Blue Advantage HMO,No,WALLER,No,,,Individual
+33602,TXS261,Blue Advantage HMO,No,WHARTON,No,,,Individual
+33602,TXS271,Blue Advantage HMO,No,CHAMBERS,No,,,Individual
+33602,TXS271,Blue Advantage HMO,No,LIBERTY,No,,,Individual
+33602,TXS271,Blue Advantage HMO,No,MONTGOMERY,No,,,Individual
+33602,TXS271,Blue Advantage HMO,No,WALKER,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,ELLIS,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,EL PASO,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,ERATH,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,FALLS,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,FAYETTE,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,FREESTONE,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,GRIMES,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,HAMILTON,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,HAYS,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,HILL,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,HOOD,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,IRION,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,JOHNSON,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,KIMBLE,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,LAMPASAS,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,LEE,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,LEON,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,LIMESTONE,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,LLANO,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,MCCULLOCH,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,MCLENNAN,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,MADISON,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,MASON,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,MENARD,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,MILAM,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,MILLS,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,REAGAN,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,ROBERTSON,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,ROCKWALL,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,RUNNELS,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,SAN SABA,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,SCHLEICHER,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,SOMERVELL,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,STERLING,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,SUTTON,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,TARRANT,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,TOM GREEN,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,TRAVIS,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,WALKER,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,WALLER,No,,,Individual
+40788,TXS002,SWHP HMO Individual,No,WASHINGTON,No,,,Individual
+37755,TXS001,ICSW ACA SG PPO,No,LOVING,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,LUBBOCK,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,LYNN,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,MCCULLOCH,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,MCLENNAN,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,MADISON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,MARTIN,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,MASON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,MENARD,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,MIDLAND,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,MILAM,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,MILLS,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,MITCHELL,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,MOORE,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,MOTLEY,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,NAVARRO,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,NOLAN,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,OCHILTREE,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,OLDHAM,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,PARMER,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,PECOS,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,POTTER,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,RANDALL,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,REAGAN,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,REEVES,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,ROBERTS,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,ROBERTSON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,ROCKWALL,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,RUNNELS,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,SAN SABA,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,SCHLEICHER,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,SCURRY,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,SHACKELFORD,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,SHERMAN,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,SOMERVELL,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,STEPHENS,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,STERLING,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,STONEWALL,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,SUTTON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,SWISHER,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,TARRANT,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,TAYLOR,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,TERRY,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,THROCKMORTON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,TOM GREEN,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,TRAVIS,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,UPTON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,WALKER,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,WALLER,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,WARD,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,WASHINGTON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,WHEELER,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,WILLIAMSON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,WINKLER,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,YOAKUM,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,ANDREWS,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,ARMSTRONG,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,AUSTIN,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,BAILEY,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,BASTROP,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,BELL,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,BEXAR,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,BLANCO,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,BORDEN,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,BOSQUE,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,BRAZOS,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,BREWSTER,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,BRISCOE,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,BROWN,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,BURLESON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,BURNET,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,CALDWELL,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,CALLAHAN,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,CARSON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,CASTRO,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,CHILDRESS,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,COCHRAN,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,COKE,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,COLEMAN,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,COLLIN,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,COLLINGSWORTH,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,COMAL,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,COMANCHE,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,CONCHO,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,CORYELL,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,COTTLE,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,CRANE,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,CROCKETT,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,CROSBY,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,DALLAM,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,DALLAS,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,DAWSON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,DEAF SMITH,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,DENTON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,DICKENS,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,DONLEY,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,EASTLAND,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,ECTOR,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,ELLIS,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,EL PASO,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,ERATH,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,FALLS,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,FAYETTE,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,FISHER,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,FLOYD,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,FREESTONE,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,GAINES,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,GARZA,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,GLASSCOCK,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,GRAY,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,GRAYSON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,GRIMES,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,GUADALUPE,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,HALE,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,HALL,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,HAMILTON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,HANSFORD,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,HARTLEY,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,HASKELL,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,HAYS,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,HEMPHILL,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,HILL,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,HOCKLEY,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,HOOD,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,HOUSTON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,HOWARD,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,HUTCHINSON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,IRION,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,JOHNSON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,JONES,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,KENT,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,KIMBLE,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,KING,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,KNOX,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,LAMB,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,LAMPASAS,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,LEE,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,LEON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,LIMESTONE,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,LIPSCOMB,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,LLANO,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,LOVING,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,LUBBOCK,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,LYNN,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,MCCULLOCH,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,MCLENNAN,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,MADISON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,MARTIN,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,MASON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,MENARD,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,MIDLAND,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,MILAM,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,MILLS,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,MITCHELL,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,MOORE,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,MOTLEY,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,NAVARRO,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,NOLAN,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,OCHILTREE,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,OLDHAM,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,PARMER,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,PECOS,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,POTTER,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,RANDALL,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,REAGAN,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,REEVES,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,ROBERTS,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,ROBERTSON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,ROCKWALL,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,RUNNELS,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,SAN SABA,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,SCHLEICHER,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,SCURRY,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,SHACKELFORD,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,SHERMAN,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,SOMERVELL,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,STEPHENS,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,STERLING,No,,,Small Group
+40788,TXS002,SWHP HMO Individual,No,WILLIAMSON,No,,,Individual
+37755,TXS002,ICSW ACA SG PPO,No,STONEWALL,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,SUTTON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,SWISHER,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,TARRANT,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,TAYLOR,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,TERRY,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,THROCKMORTON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,TOM GREEN,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,TRAVIS,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,UPTON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,WALKER,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,WALLER,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,WARD,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,WASHINGTON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,WHEELER,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,WILLIAMSON,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,WINKLER,No,,,Small Group
+37755,TXS002,ICSW ACA SG PPO,No,YOAKUM,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,ANDREWS,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,ARMSTRONG,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,AUSTIN,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,BAILEY,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,BASTROP,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,BELL,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,BEXAR,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,BLANCO,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,BORDEN,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,BOSQUE,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,BRAZOS,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,BREWSTER,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,BRISCOE,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,BROWN,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,BURLESON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,BURNET,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,CALDWELL,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,CALLAHAN,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,CARSON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,CASTRO,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,CHILDRESS,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,COCHRAN,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,COKE,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,COLEMAN,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,COLLIN,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,COLLINGSWORTH,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,COMAL,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,COMANCHE,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,CONCHO,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,CORYELL,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,COTTLE,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,CRANE,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,CROCKETT,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,CROSBY,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,DALLAM,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,DALLAS,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,DAWSON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,DEAF SMITH,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,DENTON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,DICKENS,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,DONLEY,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,EASTLAND,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,ECTOR,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,ELLIS,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,EL PASO,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,ERATH,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,FALLS,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,FAYETTE,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,FISHER,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,FLOYD,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,FREESTONE,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,GAINES,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,GARZA,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,GLASSCOCK,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,GRAY,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,GRAYSON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,GRIMES,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,GUADALUPE,No,,,Small Group
+45786,TXS001,MHT,No,FORT BEND,No,,,Individual
+45786,TXS001,MHT,No,HARRIS,No,,,Individual
+45786,TXS001,MHT,No,HIDALGO,No,,,Individual
+45786,TXS001,MHT,No,JEFFERSON,No,,,Individual
+45786,TXS001,MHT,No,MONTGOMERY,No,,,Individual
+45786,TXS001,MHT,No,STARR,No,,,Individual
+45786,TXS001,MHT,No,TARRANT,No,,,Individual
+45786,TXS001,MHT,No,WEBB,No,,,Individual
+37755,TXS001,ICSW ACA SG PPO,No,HALE,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,HALL,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,HAMILTON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,HANSFORD,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,HARTLEY,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,HASKELL,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,HAYS,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,HEMPHILL,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,HILL,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,HOCKLEY,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,HOOD,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,HOUSTON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,HOWARD,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,HUTCHINSON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,IRION,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,JOHNSON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,JONES,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,KENT,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,KIMBLE,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,KING,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,KNOX,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,LAMB,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,LAMPASAS,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,LEE,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,LEON,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,LIMESTONE,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,LIPSCOMB,No,,,Small Group
+37755,TXS001,ICSW ACA SG PPO,No,LLANO,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,ANDREWS,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,ARMSTRONG,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,AUSTIN,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,BAILEY,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,BASTROP,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,BELL,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,BEXAR,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,BLANCO,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,BORDEN,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,BOSQUE,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,BRAZOS,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,BREWSTER,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,BRISCOE,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,BROWN,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,BURLESON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,BURNET,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,CALDWELL,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,CALLAHAN,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,CARSON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,CASTRO,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,CHILDRESS,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,COCHRAN,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,COKE,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,COLEMAN,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,COLLIN,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,COLLINGSWORTH,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,COMAL,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,COMANCHE,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,CONCHO,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,CORYELL,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,COTTLE,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,CRANE,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,CROCKETT,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,CROSBY,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,DALLAM,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,DALLAS,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,DAWSON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,DEAF SMITH,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,DENTON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,DICKENS,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,DONLEY,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,EASTLAND,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,ECTOR,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,ELLIS,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,EL PASO,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,ERATH,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,FALLS,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,FAYETTE,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,FISHER,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,FLOYD,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,FREESTONE,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,GAINES,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,GARZA,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,GLASSCOCK,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,GRAY,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,GRAYSON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,GRIMES,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,GUADALUPE,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,HALE,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,HALL,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,HAMILTON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,HANSFORD,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,HARTLEY,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,HASKELL,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,HAYS,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,HEMPHILL,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,HILL,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,HOCKLEY,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,HOOD,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,HOUSTON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,HOWARD,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,HUTCHINSON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,IRION,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,JOHNSON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,JONES,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,KENT,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,KIMBLE,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,KING,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,KNOX,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,LAMB,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,LAMPASAS,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,LEE,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,LEON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,LIMESTONE,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,LIPSCOMB,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,LLANO,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,LOVING,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,LUBBOCK,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,LYNN,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,MCCULLOCH,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,MCLENNAN,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,MADISON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,MARTIN,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,MASON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,MENARD,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,MIDLAND,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,MILAM,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,MILLS,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,MITCHELL,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,MOORE,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,MOTLEY,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,NAVARRO,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,NOLAN,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,OCHILTREE,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,OLDHAM,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,PARMER,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,PECOS,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,POTTER,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,RANDALL,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,REAGAN,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,REEVES,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,ROBERTS,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,ROBERTSON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,ROCKWALL,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,RUNNELS,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,SAN SABA,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,SCHLEICHER,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,SCURRY,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,SHACKELFORD,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,SHERMAN,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,SOMERVELL,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,STEPHENS,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,STERLING,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,STONEWALL,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,SUTTON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,SWISHER,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,TARRANT,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,TAYLOR,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,TERRY,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,THROCKMORTON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,TOM GREEN,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,TRAVIS,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,UPTON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,WALKER,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,WALLER,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,WARD,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,WASHINGTON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,WHEELER,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,WILLIAMSON,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,WINKLER,No,,,Small Group
+40788,TXS001,BSWHP ACA SG HMO,No,YOAKUM,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,ANDREWS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,ARMSTRONG,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,AUSTIN,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,BAILEY,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,BASTROP,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,BELL,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,BEXAR,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,BLANCO,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,BORDEN,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,BOSQUE,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,BRAZOS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,BREWSTER,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,BRISCOE,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,BROWN,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,BURLESON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,BURNET,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,CALDWELL,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,CALLAHAN,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,CARSON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,CASTRO,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,CHILDRESS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,COCHRAN,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,COKE,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,COLEMAN,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,COLLIN,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,COLLINGSWORTH,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,COMAL,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,COMANCHE,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,CONCHO,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,CORYELL,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,COTTLE,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,CRANE,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,CROCKETT,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,CROSBY,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,DALLAM,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,DALLAS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,DAWSON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,DEAF SMITH,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,DENTON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,DICKENS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,DONLEY,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,EASTLAND,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,ECTOR,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,ELLIS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,EL PASO,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,ERATH,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,FALLS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,FAYETTE,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,FISHER,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,FLOYD,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,FREESTONE,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,GAINES,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,GARZA,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,GLASSCOCK,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,GRAY,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,GRAYSON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,GRIMES,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,GUADALUPE,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,HALE,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,HALL,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,HAMILTON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,HANSFORD,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,HARTLEY,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,HASKELL,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,HAYS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,HEMPHILL,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,HILL,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,HOCKLEY,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,HOOD,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,HOUSTON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,HOWARD,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,HUTCHINSON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,IRION,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,ROBERTS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,ROBERTSON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,ROCKWALL,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,RUNNELS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,SAN SABA,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,SCHLEICHER,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,SCURRY,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,SHACKELFORD,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,SHERMAN,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,SOMERVELL,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,STEPHENS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,STERLING,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,STONEWALL,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,SUTTON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,SWISHER,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,TARRANT,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,TAYLOR,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,TERRY,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,THROCKMORTON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,TOM GREEN,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,TRAVIS,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,UPTON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,WALKER,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,WALLER,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,WARD,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,WASHINGTON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,WHEELER,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,WILLIAMSON,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,WINKLER,No,,,Small Group
+40788,TXS002,BSWHP ACA SG HMO,No,YOAKUM,No,,,Small Group
+88435,TXS002,INIC SG SELECT 3 8 18 25,No,BEXAR,No,,,Small Group
+88435,TXS002,INIC SG SELECT 3 8 18 25,No,COLLIN,No,,,Small Group
+88435,TXS002,INIC SG SELECT 3 8 18 25,No,COMAL,No,,,Small Group
+88435,TXS002,INIC SG SELECT 3 8 18 25,No,DALLAS,No,,,Small Group
+88435,TXS002,INIC SG SELECT 3 8 18 25,No,DENTON,No,,,Small Group
+88435,TXS002,INIC SG SELECT 3 8 18 25,No,GUADALUPE,No,,,Small Group
+88435,TXS002,INIC SG SELECT 3 8 18 25,No,HAYS,No,,,Small Group
+88435,TXS002,INIC SG SELECT 3 8 18 25,No,ROCKWALL,No,,,Small Group
+88435,TXS002,INIC SG SELECT 3 8 18 25,No,TARRANT,No,,,Small Group
+88435,TXS002,INIC SG SELECT 3 8 18 25,No,TRAVIS,No,,,Small Group
+88435,TXS002,INIC SG SELECT 3 8 18 25,No,WILLIAMSON,No,,,Small Group
+88435,TXS003,"INIC SG SELECT 10, 26, 27",No,BRAZORIA,No,,,Small Group
+88435,TXS003,"INIC SG SELECT 10, 26, 27",No,FORT BEND,No,,,Small Group
+88435,TXS003,"INIC SG SELECT 10, 26, 27",No,HARRIS,No,,,Small Group
+88435,TXS003,"INIC SG SELECT 10, 26, 27",No,MONTGOMERY,No,,,Small Group
+63251,TXS001,Bexar County Service Area,No,BEXAR,No,,,Individual
+33602,TXS002,Blue Choice PPO,Yes,,No,,,Small Group
+33602,TXS003,BlueCare Dental PPO,Yes,,No,,,Individual
+98809,TXS002,SG TX Choice,Yes,,No,,,Small Group
+98809,TXS001,SG TX Choice Plus,Yes,,No,,,Small Group
+88435,TXS001,INIC SG BROAD,Yes,,No,,,Small Group
+40220,TXS001,SG TX Navigate,Yes,,No,,,Small Group

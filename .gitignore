@@ -1,0 +1,6 @@
+/node_modules
+#/TexasFilteredData
+/Chatbot/__pycache__
+/package-lock.json
+/package.json
+/test.js

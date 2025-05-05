@@ -1,0 +1,509 @@
+State,Rating Area ID,Market,County,MSA,Three Digit Zip,FIPS
+Texas,1,Individual,CALLAHAN,,,48059
+Texas,1,Individual,JONES,,,48253
+Texas,1,Individual,TAYLOR,,,48441
+Texas,1,Individual,BROWN,,,48049
+Texas,1,Individual,COLEMAN,,,48083
+Texas,1,Individual,COMANCHE,,,48093
+Texas,1,Individual,EASTLAND,,,48133
+Texas,1,Individual,FISHER,,,48151
+Texas,1,Individual,HASKELL,,,48207
+Texas,1,Individual,KENT,,,48263
+Texas,1,Individual,MITCHELL,,,48335
+Texas,1,Individual,NOLAN,,,48353
+Texas,1,Individual,RUNNELS,,,48399
+Texas,1,Individual,SCURRY,,,48415
+Texas,1,Individual,SHACKELFORD,,,48417
+Texas,1,Individual,STEPHENS,,,48429
+Texas,1,Individual,STONEWALL,,,48433
+Texas,1,Individual,THROCKMORTON,,,48447
+Texas,2,Individual,ARMSTRONG,,,48011
+Texas,2,Individual,CARSON,,,48065
+Texas,2,Individual,POTTER,,,48375
+Texas,2,Individual,RANDALL,,,48381
+Texas,2,Individual,BRISCOE,,,48045
+Texas,2,Individual,CASTRO,,,48069
+Texas,2,Individual,CHILDRESS,,,48075
+Texas,2,Individual,COLLINGSWORTH,,,48087
+Texas,2,Individual,DALLAM,,,48111
+Texas,2,Individual,DEAF SMITH,,,48117
+Texas,2,Individual,DONLEY,,,48129
+Texas,2,Individual,GRAY,,,48179
+Texas,2,Individual,HALL,,,48191
+Texas,2,Individual,HANSFORD,,,48195
+Texas,2,Individual,HARTLEY,,,48205
+Texas,2,Individual,HEMPHILL,,,48211
+Texas,2,Individual,HUTCHINSON,,,48233
+Texas,2,Individual,LIPSCOMB,,,48295
+Texas,2,Individual,MOORE,,,48341
+Texas,2,Individual,OCHILTREE,,,48357
+Texas,2,Individual,OLDHAM,,,48359
+Texas,2,Individual,PARMER,,,48369
+Texas,2,Individual,ROBERTS,,,48393
+Texas,2,Individual,SHERMAN,,,48421
+Texas,2,Individual,SWISHER,,,48437
+Texas,2,Individual,WHEELER,,,48483
+Texas,3,Individual,BASTROP,,,48021
+Texas,3,Individual,CALDWELL,,,48055
+Texas,3,Individual,HAYS,,,48209
+Texas,3,Individual,TRAVIS,,,48453
+Texas,3,Individual,WILLIAMSON,,,48491
+Texas,3,Individual,BLANCO,,,48031
+Texas,3,Individual,BURNET,,,48053
+Texas,3,Individual,FAYETTE,,,48149
+Texas,3,Individual,LEE,,,48287
+Texas,3,Individual,LLANO,,,48299
+Texas,4,Individual,HARDIN,,,48199
+Texas,4,Individual,JEFFERSON,,,48245
+Texas,4,Individual,ORANGE,,,48361
+Texas,4,Individual,SAN JACINTO,,,48407
+Texas,4,Individual,ANGELINA,,,48005
+Texas,4,Individual,HOUSTON,,,48225
+Texas,4,Individual,JASPER,,,48241
+Texas,4,Individual,NACOGDOCHES,,,48347
+Texas,4,Individual,NEWTON,,,48351
+Texas,4,Individual,POLK,,,48373
+Texas,4,Individual,SABINE,,,48403
+Texas,4,Individual,SAN AUGUSTINE,,,48405
+Texas,4,Individual,SHELBY,,,48419
+Texas,4,Individual,TRINITY,,,48455
+Texas,4,Individual,TYLER,,,48457
+Texas,5,Individual,CAMERON,,,48061
+Texas,5,Individual,KENEDY,,,48261
+Texas,5,Individual,WILLACY,,,48489
+Texas,6,Individual,BRAZOS,,,48041
+Texas,6,Individual,BURLESON,,,48051
+Texas,6,Individual,ROBERTSON,,,48395
+Texas,6,Individual,GRIMES,,,48185
+Texas,6,Individual,LEON,,,48289
+Texas,6,Individual,MADISON,,,48313
+Texas,6,Individual,MILAM,,,48331
+Texas,6,Individual,WASHINGTON,,,48477
+Texas,7,Individual,ARANSAS,,,48007
+Texas,7,Individual,NUECES,,,48355
+Texas,7,Individual,SAN PATRICIO,,,48409
+Texas,7,Individual,BEE,,,48025
+Texas,7,Individual,JIM WELLS,,,48249
+Texas,7,Individual,KLEBERG,,,48273
+Texas,7,Individual,LIVE OAK,,,48297
+Texas,7,Individual,REFUGIO,,,48391
+Texas,8,Individual,COLLIN,,,48085
+Texas,8,Individual,DALLAS,,,48113
+Texas,8,Individual,ELLIS,,,48139
+Texas,8,Individual,HUNT,,,48231
+Texas,8,Individual,KAUFMAN,,,48257
+Texas,8,Individual,ROCKWALL,,,48397
+Texas,8,Individual,NAVARRO,,,48349
+Texas,9,Individual,EL PASO,,,48141
+Texas,9,Individual,BREWSTER,,,48043
+Texas,9,Individual,CULBERSON,,,48109
+Texas,9,Individual,HUDSPETH,,,48229
+Texas,9,Individual,JEFF DAVIS,,,48243
+Texas,9,Individual,PRESIDIO,,,48377
+Texas,10,Individual,GALVESTON,,,48167
+Texas,10,Individual,HARRIS,,,48201
+Texas,11,Individual,BELL,,,48027
+Texas,11,Individual,CORYELL,,,48099
+Texas,11,Individual,LAMPASAS,,,48281
+Texas,11,Individual,HAMILTON,,,48193
+Texas,11,Individual,MILLS,,,48333
+Texas,11,Individual,SAN SABA,,,48411
+Texas,12,Individual,WEBB,,,48479
+Texas,12,Individual,DUVAL,,,48131
+Texas,12,Individual,JIM HOGG,,,48247
+Texas,12,Individual,MCMULLEN,,,48311
+Texas,12,Individual,ZAPATA,,,48505
+Texas,1,Small Group,CALLAHAN,,,48059
+Texas,1,Small Group,JONES,,,48253
+Texas,1,Small Group,TAYLOR,,,48441
+Texas,1,Small Group,BROWN,,,48049
+Texas,1,Small Group,COLEMAN,,,48083
+Texas,1,Small Group,COMANCHE,,,48093
+Texas,1,Small Group,EASTLAND,,,48133
+Texas,1,Small Group,FISHER,,,48151
+Texas,1,Small Group,HASKELL,,,48207
+Texas,1,Small Group,KENT,,,48263
+Texas,1,Small Group,MITCHELL,,,48335
+Texas,1,Small Group,NOLAN,,,48353
+Texas,1,Small Group,RUNNELS,,,48399
+Texas,1,Small Group,SCURRY,,,48415
+Texas,1,Small Group,SHACKELFORD,,,48417
+Texas,1,Small Group,STEPHENS,,,48429
+Texas,1,Small Group,STONEWALL,,,48433
+Texas,1,Small Group,THROCKMORTON,,,48447
+Texas,2,Small Group,ARMSTRONG,,,48011
+Texas,2,Small Group,CARSON,,,48065
+Texas,2,Small Group,POTTER,,,48375
+Texas,2,Small Group,RANDALL,,,48381
+Texas,2,Small Group,BRISCOE,,,48045
+Texas,2,Small Group,CASTRO,,,48069
+Texas,2,Small Group,CHILDRESS,,,48075
+Texas,2,Small Group,COLLINGSWORTH,,,48087
+Texas,2,Small Group,DALLAM,,,48111
+Texas,2,Small Group,DEAF SMITH,,,48117
+Texas,2,Small Group,DONLEY,,,48129
+Texas,2,Small Group,GRAY,,,48179
+Texas,2,Small Group,HALL,,,48191
+Texas,2,Small Group,HANSFORD,,,48195
+Texas,2,Small Group,HARTLEY,,,48205
+Texas,2,Small Group,HEMPHILL,,,48211
+Texas,2,Small Group,HUTCHINSON,,,48233
+Texas,2,Small Group,LIPSCOMB,,,48295
+Texas,2,Small Group,MOORE,,,48341
+Texas,2,Small Group,OCHILTREE,,,48357
+Texas,2,Small Group,OLDHAM,,,48359
+Texas,2,Small Group,PARMER,,,48369
+Texas,2,Small Group,ROBERTS,,,48393
+Texas,2,Small Group,SHERMAN,,,48421
+Texas,2,Small Group,SWISHER,,,48437
+Texas,2,Small Group,WHEELER,,,48483
+Texas,3,Small Group,BASTROP,,,48021
+Texas,3,Small Group,CALDWELL,,,48055
+Texas,3,Small Group,HAYS,,,48209
+Texas,3,Small Group,TRAVIS,,,48453
+Texas,3,Small Group,WILLIAMSON,,,48491
+Texas,3,Small Group,BLANCO,,,48031
+Texas,3,Small Group,BURNET,,,48053
+Texas,3,Small Group,FAYETTE,,,48149
+Texas,3,Small Group,LEE,,,48287
+Texas,3,Small Group,LLANO,,,48299
+Texas,4,Small Group,HARDIN,,,48199
+Texas,4,Small Group,JEFFERSON,,,48245
+Texas,4,Small Group,ORANGE,,,48361
+Texas,4,Small Group,SAN JACINTO,,,48407
+Texas,4,Small Group,ANGELINA,,,48005
+Texas,4,Small Group,HOUSTON,,,48225
+Texas,4,Small Group,JASPER,,,48241
+Texas,4,Small Group,NACOGDOCHES,,,48347
+Texas,4,Small Group,NEWTON,,,48351
+Texas,4,Small Group,POLK,,,48373
+Texas,4,Small Group,SABINE,,,48403
+Texas,4,Small Group,SAN AUGUSTINE,,,48405
+Texas,4,Small Group,SHELBY,,,48419
+Texas,4,Small Group,TRINITY,,,48455
+Texas,4,Small Group,TYLER,,,48457
+Texas,5,Small Group,CAMERON,,,48061
+Texas,5,Small Group,KENEDY,,,48261
+Texas,5,Small Group,WILLACY,,,48489
+Texas,6,Small Group,BRAZOS,,,48041
+Texas,6,Small Group,BURLESON,,,48051
+Texas,6,Small Group,ROBERTSON,,,48395
+Texas,6,Small Group,GRIMES,,,48185
+Texas,6,Small Group,LEON,,,48289
+Texas,6,Small Group,MADISON,,,48313
+Texas,6,Small Group,MILAM,,,48331
+Texas,6,Small Group,WASHINGTON,,,48477
+Texas,7,Small Group,ARANSAS,,,48007
+Texas,7,Small Group,NUECES,,,48355
+Texas,7,Small Group,SAN PATRICIO,,,48409
+Texas,7,Small Group,BEE,,,48025
+Texas,7,Small Group,JIM WELLS,,,48249
+Texas,7,Small Group,KLEBERG,,,48273
+Texas,7,Small Group,LIVE OAK,,,48297
+Texas,7,Small Group,REFUGIO,,,48391
+Texas,8,Small Group,COLLIN,,,48085
+Texas,8,Small Group,DALLAS,,,48113
+Texas,8,Small Group,ELLIS,,,48139
+Texas,8,Small Group,HUNT,,,48231
+Texas,8,Small Group,KAUFMAN,,,48257
+Texas,8,Small Group,ROCKWALL,,,48397
+Texas,8,Small Group,NAVARRO,,,48349
+Texas,9,Small Group,EL PASO,,,48141
+Texas,9,Small Group,BREWSTER,,,48043
+Texas,9,Small Group,CULBERSON,,,48109
+Texas,9,Small Group,HUDSPETH,,,48229
+Texas,9,Small Group,JEFF DAVIS,,,48243
+Texas,9,Small Group,PRESIDIO,,,48377
+Texas,10,Small Group,GALVESTON,,,48167
+Texas,10,Small Group,HARRIS,,,48201
+Texas,11,Small Group,BELL,,,48027
+Texas,11,Small Group,CORYELL,,,48099
+Texas,11,Small Group,LAMPASAS,,,48281
+Texas,11,Small Group,HAMILTON,,,48193
+Texas,11,Small Group,MILLS,,,48333
+Texas,11,Small Group,SAN SABA,,,48411
+Texas,12,Small Group,WEBB,,,48479
+Texas,12,Small Group,DUVAL,,,48131
+Texas,12,Small Group,JIM HOGG,,,48247
+Texas,12,Small Group,MCMULLEN,,,48311
+Texas,12,Small Group,ZAPATA,,,48505
+Texas,13,Individual,GREGG,,,48183
+Texas,13,Individual,RUSK,,,48401
+Texas,13,Individual,UPSHUR,,,48459
+Texas,13,Individual,HARRISON,,,48203
+Texas,13,Individual,MARION,,,48315
+Texas,13,Individual,PANOLA,,,48365
+Texas,14,Individual,CROSBY,,,48107
+Texas,14,Individual,LUBBOCK,,,48303
+Texas,14,Individual,BAILEY,,,48017
+Texas,14,Individual,COCHRAN,,,48079
+Texas,14,Individual,DICKENS,,,48125
+Texas,14,Individual,FLOYD,,,48153
+Texas,14,Individual,GARZA,,,48169
+Texas,14,Individual,HALE,,,48189
+Texas,14,Individual,HOCKLEY,,,48219
+Texas,14,Individual,KING,,,48269
+Texas,14,Individual,LAMB,,,48279
+Texas,14,Individual,LYNN,,,48305
+Texas,14,Individual,MOTLEY,,,48345
+Texas,14,Individual,TERRY,,,48445
+Texas,14,Individual,YOAKUM,,,48501
+Texas,15,Individual,HIDALGO,,,48215
+Texas,15,Individual,BROOKS,,,48047
+Texas,15,Individual,STARR,,,48427
+Texas,16,Individual,MIDLAND,,,48329
+Texas,16,Individual,ECTOR,,,48135
+Texas,16,Individual,ANDREWS,,,48003
+Texas,16,Individual,BORDEN,,,48033
+Texas,16,Individual,CRANE,,,48103
+Texas,16,Individual,DAWSON,,,48115
+Texas,16,Individual,GAINES,,,48165
+Texas,16,Individual,GLASSCOCK,,,48173
+Texas,16,Individual,HOWARD,,,48227
+Texas,16,Individual,LOVING,,,48301
+Texas,16,Individual,MARTIN,,,48317
+Texas,16,Individual,PECOS,,,48371
+Texas,16,Individual,REEVES,,,48389
+Texas,16,Individual,TERRELL,,,48443
+Texas,16,Individual,UPTON,,,48461
+Texas,16,Individual,WARD,,,48475
+Texas,16,Individual,WINKLER,,,48495
+Texas,17,Individual,IRION,,,48235
+Texas,17,Individual,TOM GREEN,,,48451
+Texas,17,Individual,COKE,,,48081
+Texas,17,Individual,CONCHO,,,48095
+Texas,17,Individual,CROCKETT,,,48105
+Texas,17,Individual,KIMBLE,,,48267
+Texas,17,Individual,MCCULLOCH,,,48307
+Texas,17,Individual,MASON,,,48319
+Texas,17,Individual,MENARD,,,48327
+Texas,17,Individual,REAGAN,,,48383
+Texas,17,Individual,SCHLEICHER,,,48413
+Texas,17,Individual,STERLING,,,48431
+Texas,17,Individual,SUTTON,,,48435
+Texas,18,Individual,ATASCOSA,,,48013
+Texas,18,Individual,BANDERA,,,48019
+Texas,18,Individual,BEXAR,,,48029
+Texas,18,Individual,COMAL,,,48091
+Texas,18,Individual,GUADALUPE,,,48187
+Texas,18,Individual,KENDALL,,,48259
+Texas,18,Individual,MEDINA,,,48325
+Texas,18,Individual,WILSON,,,48493
+Texas,18,Individual,DIMMIT,,,48127
+Texas,18,Individual,EDWARDS,,,48137
+Texas,18,Individual,FRIO,,,48163
+Texas,18,Individual,GILLESPIE,,,48171
+Texas,18,Individual,GONZALES,,,48177
+Texas,18,Individual,KERR,,,48265
+Texas,18,Individual,KINNEY,,,48271
+Texas,18,Individual,LA SALLE,,,48283
+Texas,18,Individual,MAVERICK,,,48323
+Texas,18,Individual,REAL,,,48385
+Texas,18,Individual,UVALDE,,,48463
+Texas,18,Individual,VAL VERDE,,,48465
+Texas,18,Individual,ZAVALA,,,48507
+Texas,19,Individual,GRAYSON,,,48181
+Texas,19,Individual,COOKE,,,48097
+Texas,19,Individual,FANNIN,,,48147
+Texas,20,Individual,DELTA,,,48119
+Texas,20,Individual,BOWIE,,,48037
+Texas,20,Individual,CAMP,,,48063
+Texas,20,Individual,CASS,,,48067
+Texas,20,Individual,FRANKLIN,,,48159
+Texas,20,Individual,HOPKINS,,,48223
+Texas,20,Individual,LAMAR,,,48277
+Texas,20,Individual,MORRIS,,,48343
+Texas,20,Individual,RED RIVER,,,48387
+Texas,20,Individual,TITUS,,,48449
+Texas,21,Individual,SMITH,,,48423
+Texas,21,Individual,ANDERSON,,,48001
+Texas,21,Individual,CHEROKEE,,,48073
+Texas,21,Individual,HENDERSON,,,48213
+Texas,21,Individual,RAINS,,,48379
+Texas,21,Individual,VAN ZANDT,,,48467
+Texas,21,Individual,WOOD,,,48499
+Texas,22,Individual,CALHOUN,,,48057
+Texas,22,Individual,GOLIAD,,,48175
+Texas,22,Individual,VICTORIA,,,48469
+Texas,22,Individual,DE WITT,,,48123
+Texas,22,Individual,JACKSON,,,48239
+Texas,22,Individual,KARNES,,,48255
+Texas,22,Individual,LAVACA,,,48285
+Texas,23,Individual,MCLENNAN,,,48309
+Texas,23,Individual,BOSQUE,,,48035
+Texas,23,Individual,FALLS,,,48145
+Texas,23,Individual,FREESTONE,,,48161
+Texas,23,Individual,HILL,,,48217
+Texas,23,Individual,LIMESTONE,,,48293
+Texas,24,Individual,ARCHER,,,48009
+Texas,24,Individual,CLAY,,,48077
+Texas,24,Individual,WICHITA,,,48485
+Texas,24,Individual,BAYLOR,,,48023
+Texas,24,Individual,COTTLE,,,48101
+Texas,24,Individual,FOARD,,,48155
+Texas,24,Individual,HARDEMAN,,,48197
+Texas,24,Individual,JACK,,,48237
+Texas,24,Individual,KNOX,,,48275
+Texas,24,Individual,MONTAGUE,,,48337
+Texas,24,Individual,WILBARGER,,,48487
+Texas,24,Individual,YOUNG,,,48503
+Texas,25,Individual,DENTON,,,48121
+Texas,25,Individual,JOHNSON,,,48251
+Texas,25,Individual,PARKER,,,48367
+Texas,25,Individual,TARRANT,,,48439
+Texas,25,Individual,WISE,,,48497
+Texas,25,Individual,ERATH,,,48143
+Texas,25,Individual,HOOD,,,48221
+Texas,25,Individual,PALO PINTO,,,48363
+Texas,25,Individual,SOMERVELL,,,48425
+Texas,26,Individual,AUSTIN,,,48015
+Texas,26,Individual,BRAZORIA,,,48039
+Texas,26,Individual,FORT BEND,,,48157
+Texas,26,Individual,WALLER,,,48473
+Texas,26,Individual,COLORADO,,,48089
+Texas,26,Individual,MATAGORDA,,,48321
+Texas,26,Individual,WHARTON,,,48481
+Texas,13,Small Group,GREGG,,,48183
+Texas,13,Small Group,RUSK,,,48401
+Texas,13,Small Group,UPSHUR,,,48459
+Texas,13,Small Group,HARRISON,,,48203
+Texas,13,Small Group,MARION,,,48315
+Texas,13,Small Group,PANOLA,,,48365
+Texas,14,Small Group,CROSBY,,,48107
+Texas,14,Small Group,LUBBOCK,,,48303
+Texas,14,Small Group,BAILEY,,,48017
+Texas,14,Small Group,COCHRAN,,,48079
+Texas,14,Small Group,DICKENS,,,48125
+Texas,14,Small Group,FLOYD,,,48153
+Texas,14,Small Group,GARZA,,,48169
+Texas,14,Small Group,HALE,,,48189
+Texas,14,Small Group,HOCKLEY,,,48219
+Texas,14,Small Group,KING,,,48269
+Texas,14,Small Group,LAMB,,,48279
+Texas,14,Small Group,LYNN,,,48305
+Texas,14,Small Group,MOTLEY,,,48345
+Texas,14,Small Group,TERRY,,,48445
+Texas,14,Small Group,YOAKUM,,,48501
+Texas,15,Small Group,HIDALGO,,,48215
+Texas,15,Small Group,BROOKS,,,48047
+Texas,15,Small Group,STARR,,,48427
+Texas,16,Small Group,MIDLAND,,,48329
+Texas,16,Small Group,ECTOR,,,48135
+Texas,16,Small Group,ANDREWS,,,48003
+Texas,16,Small Group,BORDEN,,,48033
+Texas,16,Small Group,CRANE,,,48103
+Texas,16,Small Group,DAWSON,,,48115
+Texas,16,Small Group,GAINES,,,48165
+Texas,16,Small Group,GLASSCOCK,,,48173
+Texas,16,Small Group,HOWARD,,,48227
+Texas,16,Small Group,LOVING,,,48301
+Texas,16,Small Group,MARTIN,,,48317
+Texas,16,Small Group,PECOS,,,48371
+Texas,16,Small Group,REEVES,,,48389
+Texas,16,Small Group,TERRELL,,,48443
+Texas,16,Small Group,UPTON,,,48461
+Texas,16,Small Group,WARD,,,48475
+Texas,16,Small Group,WINKLER,,,48495
+Texas,17,Small Group,IRION,,,48235
+Texas,17,Small Group,TOM GREEN,,,48451
+Texas,17,Small Group,COKE,,,48081
+Texas,17,Small Group,CONCHO,,,48095
+Texas,17,Small Group,CROCKETT,,,48105
+Texas,17,Small Group,KIMBLE,,,48267
+Texas,17,Small Group,MCCULLOCH,,,48307
+Texas,17,Small Group,MASON,,,48319
+Texas,17,Small Group,MENARD,,,48327
+Texas,17,Small Group,REAGAN,,,48383
+Texas,17,Small Group,SCHLEICHER,,,48413
+Texas,17,Small Group,STERLING,,,48431
+Texas,17,Small Group,SUTTON,,,48435
+Texas,18,Small Group,ATASCOSA,,,48013
+Texas,18,Small Group,BANDERA,,,48019
+Texas,18,Small Group,BEXAR,,,48029
+Texas,18,Small Group,COMAL,,,48091
+Texas,18,Small Group,GUADALUPE,,,48187
+Texas,18,Small Group,KENDALL,,,48259
+Texas,18,Small Group,MEDINA,,,48325
+Texas,18,Small Group,WILSON,,,48493
+Texas,18,Small Group,DIMMIT,,,48127
+Texas,18,Small Group,EDWARDS,,,48137
+Texas,18,Small Group,FRIO,,,48163
+Texas,18,Small Group,GILLESPIE,,,48171
+Texas,18,Small Group,GONZALES,,,48177
+Texas,18,Small Group,KERR,,,48265
+Texas,18,Small Group,KINNEY,,,48271
+Texas,18,Small Group,LA SALLE,,,48283
+Texas,18,Small Group,MAVERICK,,,48323
+Texas,18,Small Group,REAL,,,48385
+Texas,18,Small Group,UVALDE,,,48463
+Texas,18,Small Group,VAL VERDE,,,48465
+Texas,18,Small Group,ZAVALA,,,48507
+Texas,19,Small Group,GRAYSON,,,48181
+Texas,19,Small Group,COOKE,,,48097
+Texas,19,Small Group,FANNIN,,,48147
+Texas,20,Small Group,DELTA,,,48119
+Texas,20,Small Group,BOWIE,,,48037
+Texas,20,Small Group,CAMP,,,48063
+Texas,20,Small Group,CASS,,,48067
+Texas,20,Small Group,FRANKLIN,,,48159
+Texas,20,Small Group,HOPKINS,,,48223
+Texas,20,Small Group,LAMAR,,,48277
+Texas,20,Small Group,MORRIS,,,48343
+Texas,20,Small Group,RED RIVER,,,48387
+Texas,20,Small Group,TITUS,,,48449
+Texas,21,Small Group,SMITH,,,48423
+Texas,21,Small Group,ANDERSON,,,48001
+Texas,21,Small Group,CHEROKEE,,,48073
+Texas,21,Small Group,HENDERSON,,,48213
+Texas,21,Small Group,RAINS,,,48379
+Texas,21,Small Group,VAN ZANDT,,,48467
+Texas,21,Small Group,WOOD,,,48499
+Texas,22,Small Group,CALHOUN,,,48057
+Texas,22,Small Group,GOLIAD,,,48175
+Texas,22,Small Group,VICTORIA,,,48469
+Texas,22,Small Group,DE WITT,,,48123
+Texas,22,Small Group,JACKSON,,,48239
+Texas,22,Small Group,KARNES,,,48255
+Texas,22,Small Group,LAVACA,,,48285
+Texas,23,Small Group,MCLENNAN,,,48309
+Texas,23,Small Group,BOSQUE,,,48035
+Texas,23,Small Group,FALLS,,,48145
+Texas,23,Small Group,FREESTONE,,,48161
+Texas,23,Small Group,HILL,,,48217
+Texas,23,Small Group,LIMESTONE,,,48293
+Texas,24,Small Group,ARCHER,,,48009
+Texas,24,Small Group,CLAY,,,48077
+Texas,24,Small Group,WICHITA,,,48485
+Texas,24,Small Group,BAYLOR,,,48023
+Texas,24,Small Group,COTTLE,,,48101
+Texas,24,Small Group,FOARD,,,48155
+Texas,24,Small Group,HARDEMAN,,,48197
+Texas,24,Small Group,JACK,,,48237
+Texas,24,Small Group,KNOX,,,48275
+Texas,24,Small Group,MONTAGUE,,,48337
+Texas,24,Small Group,WILBARGER,,,48487
+Texas,24,Small Group,YOUNG,,,48503
+Texas,25,Small Group,DENTON,,,48121
+Texas,25,Small Group,JOHNSON,,,48251
+Texas,25,Small Group,PARKER,,,48367
+Texas,25,Small Group,TARRANT,,,48439
+Texas,25,Small Group,WISE,,,48497
+Texas,25,Small Group,ERATH,,,48143
+Texas,25,Small Group,HOOD,,,48221
+Texas,25,Small Group,PALO PINTO,,,48363
+Texas,25,Small Group,SOMERVELL,,,48425
+Texas,26,Small Group,AUSTIN,,,48015
+Texas,26,Small Group,BRAZORIA,,,48039
+Texas,26,Small Group,FORT BEND,,,48157
+Texas,26,Small Group,WALLER,,,48473
+Texas,26,Small Group,COLORADO,,,48089
+Texas,26,Small Group,MATAGORDA,,,48321
+Texas,26,Small Group,WHARTON,,,48481
+Texas,27,Individual,CHAMBERS,,,48071
+Texas,27,Individual,LIBERTY,,,48291
+Texas,27,Individual,MONTGOMERY,,,48339
+Texas,27,Individual,WALKER,,,48471
+Texas,27,Small Group,CHAMBERS,,,48071
+Texas,27,Small Group,LIBERTY,,,48291
+Texas,27,Small Group,MONTGOMERY,,,48339
+Texas,27,Small Group,WALKER,,,48471

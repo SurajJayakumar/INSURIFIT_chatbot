@@ -1,0 +1,78 @@
+
+----- headers found between files: -----
+
+../HIOS_DATA_Unzipped/RBIS.INSURANCE_PLAN_20240509202140.dat
+['HIOS Plan ID', 'Plan Marketing Name', 'HIOS Product ID', 'Market Coverage', 'Dental Only Plan', 'Network ID', 'Service Area ID', 'Formulary ID', 'New\\Existing Plan', 'Plan Type', 'Level of Coverage', 'Unique Plan Design', 'QHP\\Non QHP', 'Notice Required for Pregnancy', 'Is a Referral Required for Specialist', 'Specialist s  Requiring a Referral', 'Plan Level Exclusions', 'Limited Cost Sharing Plan Variation   Est Advanced Payment', 'Child Only Offering', 'Child Only Plan ID', 'Wellness Program Offered', 'Disease Management Programs Offered', 'EHB Apportionment for Pediatric Dental', 'Guaranteed vs  Estimated Rate', 'Plan Effective Date', 'Plan Expiration Date', 'Out of Country Coverage', 'Out of Country Coverage Description', 'Out of Service Area Coverage', 'Out of Service Area Coverage Description', 'National Network', 'Enrollment Payment URL', 'Life Cycle Status Name', 'EHB Percent of Total Premium', 'Does this plan offer Composite Rating', 'Design Type', 'Plan Published Indicator']
+
+../HIOS_DATA_Unzipped/RBIS.INSURANCE_PLAN_BASE_RATE_FILE_20_21_22_24_25_26_20240509202140.dat
+['Plan ID', 'Rate Effective Date', 'Rate Expiration Date', 'Age', 'Tobacco', 'Rating Area ID', 'Individual Rate', 'Individual Tobacco Rate', 'Couple', 'Primary Subscriber and One Dependent', 'Primary Subscriber and Two Dependents', 'Primary Subscriber and Three Dependents', 'Couple and One Dependent', 'Couple and Two Dependents', 'Couple and Three Dependents', 'HIOS Issuer ID', 'Market Coverage']
+
+../HIOS_DATA_Unzipped/RBIS.INSURANCE_PLAN_BENEFIT_COST_SHARE_20240509202140.dat
+['HIOS Plan ID', 'CSR Variation Type', 'Benefit', 'Multiple In Network Tiers ', 'Network Type', 'Co payment', 'Co Insurance', 'Multiple In Network Tiers Code']
+
+../HIOS_DATA_Unzipped/RBIS.INSURANCE_PLAN_BENEFITS_20240509202140.dat
+['HIOS Plan ID', 'Benefit', 'EHB', 'Is This Benefit Covered', 'Quantitative Limit On Service', 'Limit Quantity', 'Limit Unit', 'Exclusions', 'Explanation', 'EHB Variance Reason', 'Excluded from In Network MOOP', 'Excluded from Out Of Network MOOP']
+
+../HIOS_DATA_Unzipped/RBIS.INSURANCE_PLAN_VARIANT_20240509202140.dat
+['HIOS Plan ID', 'Level of Coverage', 'CSR Variation Type', 'Issuer Actuarial Value', 'AV Calculator Output Number', 'Medical and Drug Deductibles Integrated ', 'Medical and Drug Maximum Out Of Pocket Integrated ', 'Multiple In Network Tiers ', '1st Tier Utilization', '2nd Tier Utilization', ' Plan Brochure', 'URL for Summary of Benefits and Coverage', 'HSA Eligible', 'HSA\\HRA Employer Contribution', 'HSA\\HRA Employer Contribution Amount', 'Maximum Coinsurance for Specialty Drugs', 'Maximum Number of Days for Charging an Inpatient Copay', 'Begin Primary Care Cost Sharing After a Set Number of Visits', 'Begin 
+Primary Care Deductible\\ Coinsurance After a Set Number of Copays', 'Plan Variant Marketing Name']
+
+../HIOS_DATA_Unzipped/RBIS.INSURANCE_PLAN_VARIANT_DDCTBL_MOOP_20240509202140.dat
+['Insurance Plan Identifier', 'Insurance Plan Benefit Metal Tier Type Name', 'Insurance Plan Variant Component Type Name', 'Medical And Drug Deductibles Integrated', 'Maximum Out of Pocket \\ Deductible Type', 'Network Category Type Code', 'Insurance Plan Individual Deductible Amount \\ Insurance Plan Annual Out Of Pocket Limit Amount', 'Insurance Plan Family Deductible Amount \\ Insurance Plan Annual Out Of 
+Pocket Limit Amount Per Person', 'Insurance Plan Family Deductible Amount \\ Insurance Plan Annual Out Of Pocket Limit Amount Per Group', 'Insurance Plan Default Co-Insurance Amount', 'Level of Coverage Type Code']
+
+../HIOS_DATA_Unzipped/RBIS.INSURANCE_PLAN_VARIANT_SBC_SCENARIO_20240509202140.dat
+['Insurance Plan Identifier', 'Insurance Plan Variant Component Type Name', 'SBC Coverage Name', 'SBC Coverage Deductible Amount', 'SBC Coverage Copayment Amount', 'SBC Coverage Coinsurance Amount', 'SBC Coverage Limit Amount']
+
+../HIOS_DATA_Unzipped/RBIS.ISSUER_BUSINESS_RULE_20240509202140.dat
+['HIOS Issuer ID', 'Market', 'Product ID', 'Plan ID  Standard Component', 'What is the maximum number of rated underage dependents on this policy', 'Is there a maximum age for a dependent', 'How is age determined for rating and eligibility purposes', 'How is tobacco status determined for subscribers and dependents', 'Allowed relationships between primary and dependent']
+
+../HIOS_DATA_Unzipped/RBIS.ISSUER_SERVICE_AREA_20240509202140.dat
+['HIOS Issuer ID', 'Service Area ID', 'Service Area Name', 'State', 'County Name', 'Partial County', 'Service Area Zip Code (s) ', 'Partial County Justification', 'Market']
+
+../HIOS_DATA_Unzipped/RBIS.STATE_RATING_AREA_20240509202140.dat
+['State', 'Rating Area ID', 'Market', 'County', 'MSA', 'Three Digit Zip', 'FIPS']
+
+----- Notes: -----
+
+Insurance_Plan: basic insurance plan info
+IP_Base rate: insurance plan info per-district, has different values depending on tobacco and age
+IP_Benefit_Cost_Share: Network info
+
+HIOS Plan ID is the same as Plan ID
+
+HIOS issuer ID is needed for the Issuer business rule file, as plan ID specific information isn't always available - this can be matched to the plan ID in the plan_base_rate_file
+found service areas: ['17933', '29418', '30609', '33602', '37755', '40220', '40788', '45786', '57125', '58840', '63251', '66252', '71837', '75655', '76589', '87226', '88435', '98809', '20069']
+
+----- TLDR: -----
+
+Need to know in a profile:
+- If user uses Tobacco
+- User county location (for HI provider, plan area)
+- Age (<14, 15-63, 64+)
+- How many dependents (If user wants family/group plan)
+
+Good to know:
+- If user wants essential health benefits (EHB) (see RBIS.INSURANCE_PLAN_BENEFITS file)
+- If user wants additional benefits (see RBIS.INSURANCE_PLAN_BENEFIT_COST_SHARE file)
+- If user wants ___ only (dental only, pediatric only; these are sometimes provided as alternative plans)
+- In network/out of network MOOP (sometimes plans are excluded)
+- Desired level of coverage (platinum, gold, silver bronze, etc)
+- Desired cost for plans (deductible / OOP limit, changes in group, copay)
+- If user is pregnant (SBC)
+- If user has diabetes (SBC)
+
+Probably don't need to know:
+- Relationship to dependents (see: RBIS.ISSUER_BUSINESS_RULE)
+- If user wants CSR (Exchange variant plan (CSR) / non exchange (CSR) )
+- If user has HSA/HSR employer (Very few are HSA eligible, only about 30 plans have details on it; see RBIS.INSURANCE_PLAN_VARIANT)
+- Desired number of pediatric appointments before cost sharing
+
+What can be returned:
+- Plan name & ID
+- Plan high-level details
+- Cost breakdown 
+- AV (summarizes generally what percent of expenses a health insurance plan will pay, correlated with metal tier names)
+- A link to official summary and benefits and coverage document
+
+
