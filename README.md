@@ -15,6 +15,6 @@ https://www.youtube.com/watch?v=xAkL7oUVgog
 3) Install all the needed dependencies- (pandas, flask, Spacy, etc.)
 4) Run app.py
 5) Deploy using ngrok (port 5000)
-6) Import the botpress workflow and publish
+6) Import the botpress workflow, go to penultimate node (send to backend execute code card) and change the API endpoint URL to your ngrok URL and publish.
 7) open nlp_sem_project.html and enjoy!
 
