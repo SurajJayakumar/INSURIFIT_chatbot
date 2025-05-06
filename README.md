@@ -16,5 +16,5 @@ https://www.youtube.com/watch?v=xAkL7oUVgog
 4) Run app.py
 5) Deploy using ngrok
 6) Import the botpress workflow and publish
-7) open insurifit.html and enjoy!
+7) open nlp_sem_project.html and enjoy!
 
