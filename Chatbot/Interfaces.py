@@ -64,7 +64,6 @@ class HIPlanInfo:
     out_of_pocket_max: str # max annual out-of-pocket expenses; RBIS.INSURANCE_PLAN_VARIANT_DDCTBL_MOOP: Insurance Plan Annual Out of Pocket Limit Amount
     covered_medications: list[str] # list of covered medications; RBIS.INSURANCE_PLAN_BENEFITS: Benefit
     num_dependents: int
-    couple_or_primary: str
 
 # This class is used to store minimal output information about searched health insurance plans
 @dataclass
