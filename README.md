@@ -1,20 +1,64 @@
-# Health Insurance Policy Recommender Chatbot
- UTD - CS 6320 semester project for spring 2025
+# 🏥 Health Insurance Policy Recommender Chatbot  
+**CS 6320 - Natural Language Processing (Spring 2025)**  
+University of Texas at Dallas
 
- Team Members:
- - Suraj Jayakumar 
- - Kevin Smith
- - Joshua Martin
+## 👥 Team Members
+- Suraj Jayakumar  
+- Kevin Smith  
+- Joshua Martin  
 
-# Video DEMO
-https://www.youtube.com/watch?v=xAkL7oUVgog
+## 🎥 Demo  
+[Watch on YouTube](https://www.youtube.com/watch?v=xAkL7oUVgog)
 
-# Instructions to run
-1) Clone the repo
-2) Set up a python virtual environment
-3) Install all the needed dependencies- (pandas, flask, Spacy, etc.)
-4) Run app.py
-5) Deploy using ngrok (port 5000)
-6) Import the botpress workflow, go to penultimate node (send to backend execute code card) and change the API endpoint URL to your ngrok URL and publish.
-7) open nlp_sem_project.html and enjoy!
+## 💡 Project Overview  
+This chatbot assists users in selecting health insurance policies based on their individual needs using natural language processing. It integrates an NLP backend with a Botpress chatbot interface and a simple web front-end for easy interaction.
 
+## 🚀 Getting Started
+
+### Prerequisites
+Make sure you have the following installed:
+- Python 3.8+
+- [virtualenv](https://pypi.org/project/virtualenv/)
+- [Ngrok](https://ngrok.com/)
+- [Botpress](https://botpress.com/)
+
+### Installation Steps
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-org/health-policy-chatbot.git
+   cd health-policy-chatbot```
+
+2. **Set up a Python virtual environment**
+   ```python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate````
+
+3. **Install dependencies**
+   ```pip install -r requirements.txt```
+
+4. **Start the Flask backend**
+   ```python app.py```
+
+5. **Deploy using ngrok**
+   ```ngrok http 5000```
+
+6. **Configure Botpress**
+   - Import the provided Botpress workflow.
+   - Navigate to the penultimate node (Execute Code card).
+   - Replace the placeholder API URL with your ngrok URL.
+   - Save and publish the workflow.
+
+## 📂 Project Structure
+├── /Chatbot/app.py # Flask backend server
+├── pipeline.html # Frontend UI
+├── /Chatbot/NLP_Semester_Project - 2025 May 05.bpz # Botpress workflow file
+├── /TexasFilteredData # Filtered United States HIOS Data
+└── README.md
+
+## 🛠️ Tech Stack
+- **Python**: Flask, pandas, spaCy  
+- **Frontend**: HTML/CSS/JS  
+- **Bot Framework**: Botpress  
+- **Deployment**: Ngrok  
+
+## 📄 License  
+This project is for educational purposes only and is not licensed for commercial use.
