@@ -29,16 +29,29 @@ Make sure you have the following installed:
    cd health-policy-chatbot```
 
 2. **Set up a Python virtual environment**
-   ```python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate````
+   
+   - On macOS/Linux:
+     ```bash
+     python -m venv venv
+     source venv/bin/activate
+     ```
+
+   - On Windows:
+     ```bash
+     python -m venv venv
+     venv\Scripts\activate
+     ```
 
 3. **Install dependencies**
+
    ```pip install -r requirements.txt```
 
 4. **Start the Flask backend**
+
    ```python app.py```
 
 5. **Deploy using ngrok**
+
    ```ngrok http 5000```
 
 6. **Configure Botpress**
@@ -48,11 +61,13 @@ source venv/bin/activate  # On Windows use `venv\Scripts\activate````
    - Save and publish the workflow.
 
 ## 📂 Project Structure
+```
 ├── /Chatbot/app.py # Flask backend server
 ├── pipeline.html # Frontend UI
 ├── /Chatbot/NLP_Semester_Project - 2025 May 05.bpz # Botpress workflow file
 ├── /TexasFilteredData # Filtered United States HIOS Data
 └── README.md
+```
 
 ## 🛠️ Tech Stack
 - **Python**: Flask, pandas, spaCy  
