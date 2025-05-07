@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Pipeline Visualization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+        }
+        /* Basic styles for the boxes */
+        .pipeline-box {
+            background-color: white;
+            border: 1px solid #e2e8f0; /* cool-gray-200 */
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 1rem 1.5rem; /* p-4 md:p-6 */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
+            text-align: center;
+            min-height: 80px; /* Ensure boxes have some height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+        }
+        .pipeline-box:hover {
+             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* shadow-lg */
+             transform: translateY(-2px);
+        }
+        .pipeline-title {
+            font-weight: 600; /* font-semibold */
+            color: #1e3a8a; /* text-blue-800 */
+            margin-bottom: 0.5rem; /* mb-2 */
+            font-size: 1.125rem; /* text-lg */
+        }
+        .pipeline-desc {
+            font-size: 0.875rem; /* text-sm */
+            color: #4b5563; /* text-gray-600 */
+        }
+        /* Style for arrows */
+        .arrow {
+            position: absolute;
+            stroke: #6b7280; /* gray-500 */
+            stroke-width: 1.5;
+            fill: none;
+            z-index: 0; /* Behind boxes */
+            marker-end: url(#arrowhead);
+        }
+        .arrow-label {
+            position: absolute;
+            background-color: #f0f4f8; /* Match body background */
+            color: #4b5563; /* gray-600 */
+            font-size: 0.75rem; /* text-xs */
+            padding: 0 4px;
+            border-radius: 4px;
+            white-space: nowrap;
+            z-index: 1; /* Above arrows */
+        }
+        /* Container for responsive layout */
+        .pipeline-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
+            gap: 2rem 4rem; /* Row and column gap */
+            padding: 2rem;
+            position: relative; /* Needed for absolute positioning of arrows */
+            max-width: 1200px;
+            margin: auto;
+        }
+        /* Layout adjustments for larger screens */
+        @media (min-width: 768px) { /* md breakpoint */
+            .pipeline-container {
+                grid-template-columns: repeat(3, 1fr); /* Three columns */
+                grid-template-rows: auto auto auto; /* Adjust rows as needed */
+                align-items: center; /* Align items vertically */
+            }
+            /* Specific placements using grid areas or column/row spans */
+            #user-container { grid-column: 1 / 2; grid-row: 2 / 3; }
+            #ui-container { grid-column: 1 / 2; grid-row: 1 / 2; }
+            #chatbot-container { grid-column: 2 / 3; grid-row: 1 / 2; }
+            #searcher-container { grid-column: 3 / 4; grid-row: 1 / 2; }
+            #db-container { grid-column: 3 / 4; grid-row: 2 / 3; }
+            #summarizer-container { grid-column: 2 / 3; grid-row: 2 / 3; }
+        }
+         @media (min-width: 1024px) { /* lg breakpoint */
+             .pipeline-container {
+                gap: 3rem 6rem; /* Increase gap */
+             }
+         }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <h1 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-12">
+        INSURIFIT Health Insurance Chatbot Pipeline
+    </h1>
+
+    <div class="pipeline-container" id="pipeline">
+        <div id="user-container" class="flex flex-col items-center justify-center">
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-600 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+            <div class="font-semibold text-gray-700">User</div>
+        </div>
+
+        <div id="ui-container" class="pipeline-box">
+            <div class="pipeline-title">User Interface</div>
+            <div class="pipeline-desc">Handles user interaction</div>
+        </div>
+
+        <div id="chatbot-container" class="pipeline-box">
+            <div class="pipeline-title">Chatbot</div>
+            <div class="pipeline-desc">Manages conversation, collects data, presents results</div>
+        </div>
+
+        <div id="searcher-container" class="pipeline-box">
+            <div class="pipeline-title">Searcher</div>
+            <div class="pipeline-desc">Filters & ranks plans based on user data</div>
+        </div>
+
+        <div id="summarizer-container" class="pipeline-box">
+            <div class="pipeline-title">Summarizer</div>
+            <div class="pipeline-desc">Generates plan summaries & comparisons</div>
+        </div>
+
+        <div id="db-container" class="flex flex-col items-center justify-center">
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-purple-600 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+             </svg>
+            <div class="font-semibold text-gray-700">Database</div>
+        </div>
+
+        <svg id="arrow-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;">
+            <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/> </marker>
+            </defs>
+            </svg>
+
+         <div id="arrow-labels" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;">
+             </div>
+
+    </div>
+
+    <script>
+        // Function to draw arrows between elements
+        function drawArrow(svg, labelsContainer, fromId, toId, labelText, options = {}) {
+            const fromElement = document.getElementById(fromId);
+            const toElement = document.getElementById(toId);
+            const svgContainer = document.getElementById('pipeline'); // Get the grid container
+
+            if (!fromElement || !toElement || !svgContainer) {
+                console.error(`Cannot draw arrow: Element ${fromId} or ${toId} not found.`);
+                return;
+            }
+
+            // Get positions relative to the SVG container (the grid)
+            const containerRect = svgContainer.getBoundingClientRect();
+            const fromRect = fromElement.getBoundingClientRect();
+            const toRect = toElement.getBoundingClientRect();
+
+            // Calculate center points relative to the container's top-left
+            const from = {
+                x: fromRect.left + fromRect.width / 2 - containerRect.left + window.scrollX,
+                y: fromRect.top + fromRect.height / 2 - containerRect.top + window.scrollY
+            };
+            const to = {
+                x: toRect.left + toRect.width / 2 - containerRect.left + window.scrollX,
+                y: toRect.top + toRect.height / 2 - containerRect.top + window.scrollY
+            };
+
+            // Calculate arrow start/end points based on element edges
+            // This is a simplified calculation, more complex logic might be needed for perfect edge connection
+            let startX, startY, endX, endY;
+            const dx = to.x - from.x;
+            const dy = to.y - from.y;
+            const angle = Math.atan2(dy, dx);
+
+            // Adjust start/end points to touch the box edges (approximate)
+            const fromOffset = fromRect.width / 2 + 5; // Add padding
+            const toOffset = toRect.width / 2 + 15; // Add padding + arrowhead length
+
+            if (Math.abs(dx) > Math.abs(dy)) { // More horizontal
+                startX = from.x + Math.sign(dx) * (fromRect.width / 2 + 5);
+                startY = from.y;
+                endX = to.x - Math.sign(dx) * (toRect.width / 2 + 15); // Account for arrowhead
+                endY = to.y;
+                 // Adjust Y slightly if needed to avoid overlap on horizontal lines
+                 startY += options.startYOffset || 0;
+                 endY += options.endYOffset || 0;
+            } else { // More vertical
+                startX = from.x;
+                startY = from.y + Math.sign(dy) * (fromRect.height / 2 + 5);
+                endX = to.x;
+                endY = to.y - Math.sign(dy) * (toRect.height / 2 + 15); // Account for arrowhead
+                 // Adjust X slightly if needed
+                 startX += options.startXOffset || 0;
+                 endX += options.endXOffset || 0;
+            }
+
+
+             // --- Create Arrow Line ---
+             const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+             line.setAttribute('x1', startX);
+             line.setAttribute('y1', startY);
+             line.setAttribute('x2', endX);
+             line.setAttribute('y2', endY);
+             line.setAttribute('class', 'arrow');
+             svg.appendChild(line);
+
+             // --- Create Arrow Label ---
+             const label = document.createElement('div');
+             label.textContent = labelText;
+             label.className = 'arrow-label';
+
+             // Position label near the middle of the arrow
+             const labelX = (startX + endX) / 2 + (options.labelOffsetX || 0);
+             const labelY = (startY + endY) / 2 + (options.labelOffsetY || -15); // Default offset above line
+
+             label.style.left = `${labelX}px`;
+             label.style.top = `${labelY}px`;
+             label.style.transform = 'translateX(-50%)'; // Center horizontally
+
+             labelsContainer.appendChild(label);
+        }
+
+        // Draw arrows after the layout is stable
+        function drawAllArrows() {
+             const svg = document.getElementById('arrow-svg');
+             const labelsContainer = document.getElementById('arrow-labels');
+             // Clear previous arrows/labels if redrawing
+             svg.innerHTML = '<defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/></marker></defs>';
+             labelsContainer.innerHTML = '';
+
+            // Define arrows and labels with potential offsets
+            drawArrow(svg, labelsContainer, 'user-container', 'ui-container', 'Interacts', { startYOffset: -20, endYOffset: 20, labelOffsetY: -10 });
+            drawArrow(svg, labelsContainer, 'ui-container', 'chatbot-container', 'Starts Convo, Asks Qs', { startYOffset: -10, endYOffset: -10, labelOffsetY: -25 });
+            drawArrow(svg, labelsContainer, 'chatbot-container', 'searcher-container', 'Completed User Data');
+            drawArrow(svg, labelsContainer, 'searcher-container', 'db-container', 'Filters & Ranks', { startYOffset: 10, endYOffset: -10 });
+            drawArrow(svg, labelsContainer, 'db-container', 'searcher-container', 'Viable Plans', { startYOffset: -10, endYOffset: 10, labelOffsetY: 5 });
+            drawArrow(svg, labelsContainer, 'searcher-container', 'chatbot-container', 'Plans', { startYOffset: 15, endYOffset: 15, labelOffsetY: 5 });
+            drawArrow(svg, labelsContainer, 'chatbot-container', 'summarizer-container', 'Plan Data');
+            drawArrow(svg, labelsContainer, 'summarizer-container', 'chatbot-container', 'Summary & Analysis', { startYOffset: 10, endYOffset: -10, labelOffsetY: 5 });
+            drawArrow(svg, labelsContainer, 'chatbot-container', 'ui-container', 'Summary & Analysis', { startYOffset: 10, endYOffset: 10, labelOffsetY: 5 });
+        }
+
+        // Ensure arrows are drawn after initial render and on resize
+        window.addEventListener('load', drawAllArrows);
+        window.addEventListener('resize', drawAllArrows);
+
+    </script>
+
+</body>
+</html>
+```
+
