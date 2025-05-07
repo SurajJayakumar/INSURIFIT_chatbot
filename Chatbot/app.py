@@ -105,11 +105,12 @@ def recommend_plan():
                 }), 200 # Return 200 OK status
 
         print(f"testFunc returned {len(top_plans_df)} plans. Processing top 1.")
-        # Ensure we only process up to 1 plans if more are returned
+        # Ensure we only process up to 20 plans if more are returned
         top_plans_df = top_plans_df.head(1)
 
         # --- Retrieve Details and Generate Summaries ---
         plan_summaries = []
+        plan_set=set()
         # Check if instances were created successfully
         if searcher_instance and summarizer_instance:
             print("Retrieving details and generating comparison summaries...")
@@ -123,7 +124,10 @@ def recommend_plan():
                     print(f"Warning: Missing 'HIOS Plan ID' in row {index}. Skipping.")
                     plan_summaries.append(f"Error: Could not process plan at rank {rank} due to missing ID.")
                     continue
-
+                if plan_id in plan_set:
+                    print(f"Plan {plan_id} already summarized. Skipping")
+                    continue
+                plan_set.add(plan_id)
                 try:
                     print(f"  Retrieving details for Plan ID: {plan_id} (Rank: {rank}, Score: {plan_score:.4f})")
                     # *** Call function to get FULL details for this specific plan ***

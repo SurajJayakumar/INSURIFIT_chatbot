@@ -295,69 +295,48 @@ class HISearcher(HIPlanSearchInterface):
                     
                 if not rate_df.empty:
                     
-                    dependent_rates = pd.to_numeric(rate_df['Individual Rate'], errors='coerce')
-                    effective_dependent_rate = dependent_rates.min()
+                    rate_df['Effective Rate'] = pd.to_numeric(rate_df['Individual Rate'], errors='coerce')
                     if profile.tobacco_use is True:
                         tobacco_rate = pd.to_numeric(rate_df['Individual Tobacco Rate'], errors='coerce')
                         rate_df['Effective Rate'] = rate_df['Effective Rate'].mask(tobacco_rate.notna(), tobacco_rate)
-                    else:
-                        rate_df['Effective Rate'] = dependent_rates
                     valid_rates = rate_df['Effective Rate'].dropna()
                     if not valid_rates.empty: effective_rate = valid_rates.min() # Get lowest applicable rate
 
-            premium = effective_rate
-            if profile.dependents > 0:
-                premium = effective_rate + profile.dependents * effective_dependent_rate
-            plan_data['premium'] = premium
-            print(f"      Fetched premium: {premium}")
+            plan_data['premium'] = effective_rate
+            print(f"      Fetched premium: {effective_rate}")
 
             #DEDUCTIBLE AND OUT OF POCKET(NOT WORKING AS OF NOW TODO)
             
             ddctbl_cols = [
-                'Insurance Plan Identifier', 'Insurance Plan Variant Component Type Name', 'Network Category Type Code', 'Insurance Plan Family Deductible Amount \ Insurance Plan Annual Out Of Pocket Limit Amount Per Person'
+                'Insurance Plan Identifier', 'Network Category Type Code', 'Insurance Plan Annual Out Of Pocket Limit Amount Per Person','Insurance Plan Annual Out Of Pocket Limit Amount Per Group'
             ]
-            ddctbl_info = defaultDB.pullData(defaultDB.Files_DDCTBL_MOOP, ddctbl_cols, [[plan_id],  ['Non-Exchange variant'], ['In Network'], []], True)
+            ddctbl_info = defaultDB.pullData(defaultDB.Files_DDCTBL_MOOP, ddctbl_cols, [[plan_id], ['In Network'], [],[]], True)
             deductible_str = None
             oop_max_str = None
             if ddctbl_info:
-                ddctbl_row = ddctbl_info[0] # Assuming first match is relevant
-                moop_row = ddctbl_info[1]
-                num_ppl = 1 + profile.dependents
+                first_match = ddctbl_info[0] # Assuming first match is relevant
 
                 # Get the string value for the 'Per Person' limit
-                raw_deductible = ddctbl_row.get('Insurance Plan Family Deductible Amount \ Insurance Plan Annual Out Of Pocket Limit Amount Per Person')
+                raw_deductible = first_match.get('Insurance Plan Annual Out Of Pocket Limit Amount Per Person')
                 if raw_deductible is not None:
                     deductible_str = str(raw_deductible).strip()
                     # Remove " per person" suffix (case-insensitive)
                     suffix_index_person = deductible_str.lower().find(' per person')
                     if suffix_index_person != -1:
                         deductible_str = deductible_str[:suffix_index_person].strip()
-                    try:
-                        deductible_value = float(deductible_str.replace('$', '').replace(',', ''))
-                        total_deductible = deductible_value * num_ppl
-                        deductible_str = f"${total_deductible:,.2f}"
-                    except ValueError:
-                        deductible_str = "Not Available"
                 else:
                     deductible_str = "Not Available"
 
                 # Get the string value for the 'Per Group' limit
-                raw_oop_max = moop_row.get('Insurance Plan Family Deductible Amount \ Insurance Plan Annual Out Of Pocket Limit Amount Per Person')
+                raw_oop_max = first_match.get('Insurance Plan Annual Out Of Pocket Limit Amount Per Group')
                 if raw_oop_max is not None:
                     oop_max_str = str(raw_oop_max).strip()
-                    # Remove " per person" suffix
-                    suffix_index_person = oop_max_str.lower().find(' per person')
-                    if suffix_index_person != -1:
-                        oop_max_str = oop_max_str[:suffix_index_person].strip()
-                    try:
-                        oop_max_value = float(oop_max_str.replace('$', '').replace(',', ''))
-                        total_oop_max = oop_max_value * num_ppl
-                        oop_max_str = f"${total_oop_max:,.2f}"
-                    except ValueError:
-                        oop_max_str = "Not Available"
+                    # Remove " per group" suffix (case-insensitive)
+                    suffix_index_group = oop_max_str.lower().find(' per group')
+                    if suffix_index_group != -1:
+                        oop_max_str = oop_max_str[:suffix_index_group].strip()
                 else:
                     oop_max_str = "Not Available"
-
             else:
                 deductible_str = "Not Available"
                 oop_max_str = "Not Available"
@@ -367,6 +346,15 @@ class HISearcher(HIPlanSearchInterface):
             plan_data['deductible'] = deductible_str
             plan_data['out_of_pocket_max'] = oop_max_str
             print(f"      Fetched and cleaned deductible string: '{plan_data['deductible']}', OOP Max string: '{plan_data['out_of_pocket_max']}'")
+            # if ddctbl_info:
+            #     print(f"XXXXXXXXXXX{ddctbl_info}")
+            #     # Simplistic: take the first row found. May need logic for CSR variations.
+            #     plan_data['deductible'] = pd.to_numeric(ddctbl_info[0].get('Insurance Plan Annual Out Of Pocket Limit Amount Per Person'), errors='coerce')
+            #     plan_data['out_of_pocket_max'] = pd.to_numeric(ddctbl_info[0].get('Insurance Plan Annual Out Of Pocket Limit Amount Per Group'), errors='coerce')
+            # else:
+            #     plan_data['deductible'] = None
+            #     plan_data['out_of_pocket_max'] = None
+            # print(f"      Fetched deductible: {plan_data['deductible']}, OOP Max: {plan_data['out_of_pocket_max']}")
 
 
             # --- 4. Get coinsurance (Example: Primary Care Visit) ---
@@ -413,7 +401,8 @@ class HISearcher(HIPlanSearchInterface):
             # --- 7. Determine Num Dependents Covered / Couple Status ---
             # This might come from plan variant data or overview. Using estimates.
             plan_data['num_dependents'] = profile.dependents # Estimate based on user profile
-            print(f"      Determined dependents/couple (estimate): Deps={plan_data['num_dependents']}'")
+            plan_data['couple_or_primary'] = "Couple" if profile.dependents > 0 else "Primary Only" # Estimate
+            print(f"      Determined dependents/couple (estimate): Deps={plan_data['num_dependents']}, Type='{plan_data['couple_or_primary']}'")
 
 
             # --- Create HIPlanInfo Object ---
@@ -429,6 +418,7 @@ class HISearcher(HIPlanSearchInterface):
                 out_of_pocket_max=plan_data.get('out_of_pocket_max'), # Already fetched/converted
                 covered_medications=plan_data.get('covered_medications', []),
                 num_dependents=plan_data.get('num_dependents', 0),
+                couple_or_primary=plan_data.get('couple_or_primary', 'Unknown')
                 # Add any other fields required by HIPlanInfo constructor
             )
             print(f"    Successfully created HIPlanInfo object for {plan_id}")
@@ -510,8 +500,6 @@ class HISearcher(HIPlanSearchInterface):
             groupVal = "Small Group"
         else:
             groupVal = "Individual"
-
-        variantVal = "Exchange variant (no CSR)" # or "Non-Exchange variant"
 
         # -- Extract desired benefits
         labels = extractEntities(profile.preferences, dec.BENEFIT_LABELS, 0.7)
@@ -605,47 +593,31 @@ class HISearcher(HIPlanSearchInterface):
         for planID in temp_frame['HIOS Plan ID'].unique():
             temp_frame2 = temp_frame[(temp_frame['HIOS Plan ID'] == planID)]
             temp_frame2 = temp_frame2['Benefit'].to_list()
+            print(temp_frame2)
             benefitFrame.loc[len(benefitFrame)] = [planID, {'Benefit Array': temp_frame2}]
         print(benefitFrame)
         # print("benefit entries found:", len(temp_frame))
-
-        # Plan MOOP information
-        MoopInfo = defaultDB.pullData(
-            defaultDB.Files_DDCTBL_MOOP, 
-            ['Insurance Plan Identifier', 'Insurance Plan Variant Component Type Name', 'Medical And Drug Deductibles Integrated', 'Maximum Out of Pocket \\ Deductible Type', 'Network Category Type Code', 'Insurance Plan Individual Deductible Amount \\ Insurance Plan Annual Out Of Pocket Limit Amount', 'Insurance Plan Family Deductible Amount \\ Insurance Plan Annual Out Of Pocket Limit Amount Per Person', 'Insurance Plan Family Deductible Amount \\ Insurance Plan Annual Out Of Pocket Limit Amount Per Group', 'Insurance Plan Default Co-Insurance Amount', 'Level of Coverage Type Code'],
-            # we could probably check if the user qualifies for csr, but it's not a big deal here
-            [possiblePlanIDs, [], [], [], [], [], [], [], [], []],
-            True)
-        temp_frame = pd.DataFrame(MoopInfo)
-        moopFrame = pd.DataFrame(columns=['HIOS Plan ID', 'MoopSubframe'])
-        for planID in temp_frame['Insurance Plan Identifier'].unique():
-            temp_frame2 = temp_frame[(temp_frame['Insurance Plan Identifier'] == planID)].to_dict()
-            moopFrame.loc[len(moopFrame)] = [planID, {'Moop Subframe': temp_frame2}]
-        print(moopFrame)
-        # example how to access dataframe for results
-        print(pd.DataFrame(moopFrame[(moopFrame['HIOS Plan ID'] == '29418TX0170023')].iloc[0, 1].get('Moop Subframe')))
 
         # Plan variant information
         VariantInfo = defaultDB.pullData(
             defaultDB.Files_PlanVariant, 
             ['HIOS Plan ID', 'Level of Coverage', 'CSR Variation Type', 'Issuer Actuarial Value', 'AV Calculator Output Number', ' Plan Brochure', 'URL for Summary of Benefits and Coverage', 'HSA Eligible', 'Plan Variant Marketing Name'], 
             # we could probably check if the user qualifies for csr, but it's not a big deal here
-            [possiblePlanIDs, [], [variantVal], [], [], [], [], [], [], [], [], []],
+            [possiblePlanIDs, [], [], [], [], [], [], [], [], [], [], []],
             True)
         variantFrame = pd.DataFrame(VariantInfo)
 
         # -- Retrieve data for each unique plan in the list
-        fullPlanFrame = pd.merge(possiblePlanFrame, baseRateFrame, on='HIOS Plan ID', how='left')
+        fullPlanFrame = pd.merge(baseRateFrame, possiblePlanFrame, on='HIOS Plan ID', how='left')
         fullPlanFrame = pd.merge(fullPlanFrame, variantFrame, on='HIOS Plan ID', how='left')
-        fullPlanFrame = pd.merge(fullPlanFrame, moopFrame, on='HIOS Plan ID', how='left')
         fullPlanFrame = pd.merge(fullPlanFrame, benefitFrame, on='HIOS Plan ID', how='left')
 
-        print("scoring...")
+        for planID in possiblePlanIDs:
+            pass
+        # - score plans and rank
         scores = pd.DataFrame(columns=['HIOS Plan ID', 'Score'])
-        for planID in fullPlanFrame['HIOS Plan ID'].to_list():
-            # - score plans and rank
-            scores.loc[len(scores)] = [planID, self.ScorePlan(profile, beneVal, fullPlanFrame[fullPlanFrame['HIOS Plan ID'] == planID])]
-        print("done scoring")
+        for i in range(len(fullPlanFrame)):
+            scores.loc[len(scores)] = [planID, self.ScorePlan(profile, beneVal, fullPlanFrame.iloc[[i]])]
 
         # take top N plan IDs
         fullPlanFrame = pd.merge(fullPlanFrame, scores, on='HIOS Plan ID', how='left')
@@ -653,8 +625,6 @@ class HISearcher(HIPlanSearchInterface):
 
         print("top plans:")
         print(topPlans)
-        print(pd.DataFrame(topPlans.iloc[0]['MoopSubframe'].get('Moop Subframe')))
-        print(pd.DataFrame(topPlans.loc[0]['MoopSubframe'].get('Moop Subframe'))) # example of how to access moop frame in this version
 
         # -- Return results
         return topPlans
@@ -667,7 +637,7 @@ def testFunc(age:int,desired_benefits:str,dependent_no:int,county:str,is_tobacco
     profile.dependents=dependent_no
     profile.age = age
     profile.preferences = desired_benefits
-    topPlans=searcher.MatchPlansFromProfile(profile, 1)
+    topPlans=searcher.MatchPlansFromProfile(profile, 10)
     return topPlans
     
 # --- Main function for testing RetrievePlanInfo ---
@@ -686,7 +656,7 @@ def main_test_retrieval():
     test_profile = UserProfile(
         age=44,
         location="brown",
-        dependents=1,
+        dependents=0,
         desiredPremium=(True, 300.00),       
         desiredDeductible=(True, 1500.00),    
         desiredCopay=(True, 40.00),           
@@ -749,7 +719,8 @@ def main_test_retrieval():
 # --- Main block ---
 if __name__ == "__main__":
     # Call the specific test function you want to run
-    main_test_retrieval()
+    #main_test_retrieval()
+    top_plans_df = testFunc(57, "Gender", 4, "Bexar", True)
+    print(top_plans_df)
     
-
 

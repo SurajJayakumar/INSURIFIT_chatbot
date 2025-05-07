@@ -7,7 +7,6 @@ import re
 # Assuming Interfaces defines UserProfile, HIPlan
 try:
     from Interfaces import UserProfile, HIPlan, HIPlanInfo
-    from HISearcher import HIDatabase, HISearcher
 except ImportError:
     print("Warning: Could not import Interfaces in HISummarizer. Defining dummies.")
     class UserProfile: pass
@@ -97,26 +96,19 @@ class HISummarizer():
         oop_max = format_currency(getattr(info, 'out_of_pocket_max', None))
         covered_medications = format_list(getattr(info, 'covered_medications', []))
         num_dependents = getattr(info, 'num_dependents', 0)
+        couple_or_primary = getattr(info, 'couple_or_primary', 'Unknown')
         plan_id = getattr(plan, 'id', 'N/A')
         score = getattr(plan, 'score', 0.0)
-
 
         in_network_string = "in-network" if in_network else "out-of-network"
 
         # Construct details safely using getattr and formatting helpers
         plan_details = (
-            f"This is a {coverage_level} health insurance plan called {name} (ID: {plan.id}, Match Score: {plan.score:.2f}). "
-            f"It is {in_network_string} and covers one person and up to 3 dependents. "
-            f"The deductible is ${deductible:.2f} per person, "
-            f"monthly premium is ${premium:.2f} per person"
-            #f"copay is ${copay:.2f} "
-            f"and out-of-pocket maximum is ${oop_max:.2f} per person."
-            f"It covers these medications: {covered_medications}"
             f"This is a {coverage_level} health insurance plan called '{name}' (ID: {plan_id}, Match Score: {score:.2f}). "
-            f"It is {in_network_string} and covers you plus {num_dependents} dependents. "
+            f"It is {in_network_string} and covers a {couple_or_primary} plus {num_dependents} dependents. "
             f"The deductible is {deductible}, "
             f"monthly premium is {premium}, "
-            f"the typical coinsurance is '{copay}', "
+            f"the typical copay/coinsurance string is '{copay}', "
             f"and the out-of-pocket maximum is {oop_max}. "
             f"Covered medications listed include: {covered_medications}."
         )
@@ -183,20 +175,18 @@ class HISummarizer():
             # Compare user's needed dependents vs plan's coverage capacity
             # (Using plan_num_deps_covered which might be an estimate - refine if plan data is better)
             if plan_num_deps_covered >= user.dependents:
-                pros.append(f"seems to cover enough individuals (3) for your family size ({user.dependents} dependents)")
+                pros.append(f"seems to cover enough individuals ({plan_num_deps_covered}) for your family size ({user.dependents} dependents)")
             else:
-                cons.append(f"might not cover enough individuals (3) for your family size ({user.dependents} dependents)")
+                cons.append(f"might not cover enough individuals ({plan_num_deps_covered}) for your family size ({user.dependents} dependents)")
 
         # Premium (Check if user specified a desire)
         if hasattr(user, 'desiredPremium') and user.desiredPremium and user.desiredPremium[0] and plan_premium is not None:
-            if hasattr(user, 'dependents') and user.dependents > 0:
-                    per_person = round(plan_premium / (1 + user.dependents),2)
-            if per_person <= user.desiredPremium[1]:
-                pros.append(f"Total plan monthly premium of ${plan_premium:.2f} or {per_person} per-person fits within your desired maximum of ${user.desiredPremium[1]:.2f} per-person")
+            if plan_premium <= user.desiredPremium[1]:
+                pros.append(f"monthly premium of ${plan_premium:.2f} fits within your desired maximum of ${user.desiredPremium[1]:.2f}")
             else:
-                cons.append(f"Total plan monthly premium of ${plan_premium:.2f} or {per_person} per-person is higher than your desired maximum of ${user.desiredPremium[1]:.2f} per-person")
+                cons.append(f"monthly premium of ${plan_premium:.2f} is higher than your desired maximum of ${user.desiredPremium[1]:.2f}")
         elif plan_premium is not None:
-            pros.append(f"has a monthly premium of ${plan_premium:.2f} per-person (you didn't specify a budget for comparison)") # Neutral if no budget set
+            pros.append(f"has a monthly premium of ${plan_premium:.2f} (you didn't specify a budget for comparison)") # Neutral if no budget set
 
         # Deductible (Compare numeric, display string)
         # *** FIXED HERE ***
@@ -204,17 +194,15 @@ class HISummarizer():
             user_desired_deductible_str = user.desiredDeductible[1] # Get user's desired string limit
             user_desired_deductible_num = get_numeric_from_string(user_desired_deductible_str) # Convert user's limit to numeric
             if user_desired_deductible_num is not None: # Check if user's limit could be converted
-                if hasattr(user, 'dependents') and user.dependents > 0:
-                    per_person = round(plan_deductible_num / (1 + user.dependents),2)
-                if per_person <= user_desired_deductible_num:
+                if plan_deductible_num <= user_desired_deductible_num:
                     # Use plan_deductible_str and user_desired_deductible_str for display
-                    pros.append(f"Total plan deductible of {plan_deductible_str} or {per_person} per-person is within your desired limit of {user_desired_deductible_str} per person")
+                    pros.append(f"deductible of {plan_deductible_str} is within your desired limit of {user_desired_deductible_str}")
                 else:
-                    cons.append(f"Total plan deductible of {plan_deductible_str} or {per_person} per-person is higher than your desired limit of {user_desired_deductible_str} per person")
+                    cons.append(f"deductible of {plan_deductible_str} is higher than your desired limit of {user_desired_deductible_str}")
             else: # User specified a desire, but it wasn't a recognizable number string
                  cons.append(f"could not numerically compare plan deductible ({plan_deductible_str}) with your desired limit ('{user_desired_deductible_str}')")
         elif plan_deductible_str is not None:
-             pros.append(f"has a deductible of {plan_deductible_str} or {per_person} per-person")
+             pros.append(f"has a deductible of {plan_deductible_str}")
 
         # OOP Max (Compare numeric, display string)
         # *** FIXED HERE ***
@@ -222,17 +210,51 @@ class HISummarizer():
             user_desired_oop_str = user.desiredOOP[1] # Get user's desired string limit
             user_desired_oop_num = get_numeric_from_string(user_desired_oop_str) # Convert user's limit to numeric
             if user_desired_oop_num is not None: # Check if user's limit could be converted
-                if hasattr(user, 'dependents') and user.dependents > 0:
-                    per_person = round(plan_oop_max_num / (1 + user.dependents),2)
-                if per_person <= user_desired_oop_num:
+                if plan_oop_max_num <= user_desired_oop_num:
                     # Use plan_oop_max_str and user_desired_oop_str for display
-                    pros.append(f"Total plan out-of-pocket maximum of {plan_oop_max_str} or {per_person} per-person is within your desired limit of {user_desired_oop_str} per person")
+                    pros.append(f"out-of-pocket maximum of {plan_oop_max_str} is within your desired limit of {user_desired_oop_str}")
                 else:
-                    cons.append(f"Total plan out-of-pocket maximum of {plan_oop_max_str} or {per_person} is higher than your desired limit of {user_desired_oop_str} per person")
+                    cons.append(f"out-of-pocket maximum of {plan_oop_max_str} is higher than your desired limit of {user_desired_oop_str}")
             else: # User specified a desire, but it wasn't a recognizable number string
                  cons.append(f"could not numerically compare plan out-of-pocket max ({plan_oop_max_str}) with your desired limit ('{user_desired_oop_str}')")
         elif plan_oop_max_str is not None:
-             pros.append(f"has an out-of-pocket maximum of {plan_oop_max_str} per person")
+             pros.append(f"has an out-of-pocket maximum of {plan_oop_max_str}")
+
+        # if hasattr(user, 'desiredDeductible') and user.desiredDeductible[0] and plan_deductible_num is not None:
+        #     if plan_deductible_num <= user.desiredDeductible[1]:
+        #         pros.append(f"deductible of {plan_deductible_str} is within your desired limit of ${user.desiredDeductible[1]:.2f}")
+        #     else:
+        #         cons.append(f"deductible of {plan_deductible_str} is higher than your desired limit of ${user.desiredDeductible[1]:.2f}")
+        # elif plan_deductible_str is not None: # Display string if available, even if no preference set
+        #      pros.append(f"has a deductible of {plan_deductible_str} (you didn't specify a limit for comparison)")
+
+        # # OOP Max (Compare numeric values, display original string)
+        # # Use plan_oop_max_num for comparison, plan_oop_max_str for display
+        # if hasattr(user, 'desiredOOP') and user.desiredOOP[0] and plan_oop_max_num is not None:
+        #     if plan_oop_max_num <= user.desiredOOP[1]:
+        #         pros.append(f"out-of-pocket maximum of {plan_oop_max_str} is within your desired limit of ${user.desiredOOP[1]:.2f}")
+        #     else:
+        #         cons.append(f"out-of-pocket maximum of {plan_oop_max_str} is higher than your desired limit of ${user.desiredOOP[1]:.2f}")
+        # elif plan_oop_max_str is not None: # Display string if available
+        #      pros.append(f"has an out-of-pocket maximum of {plan_oop_max_str} (you didn't specify a limit for comparison)")
+        
+        # if hasattr(user, 'desiredDeductible') and user.desiredDeductible and user.desiredDeductible[0] and plan_deductible is not None:
+        #     if plan_deductible <= user.desiredDeductible[1]:
+        #         pros.append(f"deductible of ${plan_deductible:.2f} is within your desired limit of ${user.desiredDeductible[1]:.2f}")
+        #     else:
+        #         cons.append(f"deductible of ${plan_deductible:.2f} is higher than your desired limit of ${user.desiredDeductible[1]:.2f}")
+        # elif plan_deductible is not None:
+        #      pros.append(f"has a deductible of ${plan_deductible:.2f} (you didn't specify a limit for comparison)")
+
+        # # OOP Max
+        # if hasattr(user, 'desiredOOP') and user.desiredOOP and user.desiredOOP[0] and plan_oop_max is not None:
+        #     if plan_oop_max <= user.desiredOOP[1]:
+        #         pros.append(f"out-of-pocket maximum of ${plan_oop_max:.2f} is within your desired limit of ${user.desiredOOP[1]:.2f}")
+        #     else:
+        #         cons.append(f"out-of-pocket maximum of ${plan_oop_max:.2f} is higher than your desired limit of ${user.desiredOOP[1]:.2f}")
+        # elif plan_oop_max is not None:
+        #      pros.append(f"has an out-of-pocket maximum of ${plan_oop_max:.2f} (you didn't specify a limit for comparison)")
+
 
         # Medications (Compare user.medications list with plan_meds list)
         if hasattr(user, 'medications') and user.medications:
@@ -269,7 +291,6 @@ class HISummarizer():
 def main():
     print("\n--- Testing HISummarizer ---")
     summarizer = HISummarizer()
-    search = HISearcher()
 
     # Check if summarizer initialized correctly
     if not summarizer.model:
@@ -298,10 +319,22 @@ def main():
 
 
     # Create sample HIPlanInfo (ensure attributes match those used)
-    info = search.RetrievePlanInfo(plan_id="33602TX0430052", profile=user)
+    info = HIPlanInfo(
+        plan_marketing_name="FamilyCare Gold TX",
+        in_network=True,
+        coverage_level="Gold",
+        service_area_id="TX001", # Assuming Dallas is in TX001
+        premium=480.75,
+        deductible=2500.00,
+        copay="20%", # String value as requested
+        out_of_pocket_max=7800.00,
+        covered_medications=["Metformin", "Lisinopril"], # Missing Amlodipine
+        num_dependents=3, # Covers enough dependents
+        couple_or_primary="Couple"
+    )
 
     # Create sample HIPlan
-    plan = HIPlan(id="33602TX0430052", rank=1, score=0.85, info=info)
+    plan = HIPlan(id="98765TXGOLD01", rank=1, score=0.85, info=info)
     print("\nTest Plan Details:")
     print(f"  ID: {plan.id}, Name: {info.plan_marketing_name}")
     print(f"  Premium: {info.premium}, Deductible: {info.deductible}, OOP Max: {info.out_of_pocket_max}")
