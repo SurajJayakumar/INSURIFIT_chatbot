@@ -504,9 +504,10 @@ class HISearcher(HIPlanSearchInterface):
         # -- Extract desired benefits
         labels = extractEntities(profile.preferences, dec.BENEFIT_LABELS, 0.7)
         beneVal = []
+        profile.preferences=""
         for label in labels:
             beneVal.extend(dec.BENEFIT_LABELS[label])
-
+        profile.preferences=" ".join(beneVal)
         # -- Access database
         # --- order for pulling data for plans: ---
         # 1 - Pull Service area ID and HIOS Issuer ID from service area file using county name

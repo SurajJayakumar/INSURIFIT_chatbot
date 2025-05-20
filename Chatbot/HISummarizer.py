@@ -1,4 +1,5 @@
 # HISummarizer.py
+from typing import List, Optional
 import google.generativeai as genai
 import os
 import traceback
@@ -13,18 +14,31 @@ except ImportError:
     class HIPlan: pass
     class HIPlanInfo: pass
 
-
+ASP_PREDICATE_EXPLANATIONS = {
+    "advice consider low oop due to age and premium mismatch": "Given your age and that this plan's premium is higher than your preference, you might want to prioritize plans with lower out-of-pocket maximums to better manage potential healthcare costs if significant care is needed.",
+    "advice consider medicare": "Based on your age, it would be beneficial to explore Medicare options, as they might offer coverage specifically designed for your needs.",
+    "advice unrealistic financial goals": "It's often challenging to find a health plan with both very low monthly premiums and very low deductibles. You might want to consider which of these is a higher priority for your financial situation and healthcare needs.",
+    "advice tradeoff higher premium for lower deductible": "For more comprehensive coverage, especially if you anticipate needing regular medical care, have dependents, or specific health conditions, a plan with a somewhat higher premium can often lead to a lower deductible and more predictable out-of-pocket costs when you access services.",
+    "advice tradeoff higher deductible for lower premium": "If you're currently in good health and looking to minimize monthly expenses, a plan with a lower premium in exchange for a higher deductible could be considered. However, this means you'd pay more upfront if you do need significant medical care.",
+    "advice tobacco impacts premium": "It's important to be aware that tobacco use generally results in higher health insurance premiums due to associated health risks.",
+    "advice potential low income considerations": "If your income falls within certain federal guidelines, you might qualify for subsidies or specific programs (like those through the Affordable Care Act marketplace) that could significantly lower your healthcare costs. It's highly recommended to check your eligibility.",
+    "plan meets desired premium": "This plan's premium aligns with your stated preference.", # More of a direct pro/con
+    "plan exceeds desired premium": "This plan's premium is higher than your stated preference.", # More of a direct pro/con
+    "plan meets desired deductible": "This plan's deductible aligns with your stated preference.", # More of a direct pro/con
+    "plan exceeds desired deductible": "This plan's deductible is higher than your stated preference.", # More of a direct pro/con
+    "plan meets desired oop max": "This plan's out-of-pocket maximum aligns with your stated preference.", # More of a direct pro/con
+    "plan exceeds desired oop max": "This plan's out-of-pocket maximum is higher than your stated preference.", # More of a direct pro/con
+    "asp validates plan": "Our detailed analysis suggests this plan generally aligns with several key aspects of your profile based on common insurance considerations.",
+    
+}
 class HISummarizer():
     def __init__(self):
         """
         Initialize HISummarizer with Google Generative AI configuration and model.
         """
         try:
-            # --- Configure API Key ---
-            # It's better practice to load the API key from an environment variable
-            # api_key = os.environ.get("GEMINI_API_KEY")
-            # For now, using the hardcoded key (ensure it's kept secure)
-            api_key = "AIzaSyBmM1X_N_7v9OnFp7Ohgvdwgq4aJYx_m4g" # Replace with your actual key
+            
+            api_key = "AIzaSyAJW3hAL4mmw_NePRqLWKfeqtGXr99RJ-M" # Replace with your actual key
             if not api_key:
                  raise ValueError("GEMINI_API_KEY not found or provided.")
 
@@ -66,7 +80,7 @@ class HISummarizer():
             return fallback_text + f" (Error: {e})"
 
 
-    def summarize_plan(self, plan: HIPlan) -> str:
+    def summarize_plan(self, plan: HIPlan,) -> str:
         """
         Summarize a health insurance plan using the configured Gemini model.
         """
@@ -124,7 +138,7 @@ class HISummarizer():
         return summary
 
 
-    def compare_plan_and_preferences(self, user: UserProfile, plan: HIPlan) -> str:
+    def compare_plan_and_preferences(self, user: UserProfile, plan: HIPlan, asp_inferred_predicates:Optional[List[str]]=None) -> str:
         """
         Compare a health insurance plan to user preferences using the Gemini model.
         """
@@ -220,41 +234,7 @@ class HISummarizer():
         elif plan_oop_max_str is not None:
              pros.append(f"has an out-of-pocket maximum of {plan_oop_max_str}")
 
-        # if hasattr(user, 'desiredDeductible') and user.desiredDeductible[0] and plan_deductible_num is not None:
-        #     if plan_deductible_num <= user.desiredDeductible[1]:
-        #         pros.append(f"deductible of {plan_deductible_str} is within your desired limit of ${user.desiredDeductible[1]:.2f}")
-        #     else:
-        #         cons.append(f"deductible of {plan_deductible_str} is higher than your desired limit of ${user.desiredDeductible[1]:.2f}")
-        # elif plan_deductible_str is not None: # Display string if available, even if no preference set
-        #      pros.append(f"has a deductible of {plan_deductible_str} (you didn't specify a limit for comparison)")
-
-        # # OOP Max (Compare numeric values, display original string)
-        # # Use plan_oop_max_num for comparison, plan_oop_max_str for display
-        # if hasattr(user, 'desiredOOP') and user.desiredOOP[0] and plan_oop_max_num is not None:
-        #     if plan_oop_max_num <= user.desiredOOP[1]:
-        #         pros.append(f"out-of-pocket maximum of {plan_oop_max_str} is within your desired limit of ${user.desiredOOP[1]:.2f}")
-        #     else:
-        #         cons.append(f"out-of-pocket maximum of {plan_oop_max_str} is higher than your desired limit of ${user.desiredOOP[1]:.2f}")
-        # elif plan_oop_max_str is not None: # Display string if available
-        #      pros.append(f"has an out-of-pocket maximum of {plan_oop_max_str} (you didn't specify a limit for comparison)")
         
-        # if hasattr(user, 'desiredDeductible') and user.desiredDeductible and user.desiredDeductible[0] and plan_deductible is not None:
-        #     if plan_deductible <= user.desiredDeductible[1]:
-        #         pros.append(f"deductible of ${plan_deductible:.2f} is within your desired limit of ${user.desiredDeductible[1]:.2f}")
-        #     else:
-        #         cons.append(f"deductible of ${plan_deductible:.2f} is higher than your desired limit of ${user.desiredDeductible[1]:.2f}")
-        # elif plan_deductible is not None:
-        #      pros.append(f"has a deductible of ${plan_deductible:.2f} (you didn't specify a limit for comparison)")
-
-        # # OOP Max
-        # if hasattr(user, 'desiredOOP') and user.desiredOOP and user.desiredOOP[0] and plan_oop_max is not None:
-        #     if plan_oop_max <= user.desiredOOP[1]:
-        #         pros.append(f"out-of-pocket maximum of ${plan_oop_max:.2f} is within your desired limit of ${user.desiredOOP[1]:.2f}")
-        #     else:
-        #         cons.append(f"out-of-pocket maximum of ${plan_oop_max:.2f} is higher than your desired limit of ${user.desiredOOP[1]:.2f}")
-        # elif plan_oop_max is not None:
-        #      pros.append(f"has an out-of-pocket maximum of ${plan_oop_max:.2f} (you didn't specify a limit for comparison)")
-
 
         # Medications (Compare user.medications list with plan_meds list)
         if hasattr(user, 'medications') and user.medications:
@@ -270,16 +250,40 @@ class HISummarizer():
         pros_text = "; ".join(pros) if pros else "no specific positive matches found based on your preferences"
         cons_text = "; ".join(cons) if cons else "no specific negative points found based on your preferences"
 
+        #----ASP Predicate Interpretation---
+        asp_insights_list=[]
+        if asp_inferred_predicates:
+            for pred_str in asp_inferred_predicates:
+                if pred_str.startswith("advice consider family benefit"):
+                    benefit_name_match=re.search(r"advice consider family benefit (.*)",pred_str)
+                    if benefit_name_match:
+                        benefit_name =benefit_name_match.group(1).replace("_"," ")
+                        asp_insights_list.append(f"For families, considering coverage for '{benefit_name}' is important , and this plan might be suitable if it includes it.")
+                elif pred_str in ASP_PREDICATE_EXPLANATIONS:
+                    asp_insights_list.append(ASP_PREDICATE_EXPLANATIONS[pred_str])
+                
+        asp_insights_text= "\n\nFurther Considerations based on your profile:\n" + "\n".join(f"- {insight}" for insight in asp_insights_list) if asp_insights_list else ""
+
+
+        plan_name_display = getattr(info, 'plan_marketing_name', 'N/A')
+        plan_id_display = getattr(plan, 'id', 'N/A')
+
         # Construct the prompt for the comparison
         prompt = (
-            f"Compare this health insurance plan (Name: {getattr(info, 'plan_marketing_name', 'N/A')}, ID: {getattr(plan, 'id', 'N/A')}) "
-            f"to the user's preferences. Explain why it might be a good or bad fit in a friendly, conversational tone, "
-            f"like explaining to someone new to insurance. Base the explanation ONLY on the following points:\n"
+            f"You are an expert health insurance advisor. Based on the user's preferences and the details of the health insurance plan named '{plan_name_display}' (ID: {plan_id_display}), provide a clear and friendly explanation of why this plan might be a good or bad fit. "
+            f"Do not invent any information not provided.\n\n"
+            f"User's key financial preferences and direct plan matches:\n"
             f"Positive points (Pros): {pros_text}\n"
-            f"Negative points (Cons): {cons_text}\n\n"
-            f"Structure the explanation into two paragraphs: one summarizing the 'Pros' (why it might fit) "
-            f"and one summarizing the 'Cons' (why it might not be the best fit). If there are no pros or no cons, "
-            f"just write one paragraph explaining the relevant points found. Be clear and avoid jargon. Do not add any extra information not listed in the pros/cons."
+            f"Negative points (Cons): {cons_text}\n"
+            f"{asp_insights_text}\n\n"
+            f"Task: Synthesize all the above information (Pros, Cons, and Further Considerations) into a balanced, conversational explanation. "
+            f"Structure your response into a few clear paragraphs. Start with an overall assessment if possible. "
+            f"If 'advice consider medicare' was noted, prominently suggest the user explore Medicare options. "
+            f"If 'advice unrealistic financial goals' was noted, gently suggest that finding a plan with both very low premiums and very low deductibles is challenging and they might need to prioritize. "
+            f"If 'advice tobacco impacts premium' was noted, mention that tobacco use generally leads to higher premiums. "
+            f"If 'advice consider family benefit' points were made, weave them into the discussion about family needs. "
+            f"The goal is to help someone new to insurance understand if this specific plan is a reasonable choice for them, given all the analyzed factors. "
+            f"Be objective and informative. Do not use asterisks or markdown for emphasis in your final output."
         )
 
         # Generate comparison using the helper method
@@ -352,7 +356,5 @@ def main():
 
 
 if __name__ == "__main__":
-    # IMPORTANT: Replace with your actual API key before running
-    # It's highly recommended to use environment variables instead of hardcoding keys
-    # Example: export GEMINI_API_KEY='YOUR_API_KEY'
+    
     main()

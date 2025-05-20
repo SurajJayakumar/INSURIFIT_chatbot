@@ -1,5 +1,7 @@
 from flask_cors import CORS
 
+from asp_runner import STATIC_ASP_RULES,  test_clingo_setup
+from asp_utils import normalize_for_asp, plan_info_to_asp_facts, user_profile_to_asp_facts
 import HISearcher, HISummarizer
 from HISearcher import testFunc
 from Interfaces import *
@@ -26,7 +28,7 @@ try:
     print("HISummarizer initialized successfully.")
     # else:
     #    print("Warning: HISummarizer initialized, but model might not be loaded.")
-
+    if not STATIC_ASP_RULES: print("CRITICAL WARNING: ASP Logic Rules NOT LOADED. ASP features will be skipped.")
 except Exception as e:
     print(f"Failed to initialize HISummarizer or HISearcher: {e}")
     if not summarizer_instance: print("Summarization will be disabled.")
@@ -111,6 +113,8 @@ def recommend_plan():
         # --- Retrieve Details and Generate Summaries ---
         plan_summaries = []
         plan_set=set()
+        user_asp_id_for_clingo = "currentUser" # Consistent ID for user in ASP
+        user_facts_asp = user_profile_to_asp_facts(user_profile, user_asp_id_for_clingo)
         # Check if instances were created successfully
         if searcher_instance and summarizer_instance:
             print("Retrieving details and generating comparison summaries...")
@@ -146,12 +150,29 @@ def recommend_plan():
                         score=float(plan_score) if pd.notna(plan_score) else 0.0, # Convert score
                         info=plan_details_info # Use the fully populated info object
                     )
+                    plan_asp_id_for_clingo = normalize_for_asp(plan_id)
+                    print(f"  Processing UNIQUE Plan ID: {plan_id} (ASP ID: {plan_asp_id_for_clingo}, Rank: {rank})")
+                    plan_facts_asp = plan_info_to_asp_facts(plan_details_info,plan_id)
+                    inferred_predicates_for_gemini=[]
+                    #TODO
+                    if STATIC_ASP_RULES: # Only run if rules were loaded
+                        print(f"    Running ASP validation for {plan_id}...")
+                        print(f"UUUUUUUUUUUU {user_facts_asp}UUUUUUUUUU")
+                        print(f"PPPPPPPPPPPPP{plan_facts_asp}PPPPPPPPPPPPPP")
+                        inferred_predicates_for_gemini = test_clingo_setup(
+                            user_facts_asp,
+                            plan_facts_asp,
+                            user_asp_id_for_clingo,
+                            plan_asp_id_for_clingo # Pass the ID used within plan_facts_asp
+                        )
+
 
                     # Generate the comparison summary string using the detailed plan object
                     print(f"  Generating summary for Plan ID: {plan_id}...")
                     summary = summarizer_instance.compare_plan_and_preferences(
                         user=user_profile,
-                        plan=plan_obj
+                        plan=plan_obj,
+                        asp_inferred_predicates=inferred_predicates_for_gemini
                     )
                     plan_summaries.append(summary) # Add the generated string
                     print(f"    Summary generated successfully.")
