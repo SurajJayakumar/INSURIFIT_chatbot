@@ -1,5 +1,5 @@
 # 🏥 Health Insurance Policy Recommender Chatbot  
-**CS 6320 - Natural Language Processing (Spring 2025)**  
+**CS 6374 and CS 6320 - Computational Logic and Natural Language Processing (Spring 2025)**  
 University of Texas at Dallas
 
 ## 👥 Team Members
