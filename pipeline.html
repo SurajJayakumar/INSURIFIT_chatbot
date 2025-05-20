@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot Pipeline Visualization</title>
+    <title>Chatbot Pipeline Visualization with ASP</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,6 @@
             font-family: 'Inter', sans-serif;
             background-color: #f0f4f8; /* Light blue-gray background */
         }
-        /* Basic styles for the boxes */
         .pipeline-box {
             background-color: white;
             border: 1px solid #e2e8f0; /* cool-gray-200 */
@@ -21,12 +20,14 @@
             padding: 1rem 1.5rem; /* p-4 md:p-6 */
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
             text-align: center;
-            min-height: 80px; /* Ensure boxes have some height */
+            min-height: 100px; /* Ensure boxes have some height */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             transition: all 0.3s ease-in-out;
+            position: relative; /* For z-index if needed */
+            z-index: 10;
         }
         .pipeline-box:hover {
              box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* shadow-lg */
@@ -42,53 +43,54 @@
             font-size: 0.875rem; /* text-sm */
             color: #4b5563; /* text-gray-600 */
         }
-        /* Style for arrows */
         .arrow {
             position: absolute;
             stroke: #6b7280; /* gray-500 */
             stroke-width: 1.5;
             fill: none;
-            z-index: 0; /* Behind boxes */
+            z-index: 0; /* Behind boxes but ensure it's rendered */
             marker-end: url(#arrowhead);
         }
         .arrow-label {
             position: absolute;
             background-color: #f0f4f8; /* Match body background */
-            color: #4b5563; /* gray-600 */
+            color: #374151; /* gray-700 */
             font-size: 0.75rem; /* text-xs */
-            padding: 0 4px;
+            padding: 1px 5px;
             border-radius: 4px;
             white-space: nowrap;
             z-index: 1; /* Above arrows */
+            border: 1px solid #e5e7eb; /* Light border for label */
         }
-        /* Container for responsive layout */
         .pipeline-container {
             display: grid;
             grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
-            gap: 2rem 4rem; /* Row and column gap */
+            gap: 3rem 2rem; /* Row and column gap */
             padding: 2rem;
-            position: relative; /* Needed for absolute positioning of arrows */
+            position: relative;
             max-width: 1200px;
             margin: auto;
         }
         /* Layout adjustments for larger screens */
         @media (min-width: 768px) { /* md breakpoint */
             .pipeline-container {
-                grid-template-columns: repeat(3, 1fr); /* Three columns */
-                grid-template-rows: auto auto auto; /* Adjust rows as needed */
-                align-items: center; /* Align items vertically */
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: auto auto auto auto; /* Adjusted for 4 rows */
+                align-items: center;
+                gap: 4rem 3rem;
             }
-            /* Specific placements using grid areas or column/row spans */
+            /* Grid placements for the new layout */
             #user-container { grid-column: 1 / 2; grid-row: 2 / 3; }
             #ui-container { grid-column: 1 / 2; grid-row: 1 / 2; }
             #chatbot-container { grid-column: 2 / 3; grid-row: 1 / 2; }
             #searcher-container { grid-column: 3 / 4; grid-row: 1 / 2; }
             #db-container { grid-column: 3 / 4; grid-row: 2 / 3; }
-            #summarizer-container { grid-column: 2 / 3; grid-row: 2 / 3; }
+            #asp-container { grid-column: 2 / 3; grid-row: 2 / 3; } /* ASP module in the middle */
+            #summarizer-container { grid-column: 2 / 3; grid-row: 3 / 4; } /* Summarizer below ASP */
         }
          @media (min-width: 1024px) { /* lg breakpoint */
              .pipeline-container {
-                gap: 3rem 6rem; /* Increase gap */
+                gap: 4rem 4rem; /* Increase gap */
              }
          }
     </style>
@@ -96,7 +98,7 @@
 <body class="p-4 md:p-8">
 
     <h1 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-12">
-        INSURIFIT Health Insurance Chatbot Pipeline
+        Health Insurance Chatbot Pipeline with ASP Logic
     </h1>
 
     <div class="pipeline-container" id="pipeline">
@@ -122,9 +124,19 @@
             <div class="pipeline-desc">Filters & ranks plans based on user data</div>
         </div>
 
+        <div id="asp-container" class="pipeline-box">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7.014A8.003 8.003 0 0122 12c0 3.778-2.689 7.168-6.343 7.986a9.026 9.026 0 00-1.014-1.329z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.343 7.343A7.963 7.963 0 014 12c0 1.437.376 2.783 1.037 3.963m1.014-1.329A9.026 9.026 0 004 19.986" />
+            </svg>
+            <div class="pipeline-title">ASP Logic / Validation</div>
+            <div class="pipeline-desc">Applies rules, infers insights, validates plans</div>
+        </div>
+
         <div id="summarizer-container" class="pipeline-box">
             <div class="pipeline-title">Summarizer</div>
-            <div class="pipeline-desc">Generates plan summaries & comparisons</div>
+            <div class="pipeline-desc">Generates plan summaries & comparisons with insights</div>
         </div>
 
         <div id="db-container" class="flex flex-col items-center justify-center">
@@ -136,125 +148,119 @@
 
         <svg id="arrow-svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;">
             <defs>
-                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-                    <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/> </marker>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+                </marker>
             </defs>
             </svg>
 
-         <div id="arrow-labels" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;">
+         <div id="arrow-labels" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5;">
              </div>
-
     </div>
 
     <script>
-        // Function to draw arrows between elements
-        function drawArrow(svg, labelsContainer, fromId, toId, labelText, options = {}) {
-            const fromElement = document.getElementById(fromId);
-            const toElement = document.getElementById(toId);
-            const svgContainer = document.getElementById('pipeline'); // Get the grid container
+        function getElementCenter(elementId, containerRect) {
+            const element = document.getElementById(elementId);
+            if (!element) return null;
+            const rect = element.getBoundingClientRect();
+            return {
+                x: rect.left + rect.width / 2 - containerRect.left + window.scrollX,
+                y: rect.top + rect.height / 2 - containerRect.top + window.scrollY,
+                width: rect.width,
+                height: rect.height
+            };
+        }
 
-            if (!fromElement || !toElement || !svgContainer) {
-                console.error(`Cannot draw arrow: Element ${fromId} or ${toId} not found.`);
+        function calculateArrowPoints(fromPos, toPos, arrowheadSize = 10) {
+            const dx = toPos.x - fromPos.x;
+            const dy = toPos.y - fromPos.y;
+            const angle = Math.atan2(dy, dx);
+            const length = Math.sqrt(dx * dx + dy * dy);
+
+            let startX, startY, endX, endY;
+
+            // Adjust start and end points to be on the edge of the boxes
+            const fromRadiusX = fromPos.width / 2;
+            const fromRadiusY = fromPos.height / 2;
+            const toRadiusX = toPos.width / 2;
+            const toRadiusY = toPos.height / 2;
+
+            // Simple approximation: find intersection with bounding box
+            // For horizontal arrows primarily
+            if (Math.abs(dx) > Math.abs(dy)) {
+                startX = fromPos.x + Math.sign(dx) * (fromRadiusX + 5); // 5px padding
+                startY = fromPos.y;
+                endX = toPos.x - Math.sign(dx) * (toRadiusX + arrowheadSize + 5); // Account for arrowhead + padding
+                endY = toPos.y;
+            } else { // For vertical arrows primarily
+                startX = fromPos.x;
+                startY = fromPos.y + Math.sign(dy) * (fromRadiusY + 5);
+                endX = toPos.x;
+                endY = toPos.y - Math.sign(dy) * (toRadiusY + arrowheadSize + 5);
+            }
+            return { startX, startY, endX, endY };
+        }
+
+        function drawArrow(svg, labelsContainer, fromId, toId, labelText, options = {}) {
+            const svgContainer = document.getElementById('pipeline');
+            if (!svgContainer) return;
+            const containerRect = svgContainer.getBoundingClientRect();
+
+            const fromPos = getElementCenter(fromId, containerRect);
+            const toPos = getElementCenter(toId, containerRect);
+
+            if (!fromPos || !toPos) {
+                console.error(`Cannot draw arrow: Element ${fromId} or ${toId} not found or not visible.`);
                 return;
             }
 
-            // Get positions relative to the SVG container (the grid)
-            const containerRect = svgContainer.getBoundingClientRect();
-            const fromRect = fromElement.getBoundingClientRect();
-            const toRect = toElement.getBoundingClientRect();
+            const { startX, startY, endX, endY } = calculateArrowPoints(fromPos, toPos);
 
-            // Calculate center points relative to the container's top-left
-            const from = {
-                x: fromRect.left + fromRect.width / 2 - containerRect.left + window.scrollX,
-                y: fromRect.top + fromRect.height / 2 - containerRect.top + window.scrollY
-            };
-            const to = {
-                x: toRect.left + toRect.width / 2 - containerRect.left + window.scrollX,
-                y: toRect.top + toRect.height / 2 - containerRect.top + window.scrollY
-            };
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            line.setAttribute('x1', startX + (options.startXOffset || 0));
+            line.setAttribute('y1', startY + (options.startYOffset || 0));
+            line.setAttribute('x2', endX + (options.endXOffset || 0));
+            line.setAttribute('y2', endY + (options.endYOffset || 0));
+            line.setAttribute('class', 'arrow');
+            svg.appendChild(line);
 
-            // Calculate arrow start/end points based on element edges
-            // This is a simplified calculation, more complex logic might be needed for perfect edge connection
-            let startX, startY, endX, endY;
-            const dx = to.x - from.x;
-            const dy = to.y - from.y;
-            const angle = Math.atan2(dy, dx);
-
-            // Adjust start/end points to touch the box edges (approximate)
-            const fromOffset = fromRect.width / 2 + 5; // Add padding
-            const toOffset = toRect.width / 2 + 15; // Add padding + arrowhead length
-
-            if (Math.abs(dx) > Math.abs(dy)) { // More horizontal
-                startX = from.x + Math.sign(dx) * (fromRect.width / 2 + 5);
-                startY = from.y;
-                endX = to.x - Math.sign(dx) * (toRect.width / 2 + 15); // Account for arrowhead
-                endY = to.y;
-                 // Adjust Y slightly if needed to avoid overlap on horizontal lines
-                 startY += options.startYOffset || 0;
-                 endY += options.endYOffset || 0;
-            } else { // More vertical
-                startX = from.x;
-                startY = from.y + Math.sign(dy) * (fromRect.height / 2 + 5);
-                endX = to.x;
-                endY = to.y - Math.sign(dy) * (toRect.height / 2 + 15); // Account for arrowhead
-                 // Adjust X slightly if needed
-                 startX += options.startXOffset || 0;
-                 endX += options.endXOffset || 0;
-            }
-
-
-             // --- Create Arrow Line ---
-             const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-             line.setAttribute('x1', startX);
-             line.setAttribute('y1', startY);
-             line.setAttribute('x2', endX);
-             line.setAttribute('y2', endY);
-             line.setAttribute('class', 'arrow');
-             svg.appendChild(line);
-
-             // --- Create Arrow Label ---
-             const label = document.createElement('div');
-             label.textContent = labelText;
-             label.className = 'arrow-label';
-
-             // Position label near the middle of the arrow
-             const labelX = (startX + endX) / 2 + (options.labelOffsetX || 0);
-             const labelY = (startY + endY) / 2 + (options.labelOffsetY || -15); // Default offset above line
-
-             label.style.left = `${labelX}px`;
-             label.style.top = `${labelY}px`;
-             label.style.transform = 'translateX(-50%)'; // Center horizontally
-
-             labelsContainer.appendChild(label);
+            const label = document.createElement('div');
+            label.textContent = labelText;
+            label.className = 'arrow-label';
+            const midX = (startX + endX) / 2;
+            const midY = (startY + endY) / 2;
+            label.style.left = `${midX + (options.labelOffsetX || 0)}px`;
+            label.style.top = `${midY + (options.labelOffsetY || -15)}px`; // Default offset above line
+            label.style.transform = 'translateX(-50%) translateY(-50%)';
+            labelsContainer.appendChild(label);
         }
 
-        // Draw arrows after the layout is stable
         function drawAllArrows() {
              const svg = document.getElementById('arrow-svg');
              const labelsContainer = document.getElementById('arrow-labels');
-             // Clear previous arrows/labels if redrawing
-             svg.innerHTML = '<defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/></marker></defs>';
+             svg.innerHTML = '<defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth"><polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/></marker></defs>';
              labelsContainer.innerHTML = '';
 
             // Define arrows and labels with potential offsets
-            drawArrow(svg, labelsContainer, 'user-container', 'ui-container', 'Interacts', { startYOffset: -20, endYOffset: 20, labelOffsetY: -10 });
-            drawArrow(svg, labelsContainer, 'ui-container', 'chatbot-container', 'Starts Convo, Asks Qs', { startYOffset: -10, endYOffset: -10, labelOffsetY: -25 });
+            drawArrow(svg, labelsContainer, 'user-container', 'ui-container', 'Interacts', {startYOffset: -25, endYOffset: 25, labelOffsetY: -5});
+            drawArrow(svg, labelsContainer, 'ui-container', 'chatbot-container', 'Starts Convo, Asks Qs', {labelOffsetY: -20});
             drawArrow(svg, labelsContainer, 'chatbot-container', 'searcher-container', 'Completed User Data');
-            drawArrow(svg, labelsContainer, 'searcher-container', 'db-container', 'Filters & Ranks', { startYOffset: 10, endYOffset: -10 });
-            drawArrow(svg, labelsContainer, 'db-container', 'searcher-container', 'Viable Plans', { startYOffset: -10, endYOffset: 10, labelOffsetY: 5 });
-            drawArrow(svg, labelsContainer, 'searcher-container', 'chatbot-container', 'Plans', { startYOffset: 15, endYOffset: 15, labelOffsetY: 5 });
-            drawArrow(svg, labelsContainer, 'chatbot-container', 'summarizer-container', 'Plan Data');
-            drawArrow(svg, labelsContainer, 'summarizer-container', 'chatbot-container', 'Summary & Analysis', { startYOffset: 10, endYOffset: -10, labelOffsetY: 5 });
-            drawArrow(svg, labelsContainer, 'chatbot-container', 'ui-container', 'Summary & Analysis', { startYOffset: 10, endYOffset: 10, labelOffsetY: 5 });
+            drawArrow(svg, labelsContainer, 'searcher-container', 'db-container', 'Filters & Ranks', {startYOffset: 20, endYOffset: -20});
+            drawArrow(svg, labelsContainer, 'db-container', 'searcher-container', 'Viable Plans', {startYOffset: -20, endYOffset: 20, labelOffsetY: 10});
+
+            // New/Modified Arrows for ASP
+            drawArrow(svg, labelsContainer, 'searcher-container', 'asp-container', 'Top N Plans + User Profile', {labelOffsetY: -20});
+            drawArrow(svg, labelsContainer, 'asp-container', 'summarizer-container', 'Validated Plans + Inferred Predicates');
+            drawArrow(svg, labelsContainer, 'summarizer-container', 'chatbot-container', 'Enriched Explanations', {labelOffsetY: 10});
+            // This arrow might be redundant if the above covers it, or it's a direct display.
+            // drawArrow(svg, labelsContainer, 'chatbot-container', 'ui-container', 'Presents Recommendations');
         }
 
-        // Ensure arrows are drawn after initial render and on resize
         window.addEventListener('load', drawAllArrows);
-        window.addEventListener('resize', drawAllArrows);
-
+        window.addEventListener('resize', () => {
+            // Debounce resize for performance if needed
+            setTimeout(drawAllArrows, 100);
+        });
     </script>
-
 </body>
 </html>
-```
-
