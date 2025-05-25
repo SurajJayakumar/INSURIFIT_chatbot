@@ -2,10 +2,11 @@
 **CS 6374 and CS 6320 - Computational Logic and Natural Language Processing (Spring 2025)**  
 University of Texas at Dallas
 
-## 👥 Team Members
+## 👥 Team Members (and previous contributor)
 - Suraj Jayakumar  
 - Kevin Smith  
-- Joshua Martin  
+- Joshua Martin
+- Vinay Nair
 
 ## 🎥 Demo  
 [Watch on YouTube](https://www.youtube.com/watch?v=xAkL7oUVgog)
