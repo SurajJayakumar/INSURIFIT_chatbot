@@ -12,7 +12,7 @@ University of Texas at Dallas
 [Watch on YouTube](https://www.youtube.com/watch?v=xAkL7oUVgog)
 
 ## 💡 Project Overview  
-This chatbot assists users in selecting health insurance policies based on their individual needs using natural language processing. It integrates an NLP backend with a Botpress chatbot interface and a simple web front-end for easy interaction.
+This chatbot assists users in selecting health insurance policies based on their individual needs using natural language processing. It integrates an NLP and ASP backend with a Botpress chatbot interface and a simple web front-end for easy interaction.
 
 ## 🚀 Getting Started
 
